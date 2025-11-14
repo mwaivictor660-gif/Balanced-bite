@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balanced Bite | Premium Recipe Ebooks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #ff7e5f;
+            --secondary: #4CAF50;
+            --dark: #2c3e50;
+            --light: #f9f9f9;
+            --accent: #ffd166;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .price-tag {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 16px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 126, 95, 0.4);
+            margin-bottom: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #ff6b4a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 126, 95, 0.6);
+        }
+
+        .guarantee {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Ebook Section */
+        .ebooks {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+            color: var(--dark);
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 15px auto;
+        }
+
+        .ebook-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .ebook-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .ebook-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .ebook-img {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .ebook-content {
+            padding: 25px;
+        }
+
+        .ebook-title {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+
+        .ebook-description {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background-color: #f5f7fa;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 80px 0;
+            background-color: var(--dark);
+            color: white;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .benefit-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .benefit-description {
+            color: #ccc;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .footer-tagline {
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 60px 0;
+            }
+            
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .ebooks, .testimonials, .benefits {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">Balanced Bite</div>
+            <p class="tagline">Delicious, nutritious recipes for everyday life. Transform your meals with our chef-curated recipe collection designed for health and flavor.</p>
+            <div class="price-tag">Only $15 - Complete Recipe Collection</div>
+            <a href="https://howtocooksmarter.gumroad.com/l/cookbook?a=96709779" class="cta-button">Buy Now - Instant Access</a>
+            <p class="guarantee">30-day satisfaction guarantee</p>
+        </div>
+    </header>
+
+    <!-- Ebooks Section -->
+    <section class="ebooks" id="ebooks">
+        <div class="container">
+            <h2 class="section-title">What's Inside Your Recipe Collection</h2>
+            <div class="ebook-grid">
+                <div class="ebook-card">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" alt="Healthy Breakfast" class="ebook-img">
+                    <div class="ebook-content">
+                        <h3 class="ebook-title">Breakfast Boost</h3>
+                        <p class="ebook-description">40+ energizing breakfast recipes to start your day right. Quick options for busy mornings and indulgent weekend treats that nourish your body.</p>
+                    </div>
+                </div>
+                <div class="ebook-card">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Healthy Lunch" class="ebook-img">
+                    <div class="ebook-content">
+                        <h3 class="ebook-title">Lunch Made Easy</h3>
+                        <p class="ebook-description">Simple, nutritious lunch recipes perfect for meal prep. Balanced meals that keep you satisfied all afternoon without the mid-day slump.</p>
+                    </div>
+                </div>
+                <div class="ebook-card">
+                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Dinner Recipes" class="ebook-img">
+                    <div class="ebook-content">
+                        <h3 class="ebook-title">Dinner Delights</h3>
+                        <p class="ebook-description">Satisfying dinner recipes the whole family will love. From quick weeknight meals to impressive dinner parties with minimal effort.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Loved By Home Cooks</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The Breakfast Boost recipes have completely changed my mornings. I actually look forward to getting out of bed now! The avocado toast recipe alone was worth the purchase."</p>
+                    <div class="testimonial-author">- Maria S.</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As someone who never enjoyed cooking, these recipes have made me actually excited to prepare meals. So simple and delicious! My family can't believe the transformation."</p>
+                    <div class="testimonial-author">- James R.</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The photos alone are worth the price! Every recipe I've tried has turned out perfectly. My family is eating healthier and loving every meal. The dinner recipes are now our weekly staples."</p>
+                    <div class="testimonial-author">- Sarah L.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Choose Balanced Bite</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="benefit-title">Nutrition Focused</h3>
+                    <p class="benefit-description">Every recipe is designed with balanced nutrition in mind, using wholesome ingredients that nourish your body.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="benefit-title">Time Efficient</h3>
+                    <p class="benefit-description">Most recipes take 30 minutes or less, perfect for busy schedules without sacrificing flavor or nutrition.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="benefit-title">Fresh Ingredients</h3>
+                    <p class="benefit-description">Recipes emphasize fresh, accessible ingredients you can find at any grocery store. No hard-to-find items.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="benefit-title">Digital Access</h3>
+                    <p class="benefit-description">Instant access on any device. Cook from your phone, tablet, or computer. Download and print if preferred.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Balanced Bite</div>
+            <p class="footer-tagline">Creating delicious, balanced meals for everyday life. Discover the joy of cooking with our carefully crafted recipe collection.</p>
+            <div class="copyright">
+                &copy; 2023 Balanced Bite. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
