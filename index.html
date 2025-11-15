@@ -3,305 +3,580 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balanced Bite | Premium Recipe Ebooks</title>
+    <title>The Ultimate 50-Recipe Cookbook | Premium Digital Recipes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --gold: #D4AF37;
+            --gold-light: #F4E4A6;
+            --deep-black: #1A1A1A;
+            --cream: #F8F5F0;
+            --red: #A52A2A;
+            --gray: #5D5D5D;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
-        :root {
-            --primary: #ff7e5f;
-            --secondary: #4CAF50;
-            --dark: #2c3e50;
-            --light: #f9f9f9;
-            --accent: #ffd166;
+        
+        html {
+            scroll-behavior: smooth;
         }
-
+        
         body {
-            background-color: var(--light);
-            color: var(--dark);
+            font-family: 'Inter', sans-serif;
+            color: var(--deep-black);
+            background-color: var(--cream);
             line-height: 1.6;
+            overflow-x: hidden;
         }
-
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
         .container {
+            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        /* Header Styles */
-        header {
-            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 80px 0;
+        
+        section {
+            padding: 100px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--deep-black);
+            padding: 18px 40px;
+            border-radius: 2px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn:hover {
+            background: var(--gold-light);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .btn-large {
+            font-size: 1.2rem;
+            padding: 20px 50px;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.7)), url('https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
             text-align: center;
+            color: white;
+            position: relative;
         }
-
-        .logo {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: var(--accent);
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-top: 60px;
         }
-
-        .tagline {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            font-weight: 300;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
-
-        .price-tag {
-            font-size: 1.5rem;
-            margin-bottom: 25px;
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--primary);
-            color: white;
-            padding: 16px 45px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.3rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 126, 95, 0.4);
-            margin-bottom: 20px;
-        }
-
-        .cta-button:hover {
-            background-color: #ff6b4a;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 126, 95, 0.6);
-        }
-
-        .guarantee {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        /* Ebook Section */
-        .ebooks {
-            padding: 80px 0;
+        
+        /* What's Inside Section */
+        .whats-inside {
             background-color: white;
         }
-
+        
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
-            font-size: 2.2rem;
-            color: var(--dark);
+            font-size: 3rem;
+            margin-bottom: 4rem;
             position: relative;
+            color: var(--deep-black);
         }
-
+        
         .section-title:after {
             content: '';
             display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--secondary);
-            margin: 15px auto;
+            width: 100px;
+            height: 2px;
+            background: var(--gold);
+            margin: 20px auto;
         }
-
-        .ebook-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .ebook-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .ebook-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .ebook-img {
-            height: 220px;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .ebook-content {
-            padding: 25px;
-        }
-
-        .ebook-title {
-            font-size: 1.4rem;
-            margin-bottom: 12px;
-            color: var(--dark);
-        }
-
-        .ebook-description {
-            color: #666;
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 80px 0;
-            background-color: #f5f7fa;
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            color: #555;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--dark);
-        }
-
-        /* Benefits Section */
-        .benefits {
-            padding: 80px 0;
-            background-color: var(--dark);
-            color: white;
-        }
-
+        
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
         }
-
+        
         .benefit-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 3px;
             text-align: center;
-            padding: 30px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            position: relative;
+            overflow: hidden;
         }
-
+        
+        .benefit-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gold);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
         .benefit-icon {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 20px;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
         }
-
-        .benefit-title {
+        
+        .benefit-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--deep-black);
+        }
+        
+        .benefit-card p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+        
+        /* Why Special Section */
+        .why-special {
+            background: linear-gradient(rgba(248, 245, 240, 0.9), rgba(248, 245, 240, 0.9)), url('https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+        }
+        
+        .special-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .special-text {
+            padding-right: 20px;
+        }
+        
+        .special-image {
+            border-radius: 3px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .special-image:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: -20px;
+            bottom: -20px;
+            border: 2px solid var(--gold);
+            z-index: -1;
+            border-radius: 3px;
+        }
+        
+        .special-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .special-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .special-text h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: var(--deep-black);
+        }
+        
+        .special-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            color: var(--gray);
+        }
+        
+        /* Story Section */
+        .story {
+            background: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 150px 0;
+        }
+        
+        .story h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+        
+        .story p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+            font-style: italic;
+        }
+        
+        /* Bonus Section */
+        .bonus {
+            background-color: white;
+            text-align: center;
+        }
+        
+        .bonus-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .bonus h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: var(--deep-black);
+        }
+        
+        .bonus p {
             font-size: 1.3rem;
-            margin-bottom: 15px;
+            margin-bottom: 2rem;
+            color: var(--gray);
         }
-
-        .benefit-description {
-            color: #ccc;
+        
+        .bonus-features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
         }
-
+        
+        .bonus-feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 200px;
+        }
+        
+        .bonus-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+        
+        .bonus-feature h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--cream);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 3px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .testimonial-card:before {
+            content: """;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 5rem;
+            color: var(--gold-light);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .stars {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 500;
+            color: var(--deep-black);
+        }
+        
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 150px 0;
+        }
+        
+        .final-cta h2 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+        
+        .final-cta p {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+        
         /* Footer */
         footer {
-            background-color: #222;
-            color: #aaa;
-            padding: 60px 0 30px;
+            background: var(--deep-black);
+            color: white;
             text-align: center;
-        }
-
-        .footer-logo {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: var(--accent);
-        }
-
-        .footer-tagline {
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-
-        .copyright {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #444;
+            padding: 40px 0;
             font-size: 0.9rem;
         }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            header {
-                padding: 60px 0;
+        
+        /* Responsive Design */
+        @media (max-width: 1100px) {
+            .hero h1 {
+                font-size: 3.2rem;
             }
             
-            .logo {
+            .special-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .special-text {
+                padding-right: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
                 font-size: 2.5rem;
             }
             
-            .section-title {
-                font-size: 1.8rem;
+            .hero p {
+                font-size: 1.2rem;
             }
             
-            .ebooks, .testimonials, .benefits {
-                padding: 60px 0;
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .special-text h2, .story h2, .bonus h2, .final-cta h2 {
+                font-size: 2.5rem;
+            }
+            
+            .btn-large {
+                font-size: 1.1rem;
+                padding: 18px 40px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .bonus-features {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <div class="logo">Balanced Bite</div>
-            <p class="tagline">Delicious, nutritious recipes for everyday life. Transform your meals with our chef-curated recipe collection designed for health and flavor.</p>
-            <div class="price-tag">Only $15 - Complete Recipe Collection</div>
-            <a href="https://howtocooksmarter.gumroad.com/l/cookbook?a=96709779" class="cta-button">Buy Now - Instant Access</a>
-            <p class="guarantee">30-day satisfaction guarantee</p>
+            <div class="hero-content fade-in">
+                <h1>The Ultimate 50-Recipe Cookbook for People Who Love Real Food</h1>
+                <p>Level up your cooking with bold flavors, juicy meals, and simple step-by-step recipes you can make any day of the week.</p>
+                <a href="https://howtocooksmarter.gumroad.com/l/cookbook?a=96709779" class="btn btn-large">Download Your Cookbook</a>
+            </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Ebooks Section -->
-    <section class="ebooks" id="ebooks">
+    <!-- What's Inside Section -->
+    <section class="whats-inside">
         <div class="container">
-            <h2 class="section-title">What's Inside Your Recipe Collection</h2>
-            <div class="ebook-grid">
-                <div class="ebook-card">
-                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80" alt="Healthy Breakfast" class="ebook-img">
-                    <div class="ebook-content">
-                        <h3 class="ebook-title">Breakfast Boost</h3>
-                        <p class="ebook-description">40+ energizing breakfast recipes to start your day right. Quick options for busy mornings and indulgent weekend treats that nourish your body.</p>
+            <h2 class="section-title fade-in">What's Inside</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Gourmet Made Easy</h3>
+                    <p>Restaurant-quality meals with simple ingredients</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon"><i class="fas fa-book-open"></i></div>
+                    <h3>50 Real Recipes</h3>
+                    <p>Breakfast, lunch, dinner, soups, meats, pastas, desserts</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Fast & Flavorful</h3>
+                    <p>Many recipes ready in under 30 minutes</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon"><i class="fas fa-user-friends"></i></div>
+                    <h3>Beginner-Friendly</h3>
+                    <p>Easy steps, no special skills required</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Beautiful Layout</h3>
+                    <p>Clean, modern ebook design</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon"><i class="fas fa-download"></i></div>
+                    <h3>Instant Download</h3>
+                    <p>Access on any device immediately</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Special Section -->
+    <section class="why-special">
+        <div class="container">
+            <div class="special-content">
+                <div class="special-text fade-in">
+                    <h2>Not Just Recipes — A Whole New Cooking Experience</h2>
+                    <p>This cookbook brings you modern flavors that excite the palate while remaining accessible for home cooks of all levels.</p>
+                    <p>Every recipe is accompanied by beautiful food photography that inspires and guides you through the cooking process.</p>
+                    <p>We've designed these meals to boost your confidence in the kitchen and create dishes that will impress family, guests, or that special someone.</p>
+                    <a href="https://howtocooksmarter.gumroad.com/l/cookbook?a=96709779" class="btn">Explore the Recipes</a>
+                </div>
+                <div class="special-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Beautifully plated gourmet meal">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story">
+        <div class="container">
+            <h2 class="fade-in">A New Way to Cook</h2>
+            <p class="fade-in">Imagine opening your cookbook and instantly knowing what to cook tonight.</p>
+            <p class="fade-in">No stress. No guessing. Just delicious, exciting meals that make you feel proud.</p>
+        </div>
+    </section>
+
+    <!-- Bonus Section -->
+    <section class="bonus">
+        <div class="container">
+            <div class="bonus-content">
+                <h2 class="fade-in">Special Bonuses Included</h2>
+                <p class="fade-in">When you get the cookbook today, you'll also receive these exclusive bonuses:</p>
+                
+                <div class="bonus-features">
+                    <div class="bonus-feature fade-in">
+                        <div class="bonus-icon"><i class="fas fa-list-alt"></i></div>
+                        <h3>Smart Shopping List</h3>
+                        <p>Printable PDF organized by category</p>
+                    </div>
+                    <div class="bonus-feature fade-in">
+                        <div class="bonus-icon"><i class="fas fa-bolt"></i></div>
+                        <h3>Quick Meal Guide</h3>
+                        <p>15-minute meal ideas for busy days</p>
+                    </div>
+                    <div class="bonus-feature fade-in">
+                        <div class="bonus-icon"><i class="fas fa-infinity"></i></div>
+                        <h3>Lifetime Access</h3>
+                        <p>All future updates included free</p>
                     </div>
                 </div>
-                <div class="ebook-card">
-                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Healthy Lunch" class="ebook-img">
-                    <div class="ebook-content">
-                        <h3 class="ebook-title">Lunch Made Easy</h3>
-                        <p class="ebook-description">Simple, nutritious lunch recipes perfect for meal prep. Balanced meals that keep you satisfied all afternoon without the mid-day slump.</p>
-                    </div>
-                </div>
-                <div class="ebook-card">
-                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Dinner Recipes" class="ebook-img">
-                    <div class="ebook-content">
-                        <h3 class="ebook-title">Dinner Delights</h3>
-                        <p class="ebook-description">Satisfying dinner recipes the whole family will love. From quick weeknight meals to impressive dinner parties with minimal effort.</p>
-                    </div>
-                </div>
+                
+                <a href="https://howtocooksmarter.gumroad.com/l/cookbook?a=96709779" class="btn btn-large fade-in">Get Cookbook + Bonuses</a>
             </div>
         </div>
     </section>
@@ -309,70 +584,83 @@
     <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">Loved By Home Cooks</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"The Breakfast Boost recipes have completely changed my mornings. I actually look forward to getting out of bed now! The avocado toast recipe alone was worth the purchase."</p>
-                    <div class="testimonial-author">- Maria S.</div>
+            <h2 class="section-title fade-in">What Cooks Are Saying</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The steak recipe alone was worth the price! I made it for date night and my partner said it was better than any restaurant. The instructions were so clear and easy to follow."</p>
+                    <p class="testimonial-author">- Michael T.</p>
                 </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"As someone who never enjoyed cooking, these recipes have made me actually excited to prepare meals. So simple and delicious! My family can't believe the transformation."</p>
-                    <div class="testimonial-author">- James R.</div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"As a busy mom, I love how many recipes take 30 minutes or less. The creamy garlic pasta has become a family favorite that I make at least once a week. So delicious!"</p>
+                    <p class="testimonial-author">- Sarah J.</p>
                 </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"The photos alone are worth the price! Every recipe I've tried has turned out perfectly. My family is eating healthier and loving every meal. The dinner recipes are now our weekly staples."</p>
-                    <div class="testimonial-author">- Sarah L.</div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"I've always been intimidated by cooking, but this book made it so approachable. The photos are stunning and the step-by-step instructions gave me the confidence to try new techniques."</p>
+                    <p class="testimonial-author">- David L.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="benefits">
+    <!-- Final CTA Section -->
+    <section class="final-cta">
         <div class="container">
-            <h2 class="section-title">Why Choose Balanced Bite</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3 class="benefit-title">Nutrition Focused</h3>
-                    <p class="benefit-description">Every recipe is designed with balanced nutrition in mind, using wholesome ingredients that nourish your body.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3 class="benefit-title">Time Efficient</h3>
-                    <p class="benefit-description">Most recipes take 30 minutes or less, perfect for busy schedules without sacrificing flavor or nutrition.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3 class="benefit-title">Fresh Ingredients</h3>
-                    <p class="benefit-description">Recipes emphasize fresh, accessible ingredients you can find at any grocery store. No hard-to-find items.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3 class="benefit-title">Digital Access</h3>
-                    <p class="benefit-description">Instant access on any device. Cook from your phone, tablet, or computer. Download and print if preferred.</p>
-                </div>
-            </div>
+            <h2 class="fade-in">Get Instant Access to All 50 Recipes</h2>
+            <p class="fade-in">Transform your cooking today with our premium digital cookbook, beautiful bonuses, and lifetime updates.</p>
+            <a href="https://howtocooksmarter.gumroad.com/l/cookbook?a=96709779" class="btn btn-large fade-in">Download Now</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-logo">Balanced Bite</div>
-            <p class="footer-tagline">Creating delicious, balanced meals for everyday life. Discover the joy of cooking with our carefully crafted recipe collection.</p>
-            <div class="copyright">
-                &copy; 2023 Balanced Bite. All rights reserved.
-            </div>
+            <p>&copy; 2023 How To Cook Smarter. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Fade in animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOnScroll = function() {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add('visible');
+                    }
+                });
+            };
+            
+            // Check on load
+            fadeInOnScroll();
+            
+            // Check on scroll
+            window.addEventListener('scroll', fadeInOnScroll);
+        });
+    </script>
 </body>
 </html>
