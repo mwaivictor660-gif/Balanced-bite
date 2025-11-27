@@ -203,60 +203,61 @@
             font-size: 0.9rem;
         }
         
-        /* Problems Section */
-        .problems-section {
+        /* Benefits Section */
+        .benefits-section {
             background-color: var(--white);
         }
         
-        .problems-grid {
+        .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
         
-        .problem-card {
+        .benefit-card {
             background-color: var(--white);
             border-radius: var(--radius);
             padding: 2rem;
             box-shadow: var(--shadow);
             transition: transform 0.3s;
             border-top: 4px solid var(--primary);
+            text-align: center;
         }
         
-        .problem-card:hover {
+        .benefit-card:hover {
             transform: translateY(-5px);
         }
         
-        .problem-card i {
+        .benefit-card i {
             font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 1rem;
         }
         
-        /* Benefits Section */
-        .benefits-section {
+        /* Features Section */
+        .features-section {
             background-color: var(--light-gray);
         }
         
-        .benefits-container {
+        .features-container {
             display: flex;
             align-items: center;
             gap: 4rem;
             margin-top: 3rem;
         }
         
-        .benefits-content {
+        .features-content {
             flex: 1;
         }
         
-        .benefit-item {
+        .feature-item {
             display: flex;
             align-items: flex-start;
             margin-bottom: 2rem;
         }
         
-        .benefit-icon {
+        .feature-icon {
             background-color: var(--primary-light);
             color: white;
             width: 50px;
@@ -269,14 +270,14 @@
             flex-shrink: 0;
         }
         
-        .benefits-image {
+        .features-image {
             flex: 1;
             border-radius: var(--radius);
             overflow: hidden;
             box-shadow: var(--shadow);
         }
         
-        .benefits-image img {
+        .features-image img {
             width: 100%;
             height: auto;
             display: block;
@@ -606,7 +607,7 @@
                 margin: 0.5rem;
             }
             
-            .benefits-container, .cookbook-container {
+            .features-container, .cookbook-container {
                 flex-direction: column;
             }
             
@@ -633,8 +634,8 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#problems">Problems</a></li>
                     <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#features">Features</a></li>
                     <li><a href="#recipes">Recipes</a></li>
                     <li><a href="#cookbook">Cookbook</a></li>
                     <li><a href="#testimonials">Results</a></li>
@@ -660,97 +661,97 @@
         </div>
     </section>
 
-    <!-- Problems Section -->
-    <section id="problems" class="problems-section">
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits-section">
         <div class="container">
-            <h2>Are You Struggling With These Common Health Issues?</h2>
-            <p class="section-subtitle">You're not alone. Millions of people experience these problems daily, often without realizing that the solution starts with delicious, nutrient-dense food.</p>
+            <h2>Transform Your Health With Every Delicious Bite</h2>
+            <p class="section-subtitle">Our cookbook is packed with recipes specifically designed to help you achieve your health goals while enjoying every meal.</p>
             
-            <div class="problems-grid">
-                <div class="problem-card">
-                    <i class="fas fa-tired"></i>
-                    <h3>Constant Fatigue & Low Energy</h3>
-                    <p>Do you rely on caffeine just to get through the day? The wrong foods can drain your energy, while the right ones can fuel you naturally.</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>High-Protein Recipes</h3>
+                    <p>Build and maintain lean muscle with our protein-packed meals that keep you full and satisfied for hours.</p>
                 </div>
-                <div class="problem-card">
+                <div class="benefit-card">
                     <i class="fas fa-weight"></i>
-                    <h3>Stubborn Weight That Won't Budge</h3>
-                    <p>Despite trying various diets, the scale doesn't move. The problem isn't willpower - it's eating the wrong combinations of foods.</p>
+                    <h3>Natural Weight Loss Support</h3>
+                    <p>Lose weight effortlessly with recipes designed to boost metabolism and reduce cravings naturally.</p>
                 </div>
-                <div class="problem-card">
-                    <i class="fas fa-bloat"></i>
-                    <h3>Digestive Issues & Bloating</h3>
-                    <p>Feeling uncomfortable after meals isn't normal. Specific foods and preparation methods can calm your digestive system.</p>
+                <div class="benefit-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Better Health & Vitality</h3>
+                    <p>Improve your overall wellbeing with nutrient-dense meals that support heart health and boost energy.</p>
                 </div>
-                <div class="problem-card">
+                <div class="benefit-card">
                     <i class="fas fa-brain"></i>
-                    <h3>Brain Fog & Poor Concentration</h3>
-                    <p>Struggling to focus? What you eat directly impacts cognitive function, memory, and mental clarity.</p>
+                    <h3>Enhanced Mental Clarity</h3>
+                    <p>Fuel your brain with the right nutrients to improve focus, memory, and cognitive performance.</p>
                 </div>
-                <div class="problem-card">
-                    <i class="fas fa-cravings"></i>
-                    <h3>Uncontrollable Food Cravings</h3>
-                    <p>Constant cravings for sugar and carbs aren't a lack of discipline - they're your body's response to nutritional deficiencies.</p>
+                <div class="benefit-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Sustainable Healthy Living</h3>
+                    <p>Create lasting healthy habits with delicious recipes that make nutritious eating enjoyable and sustainable.</p>
                 </div>
-                <div class="problem-card">
-                    <i class="fas fa-time"></i>
-                    <h3>No Time For Complicated Recipes</h3>
-                    <p>You want to eat healthier but don't have hours to spend in the kitchen. You need quick, simple solutions.</p>
+                <div class="benefit-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Quick & Easy Preparation</h3>
+                    <p>Most recipes take 30 minutes or less, making healthy eating achievable even on your busiest days.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section id="benefits" class="benefits-section">
+    <!-- Features Section -->
+    <section id="features" class="features-section">
         <div class="container">
-            <h2>How NutriBalance Transforms Your Health</h2>
-            <p class="section-subtitle">This isn't just another recipe collection. It's a science-based approach to eating that addresses the root causes of low energy and poor health through delicious meals.</p>
+            <h2>What Makes Our Cookbook Special</h2>
+            <p class="section-subtitle">We've created more than just a recipe collection - it's a complete system for healthy, delicious eating.</p>
             
-            <div class="benefits-container">
-                <div class="benefits-content">
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <i class="fas fa-bolt"></i>
+            <div class="features-container">
+                <div class="features-content">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-utensils"></i>
                         </div>
                         <div>
-                            <h3>Sustainable Energy All Day</h3>
-                            <p>Our recipes balance macronutrients to prevent energy crashes and provide steady fuel for your body and brain.</p>
+                            <h3>Restaurant-Quality Flavors</h3>
+                            <p>Every recipe is crafted to deliver exceptional taste while maintaining optimal nutritional value.</p>
                         </div>
                     </div>
                     
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <i class="fas fa-fire"></i>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-apple-alt"></i>
                         </div>
                         <div>
-                            <h3>Natural Weight Management</h3>
-                            <p>By focusing on nutrient density and satiety, these recipes help your body naturally reach its healthy weight.</p>
+                            <h3>Science-Backed Nutrition</h3>
+                            <p>Each meal is carefully balanced with the right mix of proteins, carbs, and healthy fats for maximum benefit.</p>
                         </div>
                     </div>
                     
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <i class="fas fa-digestion"></i>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shopping-basket"></i>
                         </div>
                         <div>
-                            <h3>Improved Digestion</h3>
-                            <p>Say goodbye to bloating and discomfort with recipes designed to support gut health and reduce inflammation.</p>
+                            <h3>Accessible Ingredients</h3>
+                            <p>All recipes use common, affordable ingredients you can find at any local grocery store.</p>
                         </div>
                     </div>
                     
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <i class="fas fa-brain"></i>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
                         </div>
                         <div>
-                            <h3>Enhanced Mental Clarity</h3>
-                            <p>Specific nutrients in our recipes support brain function, improving focus, memory, and cognitive performance.</p>
+                            <h3>Family-Friendly Meals</h3>
+                            <p>These recipes are so delicious that even picky eaters will ask for seconds.</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="benefits-image">
+                <div class="features-image">
                     <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Homemade chicken and vegetable meal">
                 </div>
             </div>
@@ -961,8 +962,8 @@
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#problems">Common Problems</a></li>
-                        <li><a href="#benefits">Health Benefits</a></li>
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#features">Features</a></li>
                         <li><a href="#recipes">Recipe Samples</a></li>
                         <li><a href="#cookbook">The Cookbook</a></li>
                         <li><a href="#testimonials">Success Stories</a></li>
