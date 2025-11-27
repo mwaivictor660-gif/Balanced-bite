@@ -1,666 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ultimate 50-Recipe Cookbook | Premium Digital Recipes</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --gold: #D4AF37;
-            --gold-light: #F4E4A6;
-            --deep-black: #1A1A1A;
-            --cream: #F8F5F0;
-            --red: #A52A2A;
-            --gray: #5D5D5D;
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--deep-black);
-            background-color: var(--cream);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4, h5 {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        section {
-            padding: 100px 0;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: var(--gold);
-            color: var(--deep-black);
-            padding: 18px 40px;
-            border-radius: 2px;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-family: 'Inter', sans-serif;
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
-        }
-        
-        .btn:hover {
-            background: var(--gold-light);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
-        }
-        
-        .btn-large {
-            font-size: 1.2rem;
-            padding: 20px 50px;
-        }
-        
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.7)), url('https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-        
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding-top: 60px;
-        }
-        
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 2rem;
-            color: white;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-        }
-        
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 3rem;
-            font-weight: 300;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* What's Inside Section */
-        .whats-inside {
-            background-color: white;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 4rem;
-            position: relative;
-            color: var(--deep-black);
-        }
-        
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 2px;
-            background: var(--gold);
-            margin: 20px auto;
-        }
-        
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-        
-        .benefit-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 3px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .benefit-card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--gold);
-        }
-        
-        .benefit-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .benefit-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: var(--gold);
-        }
-        
-        .benefit-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: var(--deep-black);
-        }
-        
-        .benefit-card p {
-            color: var(--gray);
-            font-size: 1.1rem;
-        }
-        
-        /* Why Special Section */
-        .why-special {
-            background: linear-gradient(rgba(248, 245, 240, 0.9), rgba(248, 245, 240, 0.9)), url('https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-        }
-        
-        .special-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        
-        .special-text {
-            padding-right: 20px;
-        }
-        
-        .special-image {
-            border-radius: 3px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-        
-        .special-image:before {
-            content: '';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            right: -20px;
-            bottom: -20px;
-            border: 2px solid var(--gold);
-            z-index: -1;
-            border-radius: 3px;
-        }
-        
-        .special-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: var(--transition);
-        }
-        
-        .special-image:hover img {
-            transform: scale(1.05);
-        }
-        
-        .special-text h2 {
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            color: var(--deep-black);
-        }
-        
-        .special-text p {
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-            color: var(--gray);
-        }
-        
-        /* Story Section */
-        .story {
-            background: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 150px 0;
-        }
-        
-        .story h2 {
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            color: white;
-        }
-        
-        .story p {
-            font-size: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            font-weight: 300;
-            font-style: italic;
-        }
-        
-        /* Bonus Section */
-        .bonus {
-            background-color: white;
-            text-align: center;
-        }
-        
-        .bonus-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .bonus h2 {
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            color: var(--deep-black);
-        }
-        
-        .bonus p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            color: var(--gray);
-        }
-        
-        .bonus-features {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
-        
-        .bonus-feature {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 200px;
-        }
-        
-        .bonus-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--gold);
-        }
-        
-        .bonus-feature h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Testimonials Section */
-        .testimonials {
-            background: var(--cream);
-        }
-        
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-        
-        .testimonial-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 3px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            position: relative;
-        }
-        
-        .testimonial-card:before {
-            content: """;
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 5rem;
-            color: var(--gold-light);
-            font-family: Georgia, serif;
-            line-height: 1;
-        }
-        
-        .stars {
-            color: var(--gold);
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            color: var(--gray);
-            font-size: 1.1rem;
-        }
-        
-        .testimonial-author {
-            font-weight: 500;
-            color: var(--deep-black);
-        }
-        
-        /* Final CTA Section */
-        .final-cta {
-            background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), url('https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 150px 0;
-        }
-        
-        .final-cta h2 {
-            font-size: 3.5rem;
-            margin-bottom: 2rem;
-            color: white;
-        }
-        
-        .final-cta p {
-            font-size: 1.5rem;
-            margin-bottom: 3rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 300;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--deep-black);
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 1100px) {
-            .hero h1 {
-                font-size: 3.2rem;
-            }
-            
-            .special-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .special-text {
-                padding-right: 0;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            section {
-                padding: 80px 0;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.2rem;
-            }
-            
-            .section-title {
-                font-size: 2.5rem;
-            }
-            
-            .special-text h2, .story h2, .bonus h2, .final-cta h2 {
-                font-size: 2.5rem;
-            }
-            
-            .btn-large {
-                font-size: 1.1rem;
-                padding: 18px 40px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .bonus-features {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthy Meals • Strong Bodies • Smart Cooking</title>
+<meta name="description" content="Discover balanced recipes — weight-management meals, high-protein dinners, and delicious healthy dishes for every lifestyle. Get the full cookbook today!">
+<style>
+    :root {
+        --primary:#6ec07d;
+        --accent:#ff6347;
+        --bg:#f7f7f7;
+        --card:#ffffff;
+        --muted:#555;
+        --radius:16px;
+        --shadow:0 8px 30px rgba(16,24,40,0.08);
+    }
+
+    body{
+        margin:0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: var(--bg);
+        color: #222;
+        scroll-behavior: smooth;
+    }
+    header{
+        background: linear-gradient(135deg, #f4faf6, #e0f1ea);
+        padding: 60px 20px;
+        text-align: center;
+    }
+    header h1{
+        font-size: 38px;
+        margin-bottom: 12px;
+    }
+    header p{
+        font-size: 18px;
+        color: var(--muted);
+        margin-bottom: 25px;
+    }
+    .cta-btn{
+        background: var(--accent);
+        color:white;
+        text-decoration:none;
+        font-size: 20px;
+        padding: 18px 30px;
+        border-radius: 12px;
+        font-weight: bold;
+        display: inline-block;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta-btn:hover{
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    section{
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 0 20px;
+    }
+    .section-title{
+        font-size: 30px;
+        text-align:center;
+        margin-bottom: 20px;
+        color:#333;
+    }
+    .benefits, .features, .recipes, .testimonials{
+        display: grid;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+    .benefits{
+        grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    }
+    .benefit-card{
+        background: var(--card);
+        padding:20px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        text-align: center;
+    }
+    .benefit-card h4{
+        margin: 10px 0 8px 0;
+        color: var(--primary);
+    }
+    .benefit-card p{
+        font-size: 15px;
+        color: var(--muted);
+    }
+
+    .features{
+        grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    }
+    .feature-card{
+        background: var(--card);
+        padding:20px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+    }
+    .feature-card h4{
+        color: var(--primary);
+        margin-bottom: 8px;
+    }
+    .feature-card p{
+        color: var(--muted);
+    }
+
+    .recipes{
+        grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    }
+    .recipe-card{
+        background: var(--card);
+        border-radius: var(--radius);
+        overflow:hidden;
+        box-shadow: var(--shadow);
+        transition: transform 0.2s ease;
+    }
+    .recipe-card:hover{
+        transform: translateY(-5px);
+    }
+    .recipe-card img{
+        width:100%;
+        display:block;
+    }
+    .recipe-card h4{
+        margin:12px;
+        color: var(--primary);
+    }
+    .recipe-card p{
+        margin: 0 12px 12px 12px;
+        color: var(--muted);
+        font-size:14px;
+    }
+
+    .price-box{
+        text-align:center;
+        background: var(--card);
+        padding: 30px 20px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        margin: 40px 0;
+    }
+    .price-box h2{
+        font-size: 36px;
+        color: var(--accent);
+        margin: 15px 0;
+    }
+    .price-box p{
+        color: var(--muted);
+        font-size:16px;
+    }
+
+    .testimonials{
+        grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    }
+    .testimonial-card{
+        background: var(--card);
+        padding:20px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        font-size: 15px;
+        color: var(--muted);
+    }
+    .testimonial-card strong{
+        display:block;
+        margin-bottom:6px;
+        color: var(--primary);
+    }
+
+    footer{
+        text-align:center;
+        padding:25px 20px;
+        color: var(--muted);
+        font-size:14px;
+    }
+
+    @media(max-width:600px){
+        header h1{font-size:28px;}
+        header p{font-size:16px;}
+        .cta-btn{font-size:18px;padding:16px 25px;}
+        .section-title{font-size:24px;}
+    }
+</style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content fade-in">
-                <h1>The Ultimate 50-Recipe Cookbook for People Who Love Real Food</h1>
-                <p>Level up your cooking with bold flavors, juicy meals, and simple step-by-step recipes you can make any day of the week.</p>
-                <a href="https://howtocooksmarter.gumroad.com/l/cookbook?a=96709779" class="btn btn-large">Download Your Cookbook</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- What's Inside Section -->
-    <section class="whats-inside">
-        <div class="container">
-            <h2 class="section-title fade-in">What's Inside</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon"><i class="fas fa-utensils"></i></div>
-                    <h3>Gourmet Made Easy</h3>
-                    <p>Restaurant-quality meals with simple ingredients</p>
-                </div>
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon"><i class="fas fa-book-open"></i></div>
-                    <h3>50 Real Recipes</h3>
-                    <p>Breakfast, lunch, dinner, soups, meats, pastas, desserts</p>
-                </div>
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon"><i class="fas fa-clock"></i></div>
-                    <h3>Fast & Flavorful</h3>
-                    <p>Many recipes ready in under 30 minutes</p>
-                </div>
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon"><i class="fas fa-user-friends"></i></div>
-                    <h3>Beginner-Friendly</h3>
-                    <p>Easy steps, no special skills required</p>
-                </div>
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon"><i class="fas fa-palette"></i></div>
-                    <h3>Beautiful Layout</h3>
-                    <p>Clean, modern ebook design</p>
-                </div>
-                <div class="benefit-card fade-in">
-                    <div class="benefit-icon"><i class="fas fa-download"></i></div>
-                    <h3>Instant Download</h3>
-                    <p>Access on any device immediately</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<header>
+    <h1>Healthy Meals • Strong Bodies • Smart Cooking</h1>
+    <p>Discover balanced recipes — weight-management meals, high-protein dinners, and delicious healthy dishes for every lifestyle.</p>
+    <a href="https://howtocooksmarter.gumroad.com/l/cookbook?a=96709779" class="cta-btn">Get the Complete Cookbook</a>
+</header>
 
-    <!-- Why Special Section -->
-    <section class="why-special">
-        <div class="container">
-            <div class="special-content">
-                <div class="special-text fade-in">
-                    <h2>Not Just Recipes — A Whole New Cooking Experience</h2>
-                    <p>This cookbook brings you modern flavors that excite the palate while remaining accessible for home cooks of all levels.</p>
-                    <p>Every recipe is accompanied by beautiful food photography that inspires and guides you through the cooking process.</p>
-                    <p>We've designed these meals to boost your confidence in the kitchen and create dishes that will impress family, guests, or that special someone.</p>
-                    <a href="https://howtocooksmarter.gumroad.com/l/cookbook?a=96709779" class="btn">Explore the Recipes</a>
-                </div>
-                <div class="special-image fade-in">
-                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Beautifully plated gourmet meal">
-                </div>
-            </div>
+<section>
+    <h2 class="section-title">Why Eat Healthy & Balanced Meals</h2>
+    <div class="benefits">
+        <div class="benefit-card">
+            <h4>Boost Metabolism</h4>
+            <p>Fuel your body with protein-rich meals that increase energy and support fat-burning.</p>
         </div>
-    </section>
-
-    <!-- Story Section -->
-    <section class="story">
-        <div class="container">
-            <h2 class="fade-in">A New Way to Cook</h2>
-            <p class="fade-in">Imagine opening your cookbook and instantly knowing what to cook tonight.</p>
-            <p class="fade-in">No stress. No guessing. Just delicious, exciting meals that make you feel proud.</p>
+        <div class="benefit-card">
+            <h4>Support Muscle & Strength</h4>
+            <p>High-protein meals to keep you strong while managing weight and maintaining lean mass.</p>
         </div>
-    </section>
-
-    <!-- Bonus Section -->
-    <section class="bonus">
-        <div class="container">
-            <div class="bonus-content">
-                <h2 class="fade-in">Special Bonuses Included</h2>
-                <p class="fade-in">When you get the cookbook today, you'll also receive these exclusive bonuses:</p>
-                
-                <div class="bonus-features">
-                    <div class="bonus-feature fade-in">
-                        <div class="bonus-icon"><i class="fas fa-list-alt"></i></div>
-                        <h3>Smart Shopping List</h3>
-                        <p>Printable PDF organized by category</p>
-                    </div>
-                    <div class="bonus-feature fade-in">
-                        <div class="bonus-icon"><i class="fas fa-bolt"></i></div>
-                        <h3>Quick Meal Guide</h3>
-                        <p>15-minute meal ideas for busy days</p>
-                    </div>
-                    <div class="bonus-feature fade-in">
-                        <div class="bonus-icon"><i class="fas fa-infinity"></i></div>
-                        <h3>Lifetime Access</h3>
-                        <p>All future updates included free</p>
-                    </div>
-                </div>
-                
-                <a href="https://howtocooksmarter.gumroad.com/l/cookbook?a=96709779" class="btn btn-large fade-in">Get Cookbook + Bonuses</a>
-            </div>
+        <div class="benefit-card">
+            <h4>Manage Weight Easily</h4>
+            <p>Balanced meals to help you control portions, reduce cravings, and maintain healthy weight.</p>
         </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title fade-in">What Cooks Are Saying</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card fade-in">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"The steak recipe alone was worth the price! I made it for date night and my partner said it was better than any restaurant. The instructions were so clear and easy to follow."</p>
-                    <p class="testimonial-author">- Michael T.</p>
-                </div>
-                <div class="testimonial-card fade-in">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"As a busy mom, I love how many recipes take 30 minutes or less. The creamy garlic pasta has become a family favorite that I make at least once a week. So delicious!"</p>
-                    <p class="testimonial-author">- Sarah J.</p>
-                </div>
-                <div class="testimonial-card fade-in">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"I've always been intimidated by cooking, but this book made it so approachable. The photos are stunning and the step-by-step instructions gave me the confidence to try new techniques."</p>
-                    <p class="testimonial-author">- David L.</p>
-                </div>
-            </div>
+        <div class="benefit-card">
+            <h4>Eat Delicious Food</h4>
+            <p>Tasty recipes that make healthy eating enjoyable without feeling restricted.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Final CTA Section -->
-    <section class="final-cta">
-        <div class="container">
-            <h2 class="fade-in">Get Instant Access to All 50 Recipes</h2>
-            <p class="fade-in">Transform your cooking today with our premium digital cookbook, beautiful bonuses, and lifetime updates.</p>
-            <a href="https://howtocooksmarter.gumroad.com/l/cookbook?a=96709779" class="btn btn-large fade-in">Download Now</a>
+<section>
+    <h2 class="section-title">What’s Inside The Cookbook</h2>
+    <div class="features">
+        <div class="feature-card">
+            <h4>High-Protein Recipes</h4>
+            <p>Meals designed to keep you full and support weight management.</p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 How To Cook Smarter. All rights reserved.</p>
+        <div class="feature-card">
+            <h4>Healthy Dinner Ideas</h4>
+            <p>Quick, balanced, and satisfying dinners for busy weeknights.</p>
         </div>
-    </footer>
+        <div class="feature-card">
+            <h4>Meal Prep Plans</h4>
+            <p>Organized weekly meal plans to save time and simplify cooking.</p>
+        </div>
+        <div class="feature-card">
+            <h4>Nutrition Guidance</h4>
+            <p>Portion control, macros, and tips for a sustainable healthy lifestyle.</p>
+        </div>
+    </div>
+</section>
 
-    <script>
-        // Fade in animation on scroll
-        document.addEventListener('DOMContentLoaded', function() {
-            const fadeElements = document.querySelectorAll('.fade-in');
-            
-            const fadeInOnScroll = function() {
-                fadeElements.forEach(element => {
-                    const elementTop = element.getBoundingClientRect().top;
-                    const elementVisible = 150;
-                    
-                    if (elementTop < window.innerHeight - elementVisible) {
-                        element.classList.add('visible');
-                    }
-                });
-            };
-            
-            // Check on load
-            fadeInOnScroll();
-            
-            // Check on scroll
-            window.addEventListener('scroll', fadeInOnScroll);
-        });
-    </script>
+<section>
+    <h2 class="section-title">Sample Recipes</h2>
+    <div class="recipes">
+        <div class="recipe-card">
+            <img src="https://via.placeholder.com/400x250?text=Protein+Chicken+Stir+Fry" alt="Protein Chicken Stir Fry">
+            <h4>Protein-Packed Chicken Stir Fry</h4>
+            <p>Quick & tasty high-protein stir fry for a filling dinner under 20 minutes.</p>
+        </div>
+        <div class="recipe-card">
+            <img src="https://via.placeholder.com/400x250?text=Quinoa+Avocado+Salad" alt="Quinoa Avocado Salad">
+            <h4>Quinoa & Avocado Salad</h4>
+            <p>Refreshing, high-protein salad perfect for lunch or light dinner.</p>
+        </div>
+        <div class="recipe-card">
+            <img src="https://via.placeholder.com/400x250?text=Hearty+Lentil+Stew" alt="Hearty Lentil Stew">
+            <h4>Hearty Lentil Stew</h4>
+            <p>Comforting plant-based meal rich in protein, fiber, and nutrients.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="price-box">
+        <p>Instant Digital Download</p>
+        <h2>$15</h2>
+        <a href="https://howtocooksmarter.gumroad.com/l/cookbook?a=96709779" class="cta-btn">Get the Cookbook Now</a>
+        <p>Start cooking tonight • 30-day refund guarantee</p>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Why People Love This Cookbook</h2>
+    <div class="testimonials">
+        <div class="testimonial-card">
+            <strong>Sarah M.</strong>
+            <p>"The recipes are easy to follow and taste amazing. I’m eating healthier and loving it!"</p>
+        </div>
+        <div class="testimonial-card">
+            <strong>James L.</strong>
+            <p>"High-protein meals keep me full and energized throughout the day. Great for weight management!"</p>
+        </div>
+        <div class="testimonial-card">
+            <strong>Emily R.</strong>
+            <p>"Finally a cookbook that works with my busy schedule. So simple to meal prep." </p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    &copy; <span id="year"></span> Healthy Meals • Strong Bodies • Smart Cooking | <a href="#" style="color: var(--muted)">Privacy Policy</a> | <a href="#" style="color: var(--muted)">Terms & Conditions</a>
+</footer>
+
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
