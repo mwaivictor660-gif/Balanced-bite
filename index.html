@@ -3,437 +3,943 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthy Cooking Made Simple | Premium Cookbook</title>
+    <title>NutriBalance - Delicious Recipes for Energy & Weight Loss</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Base Styles */
         :root {
+            --primary: #2e7d32;
+            --primary-light: #4caf50;
+            --primary-dark: #1b5e20;
+            --secondary: #ff9800;
+            --accent: #ff5722;
+            --text-dark: #333;
+            --text-light: #666;
+            --background: #f9f9f9;
             --white: #ffffff;
-            --light-beige: #f9f7f4;
-            --pastel-green: #e8f5e8;
-            --pastel-blue: #e8f2f8;
-            --accent-orange: #ff9f68;
-            --text-dark: #2d3748;
-            --text-light: #718096;
-            --shadow: rgba(0, 0, 0, 0.08);
-            --shadow-hover: rgba(0, 0, 0, 0.12);
+            --light-gray: #f5f5f5;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --radius: 8px;
         }
-
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+            background-color: var(--background);
             color: var(--text-dark);
-            background-color: var(--white);
             line-height: 1.6;
-            overflow-x: hidden;
         }
-
+        
         .container {
+            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
         }
-
+        
         section {
             padding: 5rem 0;
         }
-
-        h1, h2, h3 {
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+            line-height: 1.3;
         }
-
+        
         h1 {
-            font-size: 3.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        h2 {
             font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
             text-align: center;
         }
-
+        
         h3 {
             font-size: 1.5rem;
         }
-
+        
         p {
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+            margin-bottom: 1rem;
         }
-
-        .btn {
+        
+        .section-subtitle {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+        
+        /* Buttons */
+        .cta-button {
             display: inline-block;
-            padding: 1.2rem 3rem;
-            background: var(--accent-orange);
+            background-color: var(--accent);
             color: white;
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
             text-decoration: none;
-            border-radius: 8px;
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(255, 159, 104, 0.3);
+            box-shadow: var(--shadow);
+            text-align: center;
         }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 159, 104, 0.4);
+        
+        .cta-button:hover {
+            background-color: #e64a19;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                        url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80');
-            background-size: cover;
-            background-position: center;
+        
+        .secondary-button {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .secondary-button:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
             display: flex;
             align-items: center;
-            text-align: center;
-            color: white;
         }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            animation: fadeInUp 1s ease-out;
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            color: var(--primary);
         }
-
-        .hero h1 {
-            color: white;
-            margin-bottom: 1.5rem;
+        
+        .logo span {
+            color: var(--accent);
         }
-
-        .hero p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
+        
+        nav ul {
+            display: flex;
+            list-style: none;
         }
-
-        /* Benefits Section */
-        .benefits {
-            background: var(--pastel-green);
+        
+        nav ul li {
+            margin-left: 2rem;
         }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .benefit-item {
-            padding: 2.5rem;
-            background: var(--white);
-            border-radius: 12px;
-            box-shadow: 0 5px 20px var(--shadow);
-            transition: transform 0.3s ease;
-        }
-
-        .benefit-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .benefit-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Features Section */
-        .features {
-            background: var(--white);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature-item {
-            padding: 2.5rem;
-            background: var(--light-beige);
-            border-radius: 12px;
-            box-shadow: 0 5px 20px var(--shadow);
-            transition: transform 0.3s ease;
-        }
-
-        .feature-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            background: var(--pastel-blue);
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .testimonial-card {
-            padding: 2.5rem;
-            background: var(--white);
-            border-radius: 12px;
-            box-shadow: 0 5px 20px var(--shadow);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .testimonial-image {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 1.5rem;
-            border: 3px solid var(--accent-orange);
-        }
-
-        .stars {
-            color: #FFD700;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Pricing */
-        .pricing {
-            background: var(--white);
-            text-align: center;
-        }
-
-        .pricing-card {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 3rem;
-            background: var(--light-beige);
-            border-radius: 16px;
-            box-shadow: 0 20px 40px var(--shadow);
-            position: relative;
-        }
-
-        .price {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--accent-orange);
-            margin: 1.5rem 0;
-        }
-
-        .guarantee-badge {
-            position: absolute;
-            top: 20px;
-            right: -30px;
-            background: var(--pastel-green);
+        
+        nav ul li a {
+            text-decoration: none;
             color: var(--text-dark);
-            padding: 0.5rem 2rem;
-            transform: rotate(45deg);
-            font-weight: 600;
-            font-size: 0.9rem;
-            border: 2px solid var(--accent-orange);
+            font-weight: 500;
+            transition: color 0.3s;
         }
-
-        /* Footer */
-        footer {
-            background: var(--text-dark);
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 3rem 0;
+            padding: 8rem 0;
             text-align: center;
         }
-
-        .footer-links {
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+        
+        .hero-badges {
             display: flex;
             justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            background-color: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+        
+        /* Problems Section */
+        .problems-section {
+            background-color: var(--white);
+        }
+        
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .problem-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--primary);
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .problem-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            background-color: var(--light-gray);
+        }
+        
+        .benefits-container {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+        
+        .benefits-content {
+            flex: 1;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+        
+        .benefit-icon {
+            background-color: var(--primary-light);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .benefits-image {
+            flex: 1;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .benefits-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Recipe Showcase */
+        .recipes-section {
+            background-color: var(--white);
+        }
+        
+        .recipes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .recipe-card {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+        
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .recipe-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .recipe-content {
+            padding: 1.5rem;
+            background-color: white;
+        }
+        
+        .recipe-content h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .recipe-tag {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Cookbook Section */
+        .cookbook-section {
+            background-color: var(--light-gray);
+            text-align: center;
+        }
+        
+        .cookbook-container {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            margin-top: 3rem;
+            text-align: left;
+        }
+        
+        .cookbook-image {
+            flex: 1;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .cookbook-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .cookbook-content {
+            flex: 1;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin: 1.5rem 0;
+        }
+        
+        .price .original {
+            font-size: 1.5rem;
+            text-decoration: line-through;
+            color: var(--text-light);
+            margin-right: 0.5rem;
+        }
+        
+        .features-list {
+            list-style: none;
             margin: 2rem 0;
         }
-
-        .footer-links a {
+        
+        .features-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .features-list li i {
+            color: var(--primary);
+            margin-right: 1rem;
+        }
+        
+        /* Testimonials */
+        .testimonials-section {
+            background-color: var(--white);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .testimonial-card:before {
+            content: """;
+            font-size: 5rem;
+            color: var(--primary-light);
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            opacity: 0.2;
+            font-family: Georgia, serif;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-light);
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* Guarantee Section */
+        .guarantee-section {
+            background-color: var(--primary-dark);
+            color: white;
+            text-align: center;
+        }
+        
+        .guarantee-section h2 {
+            color: white;
+        }
+        
+        .guarantee-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .guarantee-badge {
+            background-color: var(--accent);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--light-gray);
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1.5rem;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+        
+        .faq-answer {
+            display: none;
+            padding-top: 0.5rem;
+            color: var(--text-light);
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
             color: white;
             text-decoration: none;
+            background-color: rgba(255,255,255,0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
         }
-
+        
+        .social-links a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
         .copyright {
-            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Responsive */
+        
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .benefits-grid,
-            .features-grid,
-            .testimonial-grid {
-                grid-template-columns: 1fr;
+            .header-container {
+                flex-direction: column;
+                text-align: center;
             }
             
-            h1 {
-                font-size: 2.5rem;
+            nav ul {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
             }
             
-            h2 {
-                font-size: 2rem;
+            nav ul li {
+                margin: 0.5rem;
             }
             
-            .hero {
-                height: 80vh;
+            .benefits-container, .cookbook-container {
+                flex-direction: column;
             }
             
-            .guarantee-badge {
-                position: static;
-                transform: none;
-                margin-bottom: 1rem;
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            section {
+                padding: 3rem 0;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Nutri<span>Balance</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#problems">Problems</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="#cookbook">Cookbook</a></li>
+                    <li><a href="#testimonials">Results</a></li>
+                    <li><a href="#guarantee">Guarantee</a></li>
+                </ul>
+            </nav>
+            <a href="https://alexiskennedy.gumroad.com/l/ETOliT?a=96709779" class="cta-button">Get Your Cookbook Now</a>
+        </div>
+    </header>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Healthy Cooking Made Simple</h1>
-                <p>Discover delicious, nutrient-packed recipes that transform your relationship with food and support your wellness journey</p>
-                <a href="https://howtocooksmarter.gumroad.com/l/cookbook?a=96709779" class="btn" target="_blank">Get the Cookbook - $15</a>
+            <h1>Delicious Food That Fuels Your Body & Transforms Your Health</h1>
+            <p>Discover 50 mouthwatering recipes scientifically designed to boost energy, support weight loss, and improve digestion - without sacrificing flavor.</p>
+            <a href="https://alexiskennedy.gumroad.com/l/ETOliT?a=96709779" class="cta-button">Get The Energy-Boosting Cookbook - $9.99</a>
+            
+            <div class="hero-badges">
+                <div class="badge"><i class="fas fa-check-circle"></i> 50 Delicious, Science-Backed Recipes</div>
+                <div class="badge"><i class="fas fa-check-circle"></i> 30-Day Money Back Guarantee</div>
+                <div class="badge"><i class="fas fa-check-circle"></i> Instant Digital Download</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section id="problems" class="problems-section">
+        <div class="container">
+            <h2>Are You Struggling With These Common Health Issues?</h2>
+            <p class="section-subtitle">You're not alone. Millions of people experience these problems daily, often without realizing that the solution starts with delicious, nutrient-dense food.</p>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <i class="fas fa-tired"></i>
+                    <h3>Constant Fatigue & Low Energy</h3>
+                    <p>Do you rely on caffeine just to get through the day? The wrong foods can drain your energy, while the right ones can fuel you naturally.</p>
+                </div>
+                <div class="problem-card">
+                    <i class="fas fa-weight"></i>
+                    <h3>Stubborn Weight That Won't Budge</h3>
+                    <p>Despite trying various diets, the scale doesn't move. The problem isn't willpower - it's eating the wrong combinations of foods.</p>
+                </div>
+                <div class="problem-card">
+                    <i class="fas fa-bloat"></i>
+                    <h3>Digestive Issues & Bloating</h3>
+                    <p>Feeling uncomfortable after meals isn't normal. Specific foods and preparation methods can calm your digestive system.</p>
+                </div>
+                <div class="problem-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Brain Fog & Poor Concentration</h3>
+                    <p>Struggling to focus? What you eat directly impacts cognitive function, memory, and mental clarity.</p>
+                </div>
+                <div class="problem-card">
+                    <i class="fas fa-cravings"></i>
+                    <h3>Uncontrollable Food Cravings</h3>
+                    <p>Constant cravings for sugar and carbs aren't a lack of discipline - they're your body's response to nutritional deficiencies.</p>
+                </div>
+                <div class="problem-card">
+                    <i class="fas fa-time"></i>
+                    <h3>No Time For Complicated Recipes</h3>
+                    <p>You want to eat healthier but don't have hours to spend in the kitchen. You need quick, simple solutions.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Benefits Section -->
-    <section class="benefits">
+    <section id="benefits" class="benefits-section">
         <div class="container">
-            <h2>Why Eat Healthy & Balanced Meals</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item fade-in">
-                    <div class="benefit-icon">⚡</div>
-                    <h3>Boost Your Metabolism</h3>
-                    <p>Nutrient-dense meals provide sustained energy throughout the day, helping your body burn calories more efficiently without energy crashes.</p>
+            <h2>How NutriBalance Transforms Your Health</h2>
+            <p class="section-subtitle">This isn't just another recipe collection. It's a science-based approach to eating that addresses the root causes of low energy and poor health through delicious meals.</p>
+            
+            <div class="benefits-container">
+                <div class="benefits-content">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h3>Sustainable Energy All Day</h3>
+                            <p>Our recipes balance macronutrients to prevent energy crashes and provide steady fuel for your body and brain.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div>
+                            <h3>Natural Weight Management</h3>
+                            <p>By focusing on nutrient density and satiety, these recipes help your body naturally reach its healthy weight.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-digestion"></i>
+                        </div>
+                        <div>
+                            <h3>Improved Digestion</h3>
+                            <p>Say goodbye to bloating and discomfort with recipes designed to support gut health and reduce inflammation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div>
+                            <h3>Enhanced Mental Clarity</h3>
+                            <p>Specific nutrients in our recipes support brain function, improving focus, memory, and cognitive performance.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="benefit-item fade-in">
-                    <div class="benefit-icon">💪</div>
-                    <h3>Support Muscle Health</h3>
-                    <p>High-quality proteins in balanced meals help build and maintain lean muscle mass, supporting strength and mobility at any age.</p>
-                </div>
-                <div class="benefit-item fade-in">
-                    <div class="benefit-icon">⚖️</div>
-                    <h3>Manage Weight Naturally</h3>
-                    <p>Whole foods and proper portions help regulate appetite and maintain healthy weight without restrictive dieting or calorie counting.</p>
-                </div>
-                <div class="benefit-item fade-in">
-                    <div class="benefit-icon">😋</div>
-                    <h3>Enjoy Delicious Food</h3>
-                    <p>Healthy eating doesn't mean bland food. Discover flavorful recipes that satisfy cravings while nourishing your body.</p>
+                
+                <div class="benefits-image">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Homemade chicken and vegetable meal">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
+    <!-- Recipe Showcase -->
+    <section id="recipes" class="recipes-section">
         <div class="container">
-            <h2>What's Inside The Cookbook</h2>
-            <div class="features-grid">
-                <div class="feature-item fade-in">
-                    <div class="feature-icon">🥗</div>
-                    <h3>High-Protein Recipes</h3>
-                    <p>50 delicious protein-packed meals designed to keep you full, support muscle health, and boost metabolism throughout the day.</p>
+            <h2>A Taste of Our Delicious, Health-Boosting Recipes</h2>
+            <p class="section-subtitle">These aren't bland "diet" foods. Our recipes are carefully crafted to be both incredibly delicious and scientifically optimized for health.</p>
+            
+            <div class="recipes-grid">
+                <div class="recipe-card">
+                    <div class="recipe-image" style="background-image: url('https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80');"></div>
+                    <div class="recipe-content">
+                        <h3>Decadent Chocolate Avocado Mousse</h3>
+                        <p>Rich, creamy dessert that satisfies chocolate cravings without guilt.</p>
+                        <span class="recipe-tag">Healthy Dessert</span>
+                    </div>
                 </div>
-                <div class="feature-item fade-in">
-                    <div class="feature-icon">🍽️</div>
-                    <h3>Healthy Dinner Ideas</h3>
-                    <p>Family-friendly dinner recipes that are both nutritious and delicious, perfect for busy weeknights and special occasions.</p>
+                
+                <div class="recipe-card">
+                    <div class="recipe-image" style="background-image: url('https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80');"></div>
+                    <div class="recipe-content">
+                        <h3>Crispy Parmesan Chicken</h3>
+                        <p>Golden, crispy chicken with a savory parmesan crust that everyone loves.</p>
+                        <span class="recipe-tag">Family Favorite</span>
+                    </div>
                 </div>
-                <div class="feature-item fade-in">
-                    <div class="feature-icon">⏱️</div>
-                    <h3>Meal Prep Plans</h3>
-                    <p>Time-saving weekly meal prep strategies with shopping lists and preparation guides to make healthy eating effortless.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cookbook Section -->
+    <section id="cookbook" class="cookbook-section">
+        <div class="container">
+            <h2>The NutriBalance Cookbook</h2>
+            <p class="section-subtitle">Your complete guide to eating for energy, vitality, and optimal health - with 50 delicious recipes that your whole family will love.</p>
+            
+            <div class="cookbook-container">
+                <div class="cookbook-image">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Delicious homemade food">
                 </div>
-                <div class="feature-item fade-in">
-                    <div class="feature-icon">📊</div>
-                    <h3>Nutritional Guidance</h3>
-                    <p>Clear portion sizes, macronutrient breakdowns, and substitution options for various dietary needs and preferences.</p>
+                
+                <div class="cookbook-content">
+                    <h3>What You Get In This Life-Changing Cookbook:</h3>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> <strong>50 Delicious, Science-Backed Recipes</strong> designed to boost energy and improve health</li>
+                        <li><i class="fas fa-check"></i> <strong>Quick & Easy Meals</strong> - Most recipes take 30 minutes or less</li>
+                        <li><i class="fas fa-check"></i> <strong>Energy-Boosting Breakfasts</strong> to start your day right</li>
+                        <li><i class="fas fa-check"></i> <strong>Lunch Recipes That Prevent Afternoon Slumps</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>Dinners That Support Restorative Sleep</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>Healthy Snacks To Beat Cravings</strong></li>
+                        <li><i class="fas fa-check"></i> <strong>Nutritional Information</strong> for every recipe</li>
+                        <li><i class="fas fa-check"></i> <strong>Weekly Meal Plans</strong> for effortless healthy eating</li>
+                        <li><i class="fas fa-check"></i> <strong>Shopping Lists</strong> to save time and money</li>
+                        <li><i class="fas fa-check"></i> <strong>Food Preparation Guides</strong> to maximize your time</li>
+                    </ul>
+                    
+                    <div class="price">
+                        <span class="original">$15.00</span> $9.99
+                    </div>
+                    
+                    <p><strong>Instant digital download</strong> - Get immediate access and start transforming your health today!</p>
+                    
+                    <a href="https://alexiskennedy.gumroad.com/l/ETOliT?a=96709779" class="cta-button">Get The Cookbook Now</a>
+                    
+                    <p style="margin-top: 1rem; font-size: 0.9rem;"><i class="fas fa-lock"></i> Secure checkout · 30-day money-back guarantee</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials">
+    <section id="testimonials" class="testimonials-section">
         <div class="container">
-            <h2>Why People Love This Cookbook</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Sarah Johnson" class="testimonial-image">
-                    <div class="stars">★★★★★</div>
-                    <p>"This cookbook completely changed my approach to healthy eating. The recipes are so easy to follow and my family actually enjoys eating healthy now!"</p>
-                    <p><strong>- Sarah Johnson</strong></p>
+            <h2>What Home Cooks Are Saying</h2>
+            <p class="section-subtitle">Don't just take our word for it - see how NutriBalance has transformed mealtime for people just like you.</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "I've always struggled to eat healthy because I love good food. NutriBalance changed everything! The crispy parmesan chicken is now a weekly staple in our house. My picky 7-year-old asks for seconds every time! Finally, healthy eating that doesn't feel like a compromise."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SR</div>
+                        <div>
+                            <strong>Sarah R.</strong>
+                            <div>Busy Mom, 34</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Michael Chen" class="testimonial-image">
-                    <div class="stars">★★★★★</div>
-                    <p>"As someone who never cooked before, this book made me confident in the kitchen. I've lost 12 pounds without feeling like I'm on a diet."</p>
-                    <p><strong>- Michael Chen</strong></p>
-                </div>
-                <div class="testimonial-card fade-in">
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Jessica Martinez" class="testimonial-image">
-                    <div class="stars">★★★★★</div>
-                    <p>"The meal prep section has saved me so much time and money. I'm eating healthier than ever while spending less on groceries. Worth every penny!"</p>
-                    <p><strong>- Jessica Martinez</strong></p>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "I'm a foodie who thought 'healthy' meant bland and boring. The decadent chocolate avocado mousse proved me wrong - it's absolutely divine! I've made it three times in two weeks and my friends keep asking for the recipe. This cookbook has completely changed my relationship with healthy eating."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DL</div>
+                        <div>
+                            <strong>David L.</strong>
+                            <div>Self-Proclaimed Foodie, 42</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing -->
-    <section class="pricing">
+    <!-- Guarantee Section -->
+    <section id="guarantee" class="guarantee-section">
         <div class="container">
-            <h2>Start Your Healthy Cooking Journey</h2>
-            <div class="pricing-card fade-in">
-                <div class="guarantee-badge">30-Day Guarantee</div>
-                <h3>The Complete Healthy Cooking Guide</h3>
-                <p>50 recipes, meal plans, and nutritional guidance</p>
-                <div class="price">$15</div>
-                <a href="https://howtocooksmarter.gumroad.com/l/cookbook?a=96709779" class="btn" target="_blank">Get Instant Access</a>
-                <p style="margin-top: 1rem; font-size: 0.9rem;">Instant digital download · 30-day money-back guarantee</p>
+            <div class="guarantee-content">
+                <div class="guarantee-badge">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h2>30-Day Health Transformation Guarantee</h2>
+                <p>We're so confident that NutriBalance will transform your health that we offer a full 30-day money-back guarantee.</p>
+                <p>If you don't experience more energy, better digestion, and overall improved wellbeing, simply email us for a full refund - no questions asked.</p>
+                <p style="margin-top: 2rem;"><strong>You have nothing to lose and vibrant health to gain.</strong></p>
+                <a href="https://alexiskennedy.gumroad.com/l/ETOliT?a=96709779" class="cta-button">Try It Risk-Free Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How is this different from free recipes online?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        While there are many free recipes available, the NutriBalance Cookbook provides a complete system:
+                        <ul>
+                            <li>50 recipes scientifically designed to boost energy and improve health</li>
+                            <li>Balanced meal plans that work together</li>
+                            <li>Nutritional information for every recipe</li>
+                            <li>Strategies to address specific health concerns like bloating and fatigue</li>
+                            <li>Time-saving shopping lists and prep guides</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Are the recipes actually delicious or just "healthy"?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely delicious! We've specifically designed these recipes to satisfy your taste buds while nourishing your body. Each recipe has been tested extensively to ensure it's flavorful and satisfying. These are meals your whole family will enjoy, not bland "diet food."
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Are the ingredients expensive or hard to find?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Not at all! We've specifically designed these recipes with accessible, affordable ingredients you can find at any regular grocery store. We focus on simple, whole foods rather than expensive specialty items.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        I'm not a good cook. Are these recipes complicated?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely not! These recipes are designed for all skill levels, with clear, step-by-step instructions. Most recipes take 30 minutes or less, and we include tips and techniques to build your confidence in the kitchen.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How soon will I see results?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Many people report feeling more energy and less bloating within the first week. More significant changes like weight loss and improved mental clarity typically become noticeable within 2-4 weeks of consistently following the meal plans.
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -441,43 +947,75 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>NutriBalance Cookbook</h3>
+                    <p>Transforming healthy eating from boring to extraordinary, one delicious recipe at a time.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#problems">Common Problems</a></li>
+                        <li><a href="#benefits">Health Benefits</a></li>
+                        <li><a href="#recipes">Recipe Samples</a></li>
+                        <li><a href="#cookbook">The Cookbook</a></li>
+                        <li><a href="#testimonials">Success Stories</a></li>
+                        <li><a href="#guarantee">Our Guarantee</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Email: support@nutribalance.com</li>
+                        <li>Response Time: Within 24 hours</li>
+                    </ul>
+                </div>
             </div>
-            <p class="copyright">© <span id="current-year">2023</span> Healthy Cooking Made Simple. All rights reserved.</p>
+            
+            <div class="copyright">
+                <p>&copy; 2023 NutriBalance Cookbook. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script>
-        // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Scroll animations
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        const fadeInOnScroll = () => {
-            fadeElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('visible');
-                }
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                item.classList.toggle('active');
             });
-        };
+        });
         
-        window.addEventListener('scroll', fadeInOnScroll);
-        window.addEventListener('load', fadeInOnScroll);
-
-        // Smooth scrolling for any anchor links
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
                     window.scrollTo({
-                        top: target.offsetTop - 80,
+                        top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
                 }
