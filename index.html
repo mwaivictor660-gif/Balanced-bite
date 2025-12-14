@@ -253,22 +253,6 @@
             font-size: 0.9rem;
         }
         
-        /* One Click Buy Banner */
-        .buy-banner {
-            background: linear-gradient(to right, var(--primary-dark), var(--primary));
-            color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            margin: 2rem 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .buy-banner h3 {
-            color: white;
-            margin-bottom: 1rem;
-        }
-        
         /* Benefits Section */
         .benefits-section {
             background-color: var(--white);
@@ -806,6 +790,19 @@
             border-top: 1px solid rgba(255,255,255,0.1);
         }
         
+        /* Final CTA Section */
+        .final-cta-section {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+        }
+        
+        .final-cta-section h2 {
+            color: white;
+            margin-bottom: 2rem;
+        }
+        
         /* Responsive Design */
         @media (max-width: 768px) {
             .header-container {
@@ -854,7 +851,7 @@
     </style>
 </head>
 <body>
-    <!-- Floating Buy Button -->
+    <!-- Floating Buy Button (appears when scrolling) -->
     <a href="https://payhip.com/b/57AOS" class="floating-buy" target="_blank">
         <i class="fas fa-bolt"></i>
         BUY NOW - $19.99
@@ -881,9 +878,9 @@
                 <span class="discount-badge">SAVE $8.00</span>
             </div>
             
-            <!-- One Click Buy Button -->
+            <!-- FIRST BUY BUTTON - Main call to action -->
             <a href="https://payhip.com/b/57AOS" class="one-click-buy" target="_blank">
-                <i class="fas fa-bolt"></i> ONE-CLICK BUY NOW - INSTANT ACCESS
+                <i class="fas fa-bolt"></i> GET INSTANT ACCESS NOW
             </a>
             
             <p style="margin-top: 1rem; font-size: 0.9rem; color: rgba(255,255,255,0.8);">
@@ -897,17 +894,6 @@
             </div>
         </div>
     </section>
-
-    <!-- One Click Buy Banner -->
-    <div class="container">
-        <div class="buy-banner">
-            <h3>Ready to Transform Your Health?</h3>
-            <p>Get instant access to all 100 recipes with one simple click</p>
-            <a href="https://payhip.com/b/57AOS" class="one-click-buy" target="_blank" style="max-width: 400px;">
-                <i class="fas fa-download"></i> DOWNLOAD NOW - $19.99
-            </a>
-        </div>
-    </div>
 
     <!-- Benefits Section -->
     <section id="benefits" class="benefits-section">
@@ -946,13 +932,6 @@
                     <h3>Quick & Easy Preparation</h3>
                     <p>Most plant-based recipes take 30 minutes or less, making healthy eating achievable even on your busiest days.</p>
                 </div>
-            </div>
-            
-            <!-- Buy Button After Benefits -->
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://payhip.com/b/57AOS" class="buy-now-button" target="_blank">
-                    <i class="fas fa-shopping-cart"></i> GET ALL BENEFITS NOW - $19.99
-                </a>
             </div>
         </div>
     </section>
@@ -1010,13 +989,6 @@
                     <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="Delicious plant-based lentil stew">
                 </div>
             </div>
-            
-            <!-- Buy Button After Features -->
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://payhip.com/b/57AOS" class="cta-button" target="_blank">
-                    <i class="fas fa-utensils"></i> GET ALL 100 RECIPES NOW
-                </a>
-            </div>
         </div>
     </section>
 
@@ -1062,13 +1034,6 @@
                     <h3>Healthy Living</h3>
                     <p>Maintain optimal health, prevent lifestyle diseases, and enjoy vibrant energy at any age.</p>
                 </div>
-            </div>
-            
-            <!-- Buy Button After Target Audience -->
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://payhip.com/b/57AOS" class="buy-now-button" target="_blank" style="font-size: 1.3rem; padding: 1.2rem 3rem;">
-                    <i class="fas fa-heart"></i> START YOUR HEALTH JOURNEY NOW
-                </a>
             </div>
         </div>
     </section>
@@ -1135,12 +1100,6 @@
                     </div>
                     
                     <p><strong>Instant digital download</strong> - Get immediate access and start transforming your health with plants today!</p>
-                    
-                    <a href="https://payhip.com/b/57AOS" class="one-click-buy" target="_blank" style="max-width: 450px;">
-                        <i class="fas fa-shopping-cart"></i> BUY NOW - INSTANT ACCESS
-                    </a>
-                    
-                    <p style="margin-top: 1rem; font-size: 0.9rem;"><i class="fas fa-lock"></i> Secure checkout · 30-day money-back guarantee</p>
                 </div>
             </div>
         </div>
@@ -1204,13 +1163,6 @@
                 <p><strong>89%</strong> reported increased energy levels and better digestion</p>
                 <p><strong>96%</strong> would recommend to friends and family</p>
             </div>
-            
-            <!-- Buy Button After Reviews -->
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://payhip.com/b/57AOS" class="one-click-buy" target="_blank" style="max-width: 450px;">
-                    <i class="fas fa-thumbs-up"></i> JOIN 347 HAPPY CUSTOMERS NOW
-                </a>
-            </div>
         </div>
     </section>
 
@@ -1261,9 +1213,6 @@
                 <p>We're so confident that NutriBalance Plant-Based will transform your health that we offer a full 30-day money-back guarantee.</p>
                 <p>If you don't experience more energy, better digestion, and overall improved wellbeing, simply email us for a full refund - no questions asked.</p>
                 <p style="margin-top: 2rem;"><strong>Start your health transformation today with complete confidence.</strong></p>
-                <a href="https://payhip.com/b/57AOS" class="one-click-buy" target="_blank" style="max-width: 400px; background-color: white; color: var(--primary-dark); border: none;">
-                    <i class="fas fa-shield-alt"></i> GET STARTED WITH CONFIDENCE
-                </a>
             </div>
         </div>
     </section>
@@ -1331,13 +1280,29 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- FINAL BUY BUTTON SECTION -->
+    <section class="final-cta-section">
+        <div class="container">
+            <h2>Your Health Transformation Starts Here</h2>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2.5rem;">Don't wait another day to feel more energetic, lose weight naturally, and enjoy delicious meals that nourish your body.</p>
             
-            <!-- Final Buy Button -->
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://payhip.com/b/57AOS" class="one-click-buy" target="_blank" style="max-width: 500px; font-size: 1.4rem; padding: 1.2rem 2rem;">
-                    <i class="fas fa-check-circle"></i> YES! I WANT TO TRANSFORM MY HEALTH NOW
-                </a>
+            <div class="price-container">
+                <span class="original-price">$27.99 USD</span>
+                <span class="current-price">$19.99 USD</span>
+                <span class="discount-badge">SAVE $8.00</span>
             </div>
+            
+            <!-- FINAL BUY BUTTON - Last call to action -->
+            <a href="https://payhip.com/b/57AOS" class="one-click-buy" target="_blank" style="max-width: 500px; font-size: 1.4rem; padding: 1.2rem 2rem;">
+                <i class="fas fa-check-circle"></i> YES! I WANT TO TRANSFORM MY HEALTH NOW
+            </a>
+            
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.8);">
+                <i class="fas fa-lock"></i> 100% Secure Checkout · 30-Day Money-Back Guarantee · Instant Digital Access
+            </p>
         </div>
     </section>
 
@@ -1421,4 +1386,4 @@
         });
     </script>
 </body>
-</html>
+                        </html>
