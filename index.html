@@ -285,43 +285,53 @@
             margin-bottom: 1rem;
         }
         
-        /* Features Section */
+        /* Features Section - FIXED LAYOUT */
         .features-section {
             background-color: var(--light-gray);
         }
         
-        .features-container {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-            margin-top: 3rem;
-        }
-        
         .features-content {
-            flex: 1;
+            max-width: 900px;
+            margin: 0 auto;
         }
         
         .feature-item {
             display: flex;
-            align-items: flex-start;
-            margin-bottom: 2rem;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
         }
         
         .feature-icon {
             background-color: var(--primary-light);
             color: white;
-            width: 50px;
-            height: 50px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 1.5rem;
+            margin-right: 2rem;
             flex-shrink: 0;
+            font-size: 1.8rem;
+        }
+        
+        .feature-text {
+            flex: 1;
+        }
+        
+        .feature-text h3 {
+            margin-bottom: 0.8rem;
+            color: var(--primary-dark);
         }
         
         .features-image {
-            flex: 1;
+            width: 100%;
+            max-width: 900px;
+            margin: 3rem auto;
             border-radius: var(--radius);
             overflow: hidden;
             box-shadow: var(--shadow);
@@ -329,7 +339,8 @@
         
         .features-image img {
             width: 100%;
-            height: auto;
+            height: 400px;
+            object-fit: cover;
             display: block;
         }
         
@@ -381,22 +392,22 @@
             margin-top: 0.5rem;
         }
         
-        /* Cookbook Section */
+        /* Cookbook Section - FIXED LAYOUT */
         .cookbook-section {
             background-color: var(--light-gray);
             text-align: center;
         }
         
         .cookbook-container {
-            display: flex;
-            align-items: center;
-            gap: 4rem;
-            margin-top: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
             text-align: left;
         }
         
         .cookbook-image {
-            flex: 1;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto 3rem;
             border-radius: var(--radius);
             overflow: hidden;
             box-shadow: var(--shadow);
@@ -404,12 +415,9 @@
         
         .cookbook-image img {
             width: 100%;
-            height: auto;
+            height: 400px;
+            object-fit: cover;
             display: block;
-        }
-        
-        .cookbook-content {
-            flex: 1;
         }
         
         .price {
@@ -465,11 +473,16 @@
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
+            background: white;
+            padding: 1.2rem;
+            border-radius: var(--radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         
         .features-list li i {
             color: var(--primary);
-            margin-right: 1rem;
+            margin-right: 1.5rem;
+            font-size: 1.2rem;
         }
         
         /* Testimonials */
@@ -847,6 +860,36 @@
             .logo h1 {
                 font-size: 2rem;
             }
+            
+            .feature-item {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+            
+            .feature-icon {
+                margin-right: 0;
+                margin-bottom: 1.5rem;
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+            
+            .features-image img,
+            .cookbook-image img {
+                height: 250px;
+            }
+            
+            .features-list li {
+                padding: 1rem;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .features-list li i {
+                margin-right: 0;
+                margin-bottom: 0.8rem;
+            }
         }
     </style>
 </head>
@@ -936,58 +979,56 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Features Section - FIXED LAYOUT -->
     <section id="features" class="features-section">
         <div class="container">
             <h2>What Makes Our Plant-Based Cookbook Special</h2>
             <p class="section-subtitle">We've created more than just a recipe collection - it's a complete system for healthy, delicious plant-based eating.</p>
             
-            <div class="features-container">
-                <div class="features-content">
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                        <div>
-                            <h3>Restaurant-Quality Plant-Based Flavors</h3>
-                            <p>Every recipe is crafted to deliver exceptional taste while maintaining optimal nutritional value with 100% plant ingredients.</p>
-                        </div>
+            <div class="features-content">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
                     </div>
-                    
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-apple-alt"></i>
-                        </div>
-                        <div>
-                            <h3>Science-Backed Plant Nutrition</h3>
-                            <p>Each meal is carefully balanced with plant proteins, complex carbs, and healthy fats for maximum health benefits.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-shopping-basket"></i>
-                        </div>
-                        <div>
-                            <h3>Accessible Plant Ingredients</h3>
-                            <p>All recipes use common, affordable plant-based ingredients you can find at any local grocery store.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <div class="feature-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div>
-                            <h3>Family-Friendly Plant Meals</h3>
-                            <p>These plant-based recipes are so delicious that even picky eaters will ask for seconds.</p>
-                        </div>
+                    <div class="feature-text">
+                        <h3>Restaurant-Quality Plant-Based Flavors</h3>
+                        <p>Every recipe is crafted to deliver exceptional taste while maintaining optimal nutritional value with 100% plant ingredients. These aren't boring health foods - they're meals you'll genuinely look forward to eating.</p>
                     </div>
                 </div>
                 
-                <div class="features-image">
-                    <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="Delicious plant-based lentil stew">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Science-Backed Plant Nutrition</h3>
+                        <p>Each meal is carefully balanced with plant proteins, complex carbs, and healthy fats for maximum health benefits. We've done the nutrition math so you don't have to.</p>
+                    </div>
                 </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shopping-basket"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Accessible Plant Ingredients</h3>
+                        <p>All recipes use common, affordable plant-based ingredients you can find at any local grocery store. No hard-to-find specialty items required.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>Family-Friendly Plant Meals</h3>
+                        <p>These plant-based recipes are so delicious that even picky eaters will ask for seconds. Perfect for families transitioning to healthier eating together.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="features-image">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="Delicious plant-based lentil stew">
             </div>
         </div>
     </section>
@@ -1066,41 +1107,39 @@
         </div>
     </section>
 
-    <!-- Cookbook Section -->
+    <!-- Cookbook Section - FIXED LAYOUT -->
     <section id="cookbook" class="cookbook-section">
         <div class="container">
             <h2>The NutriBalance Plant-Based Cookbook</h2>
             <p class="section-subtitle">Your complete guide to plant-based eating for energy, vitality, and optimal health - with 100 delicious recipes that your whole family will love.</p>
             
+            <div class="cookbook-image">
+                <img src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Delicious plant-based food spread">
+            </div>
+            
             <div class="cookbook-container">
-                <div class="cookbook-image">
-                    <img src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Delicious plant-based food spread">
+                <h3>What You Get In This Life-Changing Plant-Based Cookbook:</h3>
+                
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> <strong>100 Delicious, Science-Backed Plant-Based Recipes</strong> designed to boost energy and improve health</li>
+                    <li><i class="fas fa-check"></i> <strong>Quick & Easy Plant-Based Meals</strong> - Most recipes take 30 minutes or less</li>
+                    <li><i class="fas fa-check"></i> <strong>Plant-Powered Breakfasts</strong> to start your day with sustained energy</li>
+                    <li><i class="fas fa-check"></i> <strong>Lunch Recipes That Prevent Afternoon Slumps</strong> with balanced plant nutrition</li>
+                    <li><i class="fas fa-check"></i> <strong>Dinners That Support Restorative Sleep</strong> and overnight repair</li>
+                    <li><i class="fas fa-check"></i> <strong>Healthy Plant-Based Snacks To Beat Cravings</strong></li>
+                    <li><i class="fas fa-check"></i> <strong>Complete Nutritional Information</strong> for every recipe</li>
+                    <li><i class="fas fa-check"></i> <strong>Weekly Plant-Based Meal Plans</strong> for effortless healthy eating</li>
+                    <li><i class="fas fa-check"></i> <strong>Shopping Lists</strong> to save time and money on plant ingredients</li>
+                    <li><i class="fas fa-check"></i> <strong>Plant-Based Food Preparation Guides</strong> to maximize your time</li>
+                </ul>
+                
+                <div class="price-container">
+                    <span class="original-price">$27.99 USD</span>
+                    <span class="current-price">$19.99 USD</span>
+                    <span class="discount-badge">SAVE $8.00</span>
                 </div>
                 
-                <div class="cookbook-content">
-                    <h3>What You Get In This Life-Changing Plant-Based Cookbook:</h3>
-                    
-                    <ul class="features-list">
-                        <li><i class="fas fa-check"></i> <strong>100 Delicious, Science-Backed Plant-Based Recipes</strong> designed to boost energy and improve health</li>
-                        <li><i class="fas fa-check"></i> <strong>Quick & Easy Plant-Based Meals</strong> - Most recipes take 30 minutes or less</li>
-                        <li><i class="fas fa-check"></i> <strong>Plant-Powered Breakfasts</strong> to start your day with sustained energy</li>
-                        <li><i class="fas fa-check"></i> <strong>Lunch Recipes That Prevent Afternoon Slumps</strong> with balanced plant nutrition</li>
-                        <li><i class="fas fa-check"></i> <strong>Dinners That Support Restorative Sleep</strong> and overnight repair</li>
-                        <li><i class="fas fa-check"></i> <strong>Healthy Plant-Based Snacks To Beat Cravings</strong></li>
-                        <li><i class="fas fa-check"></i> <strong>Complete Nutritional Information</strong> for every recipe</li>
-                        <li><i class="fas fa-check"></i> <strong>Weekly Plant-Based Meal Plans</strong> for effortless healthy eating</li>
-                        <li><i class="fas fa-check"></i> <strong>Shopping Lists</strong> to save time and money on plant ingredients</li>
-                        <li><i class="fas fa-check"></i> <strong>Plant-Based Food Preparation Guides</strong> to maximize your time</li>
-                    </ul>
-                    
-                    <div class="price-container">
-                        <span class="original-price">$27.99 USD</span>
-                        <span class="current-price">$19.99 USD</span>
-                        <span class="discount-badge">SAVE $8.00</span>
-                    </div>
-                    
-                    <p><strong>Instant digital download</strong> - Get immediate access and start transforming your health with plants today!</p>
-                </div>
+                <p style="text-align: center; font-size: 1.1rem; margin: 2rem 0;"><strong>Instant digital download</strong> - Get immediate access and start transforming your health with plants today!</p>
             </div>
         </div>
     </section>
@@ -1386,4 +1425,4 @@
         });
     </script>
 </body>
-                        </html>
+</html>
