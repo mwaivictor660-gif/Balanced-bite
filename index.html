@@ -26,129 +26,86 @@
             padding: 0 20px;
         }
         
-        /* Floating Buy Button */
-        .floating-buy {
+        /* STICKY BUY BUTTON */
+        .sticky-buy-button-container {
             position: fixed;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1000;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            transition: all 0.3s ease;
+            align-items: flex-end;
         }
         
-        .floating-buy-button {
+        .sticky-buy-button {
             background: linear-gradient(135deg, #ff6600, #ff9900);
             color: white;
+            padding: 15px 25px;
             border: none;
-            padding: 16px 25px;
-            border-radius: 50px;
+            border-radius: 8px;
             font-weight: 700;
             font-size: 1rem;
             cursor: pointer;
-            box-shadow: 0 5px 20px rgba(255, 102, 0, 0.4);
+            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+            transition: all 0.3s ease;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-width: 120px;
-            transition: all 0.3s ease;
+            gap: 10px;
+            text-decoration: none;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
         
-        .floating-buy-button:hover {
-            transform: translateX(5px) scale(1.05);
-            box-shadow: 0 8px 25px rgba(255, 102, 0, 0.6);
+        .sticky-buy-button:hover {
+            background: linear-gradient(135deg, #e55c00, #e58900);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 102, 0, 0.5);
         }
         
-        .floating-buy-icon {
-            font-size: 1.5rem;
-            margin-bottom: 8px;
+        .sticky-buy-button:active {
+            transform: translateY(1px);
         }
         
-        .floating-buy-text {
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-        
-        .floating-buy-price {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-top: 5px;
-        }
-        
-        .floating-buy-badge {
-            background: #228b22;
+        .price-badge {
+            background-color: #228b22;
             color: white;
-            font-size: 0.7rem;
-            padding: 4px 10px;
-            border-radius: 15px;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
             margin-top: 10px;
-            font-weight: 600;
-            box-shadow: 0 3px 10px rgba(34, 139, 34, 0.3);
-            text-align: center;
-            width: 100%;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
-        /* Responsive adjustments for floating button */
+        /* Optional: Hide on very small screens or adjust for mobile */
         @media (max-width: 768px) {
-            .floating-buy {
-                left: 10px;
-                top: auto;
-                bottom: 20px;
-                transform: none;
-                flex-direction: row;
+            .sticky-buy-button-container {
+                width: calc(100% - 40px);
+                right: 20px;
+                bottom: 10px;
                 align-items: center;
             }
             
-            .floating-buy-button {
-                flex-direction: row;
-                padding: 12px 20px;
-                min-width: auto;
+            .sticky-buy-button {
+                width: 100%;
+                padding: 16px 20px;
+                font-size: 1.1rem;
             }
             
-            .floating-buy-icon {
-                margin-bottom: 0;
-                margin-right: 10px;
-                font-size: 1.3rem;
-            }
-            
-            .floating-buy-badge {
-                display: none;
-            }
-            
-            .floating-buy-price {
-                margin-top: 0;
-                margin-left: 10px;
+            .price-badge {
+                display: none; /* Hide price badge on mobile for cleaner look */
             }
         }
         
         @media (max-width: 480px) {
-            .floating-buy {
-                left: 5px;
-                bottom: 15px;
-            }
-            
-            .floating-buy-button {
-                padding: 10px 15px;
-                font-size: 0.9rem;
-            }
-            
-            .floating-buy-text {
-                display: none;
-            }
-            
-            .floating-buy-icon {
-                margin-right: 0;
-                font-size: 1.2rem;
-            }
-            
-            .floating-buy-price {
-                font-size: 1rem;
+            .sticky-buy-button-container {
+                bottom: 10px;
+                right: 10px;
+                width: calc(100% - 20px);
             }
         }
         
@@ -562,16 +519,16 @@
     </style>
 </head>
 <body>
-    <!-- Floating Buy Button -->
-    <div class="floating-buy">
-        <button class="floating-buy-button" id="floatingBuyButton">
-            <span class="floating-buy-icon">📘</span>
-            <span class="floating-buy-text">Get Cookbook</span>
-            <span class="floating-buy-price">$19.99</span>
-        </button>
-        <div class="floating-buy-badge">14-Day Guarantee</div>
+    <!-- Sticky Buy Button Container -->
+    <div class="sticky-buy-button-container" id="stickyBuyButton">
+        <a href="https://payhip.com/b/57AOS" class="sticky-buy-button">
+            <i class="fas fa-shopping-cart"></i> Buy Now
+        </a>
+        <div class="price-badge">
+            <i class="fas fa-tag"></i> Only $19.99
+        </div>
     </div>
-
+    
     <!-- Header Section -->
     <header>
         <div class="container">
@@ -990,8 +947,10 @@
                 <div class="audience-item">
                     <i class="fas fa-utensil-spoon" style="font-size: 2.5rem; color: #228b22; margin-bottom: 15px;"></i>
                     <h3>Non-Vegans Who Love Flavor</h3>
-                    <p>Delicious recipes that prove plant-based food can be hearty, satisfying, and packed with flavor.</p> </div>
-     <div class="audience-item">
+                    <p>Delicious recipes that prove plant-based food can be hearty, satisfying, and packed with flavor.</p>
+                </div>
+                
+                <div class="audience-item">
                     <i class="fas fa-piggy-bank" style="font-size: 2.5rem; color: #228b22; margin-bottom: 15px;"></i>
                     <h3>Budget-Conscious Cooks</h3>
                     <p>Cost-effective recipes using affordable ingredients that minimize waste and maximize nutrition.</p>
@@ -1064,8 +1023,7 @@
             <p class="section-subtitle">See what others are saying about how this cookbook changed their cooking and health</p>
           <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"I was completely lost in the kitchen before this cookbook. Now I actually enjoy cooking! The recipes are so easy to follow, and my family loves the meals. We've saved so much money on takeout!"</p>
-                    <div class="testimonial-author">
+                    <p class="testimonial-text">"I was completely lost in the kitchen before this cookbook. Now I actually enjoy cooking! The recipes are so easy to follow, and my family loves the meals. We've saved so much money on takeout!"</p>                                                   <div class="testimonial-author">
                         <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah M." class="author-img">
                         <div class="author-info">
                             <h4>Sarah M.</h4>
@@ -1284,6 +1242,4 @@
     </script>
 </body>
 </html>   
-        
-    <!-- Problem & Solution -->
-
+         
