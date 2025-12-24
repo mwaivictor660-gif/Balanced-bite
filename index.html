@@ -26,6 +26,132 @@
             padding: 0 20px;
         }
         
+        /* Floating Buy Button */
+        .floating-buy {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .floating-buy-button {
+            background: linear-gradient(135deg, #ff6600, #ff9900);
+            color: white;
+            border: none;
+            padding: 16px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(255, 102, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 120px;
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .floating-buy-button:hover {
+            transform: translateX(5px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 102, 0, 0.6);
+        }
+        
+        .floating-buy-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+        
+        .floating-buy-text {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .floating-buy-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 5px;
+        }
+        
+        .floating-buy-badge {
+            background: #228b22;
+            color: white;
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 15px;
+            margin-top: 10px;
+            font-weight: 600;
+            box-shadow: 0 3px 10px rgba(34, 139, 34, 0.3);
+            text-align: center;
+            width: 100%;
+        }
+        
+        /* Responsive adjustments for floating button */
+        @media (max-width: 768px) {
+            .floating-buy {
+                left: 10px;
+                top: auto;
+                bottom: 20px;
+                transform: none;
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            .floating-buy-button {
+                flex-direction: row;
+                padding: 12px 20px;
+                min-width: auto;
+            }
+            
+            .floating-buy-icon {
+                margin-bottom: 0;
+                margin-right: 10px;
+                font-size: 1.3rem;
+            }
+            
+            .floating-buy-badge {
+                display: none;
+            }
+            
+            .floating-buy-price {
+                margin-top: 0;
+                margin-left: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .floating-buy {
+                left: 5px;
+                bottom: 15px;
+            }
+            
+            .floating-buy-button {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .floating-buy-text {
+                display: none;
+            }
+            
+            .floating-buy-icon {
+                margin-right: 0;
+                font-size: 1.2rem;
+            }
+            
+            .floating-buy-price {
+                font-size: 1rem;
+            }
+        }
+        
         /* Header */
         header {
             background: linear-gradient(rgba(34, 139, 34, 0.9), rgba(34, 139, 34, 0.95)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
@@ -436,6 +562,16 @@
     </style>
 </head>
 <body>
+    <!-- Floating Buy Button -->
+    <div class="floating-buy">
+        <button class="floating-buy-button" id="floatingBuyButton">
+            <span class="floating-buy-icon">📘</span>
+            <span class="floating-buy-text">Get Cookbook</span>
+            <span class="floating-buy-price">$19.99</span>
+        </button>
+        <div class="floating-buy-badge">14-Day Guarantee</div>
+    </div>
+
     <!-- Header Section -->
     <header>
         <div class="container">
@@ -854,10 +990,8 @@
                 <div class="audience-item">
                     <i class="fas fa-utensil-spoon" style="font-size: 2.5rem; color: #228b22; margin-bottom: 15px;"></i>
                     <h3>Non-Vegans Who Love Flavor</h3>
-                    <p>Delicious recipes that prove plant-based food can be hearty, satisfying, and packed with flavor.</p>
-                </div>
-                
-                <div class="audience-item">
+                    <p>Delicious recipes that prove plant-based food can be hearty, satisfying, and packed with flavor.</p> </div>
+     <div class="audience-item">
                     <i class="fas fa-piggy-bank" style="font-size: 2.5rem; color: #228b22; margin-bottom: 15px;"></i>
                     <h3>Budget-Conscious Cooks</h3>
                     <p>Cost-effective recipes using affordable ingredients that minimize waste and maximize nutrition.</p>
@@ -1051,7 +1185,7 @@
             
             <div style="margin: 40px 0;">
                 <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; display: inline-block; margin-bottom: 20px;">
-                    <h3 style="margin-bottom: 10px;">Only $19.99 - Less Than 20¢ Per Recipe!</h3>
+                    <h3 style="margin-bottom: 10px;">Only $19.99 </h3>
                     <p>Instant digital access • PDF format • Use on any device</p>
                 </div>
             </div>
@@ -1150,4 +1284,6 @@
     </script>
 </body>
 </html>   
-         
+        
+    <!-- Problem & Solution -->
+
