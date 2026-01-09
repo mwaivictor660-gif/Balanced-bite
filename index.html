@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Never Wonder "What's for Breakfast, Lunch, or Dinner?" Again | 100 Plant-Based Recipes</title>
+    <title>Plant-Based Living - Transform Your Health Naturally</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
+            background-color: #f9f7f3;
             color: #333;
-            background-color: #f9f9f9;
+            line-height: 1.6;
         }
         
         .container {
@@ -26,352 +25,178 @@
             padding: 0 20px;
         }
         
-        /* STICKY BUY BUTTON */
-        .sticky-buy-button-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 9999;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-        
-        .sticky-buy-button {
-            background: linear-gradient(135deg, #ff6600, #ff9900);
-            color: white;
-            padding: 15px 25px;
-            border: none;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            text-decoration: none;
-            text-align: center;
-        }
-        
-        .sticky-buy-button:hover {
-            background: linear-gradient(135deg, #e55c00, #e58900);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 102, 0, 0.5);
-        }
-        
-        .sticky-buy-button:active {
-            transform: translateY(1px);
-        }
-        
-        .price-badge {
-            background-color: #228b22;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            margin-top: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        /* Optional: Hide on very small screens or adjust for mobile */
-        @media (max-width: 768px) {
-            .sticky-buy-button-container {
-                width: calc(100% - 40px);
-                right: 20px;
-                bottom: 10px;
-                align-items: center;
-            }
-            
-            .sticky-buy-button {
-                width: 100%;
-                padding: 16px 20px;
-                font-size: 1.1rem;
-            }
-            
-            .price-badge {
-                display: none; /* Hide price badge on mobile for cleaner look */
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .sticky-buy-button-container {
-                bottom: 10px;
-                right: 10px;
-                width: calc(100% - 20px);
-            }
-        }
-        
-        /* Header */
+        /* Header Styles */
         header {
-            background: linear-gradient(rgba(34, 139, 34, 0.9), rgba(34, 139, 34, 0.95)), url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 40px 0;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
             text-align: center;
         }
         
         .header-content {
-            max-width: 800px;
-            margin: 0 auto;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #4CAF50;
+        }
+        
+        .logo i {
+            font-size: 28px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(249, 247, 243, 1) 100%);
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero-image {
+            flex: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .hero-image img:hover {
+            transform: scale(1.03);
         }
         
         h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
+            font-size: 48px;
+            color: #2c3e50;
             margin-bottom: 20px;
             line-height: 1.2;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .highlight {
+            color: #4CAF50;
         }
         
         .subtitle {
-            font-size: 1.3rem;
+            font-size: 20px;
+            color: #555;
             margin-bottom: 30px;
-            opacity: 0.9;
         }
         
-        .guarantee-badge {
-            display: inline-block;
-            background: #ff9900;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-weight: 600;
-            margin: 20px 0;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        .benefits-list {
+            margin: 25px 0;
+            list-style: none;
         }
         
+        .benefits-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .benefits-list i {
+            color: #4CAF50;
+            font-size: 18px;
+        }
+        
+        /* CTA Button */
         .cta-button {
             display: inline-block;
-            background: #ff6600;
+            background-color: #FF9800;
             color: white;
-            padding: 18px 40px;
+            padding: 18px 45px;
+            font-size: 20px;
+            font-weight: 700;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3);
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
         }
         
         .cta-button:hover {
-            background: #e55c00;
+            background-color: #F57C00;
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 102, 0, 0.5);
+            box-shadow: 0 8px 20px rgba(255, 152, 0, 0.4);
         }
         
-        /* Stats */
-        .stats {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
-            margin: 30px 0;
+        .cta-button:active {
+            transform: translateY(1px);
         }
         
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #ffcc00;
-        }
-        
-        .stat-text {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        /* Sections */
-        section {
-            padding: 60px 0;
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: white;
         }
         
         .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
             text-align: center;
-            margin-bottom: 40px;
-            color: #228b22;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #2c3e50;
         }
         
-        .section-subtitle {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 40px;
-            font-size: 1.1rem;
-            color: #555;
-        }
-        
-        /* Problem/Solution */
-        .problem-solution {
-            background-color: white;
-        }
-        
-        .problem-solution-grid {
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
         }
         
-        .problem-box, .solution-box {
+        .feature-card {
+            background-color: #f9f7f3;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .problem-box {
-            background-color: #fff5f5;
-            border-left: 5px solid #ff6666;
-        }
-        
-        .solution-box {
-            background-color: #f0fff4;
-            border-left: 5px solid #228b22;
-        }
-        
-        /* Recipe Section */
-        .recipes {
-            background-color: #f9f9f9;
-        }
-        
-        .recipe-intro {
             text-align: center;
-            margin-bottom: 40px;
-            font-size: 1.2rem;
-            color: #444;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
         }
         
-        .recipe-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        
-        .recipe-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
-        
-        .recipe-card:hover {
+        .feature-card:hover {
             transform: translateY(-10px);
         }
         
-        .recipe-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-        
-        .recipe-content {
-            padding: 25px;
-        }
-        
-        .recipe-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #228b22;
-        }
-        
-        .recipe-time {
-            display: flex;
-            align-items: center;
-            color: #666;
-            margin-bottom: 15px;
-        }
-        
-        .recipe-time i {
-            margin-right: 8px;
-            color: #ff6600;
-        }
-        
-        .ingredients-list {
+        .feature-icon {
+            font-size: 48px;
+            color: #4CAF50;
             margin-bottom: 20px;
-            padding-left: 20px;
         }
         
-        .ingredients-list li {
-            margin-bottom: 5px;
-        }
-        
-        .instructions-title {
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #333;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
-        }
-        
-        .instructions-list {
-            padding-left: 20px;
-        }
-        
-        .instructions-list li {
-            margin-bottom: 10px;
-        }
-        
-        /* Cookbook Details */
-        .cookbook-details {
-            background-color: white;
-        }
-        
-        .details-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .detail-box {
-            text-align: center;
-            padding: 25px;
-            border-radius: 10px;
-            background-color: #f9f9f9;
-        }
-        
-        .detail-icon {
-            font-size: 2.5rem;
-            color: #228b22;
+        .feature-title {
+            font-size: 22px;
             margin-bottom: 15px;
-        }
-        
-        /* Who is it for */
-        .audience {
-            background-color: #f0fff4;
-        }
-        
-        .audience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-        
-        .audience-item {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+            color: #2c3e50;
         }
         
         /* Testimonials */
         .testimonials {
-            background-color: white;
+            padding: 80px 0;
+            background-color: #f1f8e9;
         }
         
         .testimonial-grid {
@@ -381,10 +206,10 @@
         }
         
         .testimonial-card {
-            background: #f9f9f9;
-            padding: 25px;
+            background-color: white;
+            padding: 30px;
             border-radius: 10px;
-            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
         .testimonial-text {
@@ -396,36 +221,129 @@
         .testimonial-author {
             display: flex;
             align-items: center;
+            gap: 15px;
         }
         
-        .author-img {
+        .author-avatar {
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            object-fit: cover;
-            margin-right: 15px;
+            background-color: #4CAF50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
         }
         
         .author-info h4 {
-            font-size: 1rem;
+            color: #2c3e50;
             margin-bottom: 5px;
         }
         
         .author-info p {
-            font-size: 0.9rem;
             color: #777;
+            font-size: 14px;
         }
         
-        /* FAQ */
+        /* Recipe Images Section */
+        .recipe-images {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .recipe-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 250px;
+        }
+        
+        .recipe-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .recipe-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Guarantee Section */
+        .guarantee {
+            padding: 60px 0;
+            background-color: #f1f8e9;
+            text-align: center;
+        }
+        
+        .guarantee-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .guarantee-badge {
+            background-color: #FF9800;
+            color: white;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .guarantee-badge span {
+            font-size: 36px;
+            font-weight: 900;
+        }
+        
+        /* Final CTA Section */
+        .final-cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        /* FAQ Section */
         .faq {
-            background-color: #f9f9f9;
+            padding: 80px 0;
+            background-color: #f9f7f3;
+        }
+        
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .faq-item {
             margin-bottom: 20px;
-            border-radius: 10px;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
         }
         
         .faq-question {
@@ -439,806 +357,412 @@
         }
         
         .faq-answer {
-            background-color: #f0f8ff;
+            background-color: #f1f8e9;
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-answer.active {
             padding: 20px;
-            display: none;
-        }
-        
-        .faq-item.active .faq-answer {
-            display: block;
-        }
-        
-        /* Final CTA */
-        .final-cta {
-            background: linear-gradient(rgba(34, 139, 34, 0.9), rgba(34, 139, 34, 0.95)), url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
-        }
-        
-        .final-cta h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .final-cta p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 30px;
-            opacity: 0.9;
+            max-height: 300px;
         }
         
         /* Footer */
         footer {
-            background-color: #333;
+            background-color: #2c3e50;
             color: white;
-            padding: 40px 0;
-            text-align: center;
+            padding: 60px 0 30px;
         }
         
         .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
         }
         
-        .contact-info {
-            margin: 20px 0;
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #4CAF50;
         }
         
-        .contact-info a {
-            color: #ffcc00;
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
             text-decoration: none;
-            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #4CAF50;
         }
         
         .copyright {
-            margin-top: 20px;
-            font-size: 0.9rem;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #aaa;
+            font-size: 14px;
         }
         
-        /* Responsive */
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            h1 {
+                font-size: 40px;
+            }
+        }
+        
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.2rem;
+                font-size: 36px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
             }
             
             .section-title {
-                font-size: 1.8rem;
+                font-size: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero, .features, .testimonials, .recipe-images, .final-cta, .faq {
+                padding: 60px 0;
             }
             
-            .stats {
-                flex-direction: column;
-                align-items: center;
+            h1 {
+                font-size: 32px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Sticky Buy Button Container -->
-    <div class="sticky-buy-button-container" id="stickyBuyButton">
-        <a href="https://www.digistore24.com/redir/550988/wizz8079/" class="sticky-buy-button">
-            <i class="fas fa-shopping-cart"></i> Unlock All 95 Recipes
-        </a>
-        <div class="price-badge">
-            <i class="fas fa-tag"></i> Only
-        </div>
-    </div>
-    
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
-                <h1>Never Wonder "What's for Breakfast, Lunch, or Dinner?" Again</h1>
-                <p class="subtitle">The Complete Plant-Based Cookbook with 100 Delicious, Nutrient-Packed Recipes That Save Time, Money, and Boost Your Health</p>
-                
-                <div class="guarantee-badge">
-                    <i class="fas fa-shield-alt"></i> 30-Day Money-Back Guarantee
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>Plant-Based Living</span>
                 </div>
-                
-                <div class="stats">
-                    <div class="stat-item">
-                        <div class="stat-number">100+</div>
-                        <div class="stat-text">Delicious Recipes</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">500</div>
-                        <div class="stat-text">Customers Worldwide</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">30</div>
-                        <div class="stat-text">Minutes Average Prep</div>
-                    </div>
-                </div>
-                
-                <a href="https://www.digistore24.com/redir/550988/wizz8079/" class="cta-button">
-                    <i class="fas fa-shopping-cart"></i> Get The Full Cookbook
-                </a>
-                
-                <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.9;">
-                    Instant digital delivery • PDF format • Use on any device • Lifetime access
-                </p>
             </div>
         </div>
     </header>
-    
-    <!-- Problem & Solution -->
-    <section class="problem-solution">
+
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <h2 class="section-title">Tired of Meal-Time Stress? We Have the Solution</h2>
-            
-            <div class="problem-solution-grid">
-                <div class="problem-box">
-                    <h3><i class="fas fa-times-circle" style="color: #ff6666;"></i> The Daily Struggle</h3>
-                    <ul style="margin-top: 15px; padding-left: 20px;">
-                        <li>Staring at the fridge wondering what to cook</li>
-                        <li>Feeling overwhelmed by complicated recipes</li>
-                        <li>Spending too much on groceries that go to waste</li>
-                        <li>Lack of protein and nutrients in your meals</li>
-                        <li>Cooking separate meals for picky eaters</li>
-                        <li>Not having time for healthy meal prep</li>
-                        <li>Digestive issues from processed foods</li>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Transform Your Health with <span class="highlight">Plant-Based Living</span></h1>
+                    <p class="subtitle">Discover how plant-based eating can help you achieve better health, more energy, and sustainable weight management naturally</p>
+                    
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-circle"></i> Scientifically proven for sustainable weight loss</li>
+                        <li><i class="fas fa-check-circle"></i> Delicious, vibrant meals full of nutrients</li>
+                        <li><i class="fas fa-check-circle"></i> Simple approach anyone can follow</li>
+                        <li><i class="fas fa-check-circle"></i> Boost energy levels naturally</li>
                     </ul>
+                    
+                    <a href="https://www.digistore24.com/redir/550988/wizz8079/" class="cta-button" target="_blank">Click Here to See More →</a>
+                    
+                    <p style="margin-top: 15px; font-size: 14px; color: #777;">Join 50,000+ people who transformed their health with plant-based eating</p>
                 </div>
                 
-                <div class="solution-box">
-                    <h3><i class="fas fa-check-circle" style="color: #228b22;"></i> Your Simple Solution</h3>
-                    <ul style="margin-top: 15px; padding-left: 20px;">
-                        <li>100+ easy-to-follow recipes with clear instructions</li>
-                        <li>Weekly meal plans that eliminate decision fatigue</li>
-                        <li>Budget-friendly ingredients that minimize waste</li>
-                        <li>Protein-rich meals that satisfy and energize</li>
-                        <li>Family-friendly recipes everyone will love</li>
-                        <li>Quick 30-minute meals for busy schedules</li>
-                        <li>Gut-friendly recipes for better digestion</li>
-                    </ul>
+                <div class="hero-image">
+                    <img src="https://itdoesnttastelikechicken.com/wp-content/uploads/2017/01/vegan-chili-recipe-best-easy-vegetarian-with-tofu.jpg" alt="Vegan Chili with Tofu">
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- Free Recipes Preview -->
-    <section class="recipes">
+
+    <!-- Features Section -->
+    <section class="features">
         <div class="container">
-            <h2 class="section-title">Try These 5 Free Recipes From Our Cookbook</h2>
-            <p class="section-subtitle">Experience the quality and deliciousness of our recipes. If you love these, imagine what 95 more can do for your meals!</p>
+            <h2 class="section-title">What You'll Get with Plant-Based</h2>
             
-            <div class="recipe-container">
-                <!-- Recipe 1 - IMPROVED -->
-                <div class="recipe-card">
-                    <img src="https://thefirstmess.com/wp-content/uploads/2023/08/smoky-vegan-corn-chowder-with-potatoes-14-740x925.jpg" alt="Smoky Vegan Corn Chowder with Potatoes" class="recipe-img">
-                    <div class="recipe-content">
-                        <h3 class="recipe-title">Smoky Vegan Corn Chowder with Potatoes</h3>
-                        <div class="recipe-time">
-                            <i class="far fa-clock"></i> Prep: 15 min | Cook: 30 min | Total: 45 min
-                        </div>
-                        
-                        <p><strong>Full Ingredients List:</strong></p>
-                        <ul class="ingredients-list">
-                            <li>4 ears fresh corn (or 3 cups frozen corn kernels)</li>
-                            <li>4 medium Yukon gold potatoes, diced into ½-inch cubes</li>
-                            <li>1 large yellow onion, finely chopped</li>
-                            <li>4 cloves garlic, minced</li>
-                            <li>2 tablespoons olive oil or vegan butter</li>
-                            <li>1 teaspoon smoked paprika (plus extra for garnish)</li>
-                            <li>½ teaspoon ground cumin</li>
-                            <li>¼ teaspoon cayenne pepper (optional for heat)</li>
-                            <li>4 cups vegetable broth (low sodium if preferred)</li>
-                            <li>1 cup full-fat coconut milk</li>
-                            <li>1 red bell pepper, diced</li>
-                            <li>2 stalks celery, finely chopped</li>
-                            <li>1 tablespoon fresh thyme leaves (or 1 tsp dried)</li>
-                            <li>Salt and black pepper to taste</li>
-                            <li>Fresh lime juice (1-2 tablespoons)</li>
-                            <li>Fresh cilantro or parsley for garnish</li>
-                        </ul>
-                        
-                        <h4 class="instructions-title">Detailed Step-by-Step Instructions:</h4>
-                        <ol class="instructions-list">
-                            <li><strong>Prepare the Vegetables:</strong> If using fresh corn, carefully cut kernels from cobs using a sharp knife. Set aside. Dice potatoes, onion, bell pepper, and celery. Mince garlic.</li>
-                            <li><strong>Sauté Aromatics:</strong> Heat olive oil in a large Dutch oven or heavy-bottomed pot over medium heat. Add chopped onions and celery, sautéing for 5-7 minutes until onions become translucent and slightly golden at edges.</li>
-                            <li><strong>Build Flavor Base:</strong> Add minced garlic, smoked paprika, cumin, and cayenne (if using). Stir constantly for 1 minute until garlic is fragrant and spices are toasted but not burned.</li>
-                            <li><strong>Add Potatoes and Corn:</strong> Stir in diced potatoes and corn kernels, coating them thoroughly with the spice mixture. Cook for 3-4 minutes to lightly toast the corn.</li>
-                            <li><strong>Add Liquid and Simmer:</strong> Pour in vegetable broth and add diced red bell pepper and thyme leaves. Bring to a boil, then reduce heat to medium-low. Cover and simmer for 20-25 minutes until potatoes are fork-tender.</li>
-                            <li><strong>Blend for Creaminess:</strong> Remove about 2 cups of the soup (focusing on solids) and carefully blend until smooth using an immersion blender or countertop blender. Return blended portion to pot. This creates a creamy base while maintaining chunky texture.</li>
-                            <li><strong>Finish with Coconut Milk:</strong> Stir in coconut milk and simmer uncovered for 5 more minutes. The soup should thicken slightly. Add lime juice and season generously with salt and black pepper to taste.</li>
-                            <li><strong>Final Adjustments:</strong> Taste and adjust seasoning if needed. If soup is too thick, add ¼ cup of water or broth. If too thin, simmer 5 more minutes uncovered.</li>
-                            <li><strong>Serve:</strong> Ladle into bowls, garnish with fresh cilantro or parsley, a sprinkle of smoked paprika, and a lime wedge on the side. Serve with crusty bread for dipping.</li>
-                            <li><strong>Storage Tips:</strong> This soup tastes even better the next day! Store in airtight container for up to 5 days, or freeze for 3 months. Reheat gently on stovetop, adding a splash of water if too thick.</li>
-                        </ol>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heartbeat"></i>
                     </div>
+                    <h3 class="feature-title">Improved Heart Health</h3>
+                    <p>Plant-based diets are rich in fiber and antioxidants that can lower cholesterol, reduce blood pressure, and decrease heart disease risk.</p>
                 </div>
                 
-                <!-- Recipe 2 - IMPROVED -->
-                <div class="recipe-card">
-                    <img src="https://thefirstmess.com/wp-content/uploads/2023/01/cheesy-vegan-broccoli-and-barley-with-white-beans-03-740x925.jpg" alt="Cheesy Vegan Broccoli & Barley with White Beans" class="recipe-img">
-                    <div class="recipe-content">
-                        <h3 class="recipe-title">Cheesy Vegan Broccoli & Barley with White Beans</h3>
-                        <div class="recipe-time">
-                            <i class="far fa-clock"></i> Prep: 15 min | Cook: 35 min | Total: 50 min
-                        </div>
-                        
-                        <p><strong>Full Ingredients List:</strong></p>
-                        <ul class="ingredients-list">
-                            <li>1 cup pearl barley, rinsed</li>
-                            <li>1 large head broccoli (about 1 lb), cut into florets</li>
-                            <li>1 can (15 oz) cannellini beans, drained and rinsed</li>
-                            <li>1 cup raw cashews (soaked 2 hours or boiled 10 min)</li>
-                            <li>½ cup nutritional yeast</li>
-                            <li>2 cloves garlic, minced</li>
-                            <li>1 small yellow onion, diced</li>
-                            <li>3 cups vegetable broth (divided)</li>
-                            <li>2 tablespoons lemon juice</li>
-                            <li>1 teaspoon Dijon mustard</li>
-                            <li>½ teaspoon garlic powder</li>
-                            <li>¼ teaspoon turmeric (for color)</li>
-                            <li>3 tablespoons olive oil (divided)</li>
-                            <li>Salt and black pepper to taste</li>
-                            <li>Pinch of red pepper flakes (optional)</li>
-                            <li>Fresh parsley for garnish</li>
-                        </ul>
-                        
-                        <h4 class="instructions-title">Detailed Step-by-Step Instructions:</h4>
-                        <ol class="instructions-list">
-                            <li><strong>Prepare Cashews:</strong> Soak cashews in hot water for at least 2 hours, or boil for 10 minutes until softened. Drain and set aside. (This step can be done ahead of time.)</li>
-                            <li><strong>Cook Barley:</strong> In a medium saucepan, combine rinsed barley with 2 cups vegetable broth. Bring to boil, then reduce heat to low, cover, and simmer for 25-30 minutes until barley is tender and liquid is absorbed. Fluff with fork and set aside.</li>
-                            <li><strong>Make Cheese Sauce:</strong> In a high-speed blender, combine soaked cashews, nutritional yeast, lemon juice, Dijon mustard, garlic powder, turmeric, ½ teaspoon salt, and 1 cup vegetable broth. Blend on high until completely smooth and creamy (2-3 minutes). Taste and adjust seasoning, adding more broth if too thick.</li>
-                            <li><strong>Prepare Broccoli:</strong> While barley cooks, steam broccoli florets for 5-6 minutes until bright green and tender-crisp. Immediately rinse under cold water to stop cooking and preserve color. Set aside.</li>
-                            <li><strong>Sauté Aromatics:</strong> Heat 2 tablespoons olive oil in a large skillet over medium heat. Add diced onion and sauté for 5-6 minutes until soft and translucent. Add minced garlic and cook 1 more minute until fragrant.</li>
-                            <li><strong>Combine Ingredients:</strong> Add cooked barley, steamed broccoli, and cannellini beans to the skillet with onions. Gently stir to combine without mashing beans.</li>
-                            <li><strong>Add Cheese Sauce:</strong> Pour the cashew cheese sauce over the barley mixture. Stir gently to coat everything evenly. Cook over medium-low heat for 3-4 minutes until everything is heated through.</li>
-                            <li><strong>Season and Finish:</strong> Season with salt, black pepper, and red pepper flakes if using. If mixture seems dry, add a splash of vegetable broth or water. Stir in remaining tablespoon of olive oil for richness.</li>
-                            <li><strong>Serve:</strong> Divide among bowls, garnish with fresh parsley and extra nutritional yeast if desired. Serve immediately while warm.</li>
-                            <li><strong>Expert Tips:</strong> For a nut-free version, substitute raw sunflower seeds for cashews. To make this gluten-free, use quinoa instead of barley. This dish reheats beautifully - store in airtight container for up to 4 days.</li>
-                        </ol>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-weight"></i>
                     </div>
+                    <h3 class="feature-title">Effective Weight Loss</h3>
+                    <p>Experience natural, sustainable weight loss as plant-based foods are typically lower in calories and higher in satiating fiber.</p>
                 </div>
                 
-                <!-- Recipe 3 - IMPROVED -->
-                <div class="recipe-card">
-                    <img src="https://thefirstmess.com/wp-content/uploads/2023/02/30-minute-easy-lentil-bolognese-04-740x925.jpg" alt="30-Minute Easy Lentil Bolognese" class="recipe-img">
-                    <div class="recipe-content">
-                        <h3 class="recipe-title">30-Minute Easy Lentil Bolognese</h3>
-                        <div class="recipe-time">
-                            <i class="far fa-clock"></i> Prep: 15 min | Cook: 25 min | Total: 40 min
-                        </div>
-                        
-                        <p><strong>Full Ingredients List:</strong></p>
-                        <ul class="ingredients-list">
-                            <li>1 cup brown lentils, rinsed (or 2 cups cooked)</li>
-                            <li>1 can (28 oz) crushed tomatoes</li>
-                            <li>1 medium onion, finely chopped</li>
-                            <li>2 medium carrots, finely diced</li>
-                            <li>2 stalks celery, finely diced</li>
-                            <li>4 cloves garlic, minced</li>
-                            <li>2 tablespoons tomato paste</li>
-                            <li>2 tablespoons olive oil</li>
-                            <li>1 teaspoon dried oregano</li>
-                            <li>1 teaspoon dried basil</li>
-                            <li>½ teaspoon dried thyme</li>
-                            <li>1 bay leaf</li>
-                            <li>2 cups vegetable broth or water</li>
-                            <li>½ cup dry red wine (optional, substitute with broth)</li>
-                            <li>1 teaspoon maple syrup or sugar</li>
-                            <li>Salt and black pepper to taste</li>
-                            <li>Pinch of red pepper flakes (optional)</li>
-                            <li>Fresh basil for garnish</li>
-                            <li>12 oz pasta of choice</li>
-                            <li>Vegan parmesan for serving (optional)</li>
-                        </ul>
-                        
-                        <h4 class="instructions-title">Detailed Step-by-Step Instructions:</h4>
-                        <ol class="instructions-list">
-                            <li><strong>Prepare Lentils (if using dry):</strong> In a medium saucepan, combine lentils with 2 cups water. Bring to boil, then reduce heat and simmer for 20 minutes until tender but not mushy. Drain any excess water and set aside. (Skip this step if using cooked lentils.)</li>
-                            <li><strong>Make the "Soffritto":</strong> Finely chop onion, carrots, and celery into uniform small pieces (this is key for authentic texture). Heat olive oil in a large skillet or Dutch oven over medium heat. Add the chopped vegetables and sauté for 8-10 minutes until very soft and fragrant, stirring occasionally.</li>
-                            <li><strong>Build Flavor Base:</strong> Add minced garlic, tomato paste, oregano, basil, thyme, and bay leaf. Cook for 2 minutes, stirring constantly, until tomato paste darkens slightly and garlic is fragrant.</li>
-                            <li><strong>Deglaze (Optional but Recommended):</strong> If using wine, pour it in now and scrape up any browned bits from the bottom of the pan. Cook until reduced by half, about 2 minutes. If not using wine, use ¼ cup vegetable broth instead.</li>
-                            <li><strong>Add Tomatoes and Lentils:</strong> Stir in crushed tomatoes, cooked lentils, remaining vegetable broth, maple syrup, and red pepper flakes if using. Bring to a simmer.</li>
-                            <li><strong>Simmer to Develop Flavor:</strong> Reduce heat to low, partially cover, and let simmer for 15-20 minutes, stirring occasionally. The sauce should thicken but still be saucy. If it gets too thick, add a splash of water or broth.</li>
-                            <li><strong>Cook Pasta:</strong> While sauce simmers, bring a large pot of salted water to boil. Cook pasta according to package directions until al dente. Reserve ½ cup pasta water before draining.</li>
-                            <li><strong>Final Adjustments:</strong> Remove bay leaf from sauce. Taste and season generously with salt and black pepper. For extra richness, stir in a tablespoon of olive oil or vegan butter at the end.</li>
-                            <li><strong>Combine:</strong> Add drained pasta directly to the sauce along with ¼ cup of reserved pasta water. Toss well to combine, allowing pasta to absorb some sauce for 1-2 minutes over low heat.</li>
-                            <li><strong>Serve:</strong> Divide among bowls, garnish with fresh basil, vegan parmesan if using, and a drizzle of good quality olive oil. Serve immediately with crusty bread on the side.</li>
-                            <li><strong>Make-Ahead Tip:</strong> This sauce freezes beautifully for up to 3 months. Make a double batch and freeze in portions for quick meals.</li>
-                        </ol>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-seedling"></i>
                     </div>
+                    <h3 class="feature-title">Better Digestion & Gut Health</h3>
+                    <p>The high fiber content in plant-based foods promotes healthy digestion, supports gut microbiome diversity, and reduces inflammation.</p>
                 </div>
                 
-                <!-- Recipe 4 - IMPROVED -->
-                <div class="recipe-card">
-                    <img src="https://thefirstmess.com/wp-content/uploads/2021/11/farro-chickpea-skillet-tomatoes-cardamom-lime-05-1-740x925.jpg" alt="Farro Chickpea Skillet with Tomatoes, Kale, Cardamom & Lime" class="recipe-img">
-                    <div class="recipe-content">
-                        <h3 class="recipe-title">Farro Chickpea Skillet with Tomatoes, Kale, Cardamom & Lime</h3>
-                        <div class="recipe-time">
-                            <i class="far fa-clock"></i> Prep: 20 min | Cook: 35 min | Total: 55 min
-                        </div>
-                        
-                        <p><strong>Full Ingredients List:</strong></p>
-                        <ul class="ingredients-list">
-                            <li>1 cup farro, rinsed</li>
-                            <li>1 can (15 oz) chickpeas, drained and rinsed</li>
-                            <li>2 cups cherry tomatoes, halved</li>
-                            <li>1 bunch curly kale, stems removed, leaves chopped</li>
-                            <li>1 medium red onion, thinly sliced</li>
-                            <li>4 cloves garlic, minced</li>
-                            <li>3 tablespoons olive oil (divided)</li>
-                            <li>1 teaspoon ground cardamom</li>
-                            <li>½ teaspoon ground cumin</li>
-                            <li>¼ teaspoon ground cinnamon</li>
-                            <li>Zest and juice of 1 lime</li>
-                            <li>½ cup vegetable broth</li>
-                            <li>¼ cup fresh cilantro, chopped</li>
-                            <li>¼ cup fresh mint, chopped (optional)</li>
-                            <li>Salt and black pepper to taste</li>
-                            <li>¼ cup toasted pine nuts or almonds for garnish</li>
-                            <li>Vegan feta or avocado for serving (optional)</li>
-                        </ul>
-                        
-                        <h4 class="instructions-title">Detailed Step-by-Step Instructions:</h4>
-                        <ol class="instructions-list">
-                            <li><strong>Cook Farro:</strong> In a medium saucepan, combine farro with 2½ cups water and a pinch of salt. Bring to boil, then reduce heat to low, cover, and simmer for 25-30 minutes until farro is tender but still chewy. Drain any excess water and set aside.</li>
-                            <li><strong>Toast Spices:</strong> While farro cooks, heat 1 tablespoon olive oil in a large skillet over medium heat. Add cardamom, cumin, and cinnamon. Toast for 30 seconds until fragrant, being careful not to burn. Immediately transfer to a small bowl and set aside.</li>
-                            <li><strong>Sauté Aromatics:</strong> In the same skillet, add remaining 2 tablespoons olive oil. Add sliced red onion and cook for 6-8 minutes until soft and beginning to caramelize.</li>
-                            <li><strong>Add Garlic and Tomatoes:</strong> Add minced garlic to the skillet and cook 1 minute until fragrant. Add halved cherry tomatoes and cook for 5-6 minutes until they start to soften and release their juices.</li>
-                            <li><strong>Add Chickpeas:</strong> Stir in chickpeas and the toasted spice mixture. Cook for 3-4 minutes, allowing chickpeas to warm through and absorb the spices.</li>
-                            <li><strong>Incorporate Farro:</strong> Add cooked farro to the skillet, stirring well to combine all ingredients. If mixture seems dry, add vegetable broth to create a light sauce.</li>
-                            <li><strong>Wilt Kale:</strong> Add chopped kale to the skillet. Cover with a lid and cook for 3-4 minutes until kale wilts but remains bright green. Remove lid and stir to combine.</li>
-                            <li><strong>Add Fresh Elements:</strong> Remove skillet from heat. Stir in lime zest, lime juice, chopped cilantro, and mint if using. The residual heat will soften the herbs without cooking them.</li>
-                            <li><strong>Season and Garnish:</strong> Season generously with salt and black pepper. Taste and adjust seasoning, adding more lime juice if needed. Top with toasted pine nuts or almonds.</li>
-                            <li><strong>Serve:</strong> Serve warm as a main dish or hearty side. For extra creaminess, top with crumbled vegan feta or sliced avocado. This dish is excellent warm, at room temperature, or even cold the next day.</li>
-                            <li><strong>Variation Ideas:</strong> For a quicker version, use quinoa instead of farro (cooks in 15 minutes). Add roasted sweet potatoes for extra sweetness, or swap kale for spinach (add at the very end).</li>
-                        </ol>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
                     </div>
+                    <h3 class="feature-title">Increased Energy Levels</h3>
+                    <p>Enjoy more consistent energy throughout the day as plant-based foods provide sustained energy without the crashes.</p>
                 </div>
-                
-                <!-- NEW Recipe 5 -->
-                <div class="recipe-card">
-                    <img src="https://images.101cookbooks.com/macro-bowls-recipe-3.jpg?w=620&auto=format" alt="Protein-Packed Macro Bowl with Lemon Tahini Dressing" class="recipe-img">
-                    <div class="recipe-content">
-                        <h3 class="recipe-title">Protein-Packed Macro Bowl with Lemon Tahini Dressing</h3>
-                        <div class="recipe-time">
-                            <i class="far fa-clock"></i> Prep: 25 min | Cook: 20 min | Total: 45 min
-                        </div>
-                        
-                        <p><strong>Full Ingredients List:</strong></p>
-                        <ul class="ingredients-list">
-                            <li><strong>For the Bowl Base:</strong></li>
-                            <li>1 cup quinoa, rinsed</li>
-                            <li>1 can (15 oz) chickpeas, drained and rinsed</li>
-                            <li>1 small sweet potato, cubed</li>
-                            <li>2 cups broccoli florets</li>
-                            <li>2 cups shredded purple cabbage</li>
-                            <li>1 avocado, sliced</li>
-                            <li>½ cup cherry tomatoes, halved</li>
-                            <li>½ cucumber, sliced</li>
-                            <li>¼ cup pumpkin seeds (pepitas)</li>
-                            <li>2 tablespoons olive oil</li>
-                            <li>1 teaspoon smoked paprika</li>
-                            <li>1 teaspoon garlic powder</li>
-                            <li>Salt and black pepper to taste</li>
-                            
-                            <li><strong>For the Lemon Tahini Dressing:</strong></li>
-                            <li>¼ cup tahini (well-stirred)</li>
-                            <li>3 tablespoons lemon juice (1 large lemon)</li>
-                            <li>2 tablespoons water (or more for desired consistency)</li>
-                            <li>1 clove garlic, minced</li>
-                            <li>1 teaspoon maple syrup</li>
-                            <li>½ teaspoon ground cumin</li>
-                            <li>Pinch of salt</li>
-                            <li>Fresh herbs for garnish (parsley, dill, or cilantro)</li>
-                        </ul>
-                        
-                        <h4 class="instructions-title">Detailed Step-by-Step Instructions:</h4>
-                        <ol class="instructions-list">
-                            <li><strong>Cook Quinoa:</strong> In a medium saucepan, combine rinsed quinoa with 2 cups water and a pinch of salt. Bring to boil, reduce heat to low, cover, and simmer for 15 minutes. Remove from heat and let sit covered for 5 minutes, then fluff with fork.</li>
-                            <li><strong>Roast Sweet Potato and Chickpeas:</strong> Preheat oven to 400°F (200°C). Toss cubed sweet potato and chickpeas with 1 tablespoon olive oil, smoked paprika, garlic powder, salt, and pepper. Spread on baking sheet in single layer. Roast for 20 minutes, flipping halfway, until sweet potatoes are tender and chickpeas are crispy.</li>
-                            <li><strong>Prepare Broccoli:</strong> While sweet potatoes roast, steam broccoli florets for 4-5 minutes until bright green and tender-crisp. Immediately rinse under cold water to preserve color and texture. Set aside.</li>
-                            <li><strong>Make Tahini Dressing:</strong> In a small bowl, whisk together tahini, lemon juice, water, minced garlic, maple syrup, cumin, and salt until smooth and creamy. The dressing will thicken at first but thin out as you whisk. Add more water 1 tablespoon at a time until you reach a pourable consistency (should be like heavy cream). Taste and adjust seasoning.</li>
-                            <li><strong>Prepare Raw Vegetables:</strong> Thinly slice purple cabbage using a sharp knife or mandoline. Halve cherry tomatoes. Slice cucumber. Cut avocado in half, remove pit, and slice flesh while still in skin, then scoop out with spoon.</li>
-                            <li><strong>Toast Pumpkin Seeds:</strong> In a small dry skillet over medium heat, toast pumpkin seeds for 2-3 minutes until they start to pop and become fragrant. Watch carefully to prevent burning. Set aside.</li>
-                            <li><strong>Assemble Bowls:</strong> Divide cooked quinoa among 2-3 bowls. Arrange roasted sweet potatoes and chickpeas, steamed broccoli, purple cabbage, avocado slices, cherry tomatoes, and cucumber slices in sections around the quinoa.</li>
-                            <li><strong>Add Finishing Touches:</strong> Drizzle generous amount of tahini dressing over each bowl. Sprinkle with toasted pumpkin seeds and fresh herbs.</li>
-                            <li><strong>Serve:</strong> Serve immediately while warm, or let components cool to room temperature for a refreshing meal. Each diner can mix their bowl to combine all flavors and textures.</li>
-                            <li><strong>Meal Prep Tips:</strong> This bowl is perfect for meal prep! Store components separately in airtight containers: quinoa (4 days), roasted veggies/chickpeas (4 days), fresh veggies (2-3 days), dressing (5 days). Assemble when ready to eat.</li>
-                            <li><strong>Nutritional Benefits:</strong> This bowl provides complete protein (quinoa + chickpeas), healthy fats (avocado, tahini), complex carbs (sweet potato, quinoa), and 6+ servings of vegetables. The lemon tahini dressing aids nutrient absorption from the greens.</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 50px; padding: 30px; background-color: #e8f5e9; border-radius: 10px;">
-                <h3 style="color: #228b22; margin-bottom: 15px;">Love These Detailed Recipes?</h3>
-                <p style="font-size: 1.2rem; margin-bottom: 20px;">This is just <strong>5 of 100+ professionally developed recipes</strong> in our complete plant-based cookbook! Each recipe comes with:</p>
-                <ul style="display: inline-block; text-align: left; margin-bottom: 20px;">
-                    <li>Complete ingredient lists with exact measurements</li>
-                    <li>Step-by-step cooking instructions with chef tips</li>
-                    <li>Nutritional information and serving sizes</li>
-                    <li>Meal prep and storage instructions</li>
-                    <li>Ingredient substitution suggestions</li>
-                </ul>
-                <a href="https://www.digistore24.com/redir/550988/wizz8079/" class="cta-button">
-                    Get All 100+ Detailed Recipes Now
-                </a>
             </div>
         </div>
     </section>
-    
-    <!-- Cookbook Details -->
-    <section class="cookbook-details">
+
+    <!-- Recipe Images Section -->
+    <section class="recipe-images">
         <div class="container">
-            <h2 class="section-title">What's Inside The Cookbook?</h2>
-            <p class="section-subtitle">100+ carefully crafted recipes organized for easy meal planning and maximum variety</p>
-            
-            <div class="details-grid">
-                <div class="detail-box">
-                    <div class="detail-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3>60+ Breakfast Recipes</h3>
-                    <p>Start your day with energy-packed smoothies, protein bowls, and savory breakfasts that keep you full until lunch.</p>
-                </div>
-                
-                <div class="detail-box">
-                    <div class="detail-icon">
-                        <i class="fas fa-apple-alt"></i>
-                    </div>
-                    <h3>60+ Lunch Recipes</h3>
-                    <p>Quick, packable lunches that are perfect for work or school - salads, bowls, wraps, and soups that actually satisfy.</p>
-                </div>
-                
-                <div class="detail-box">
-                    <div class="detail-icon">
-                        <i class="fas fa-drumstick-bite"></i>
-                    </div>
-                    <h3>60+ Dinner Recipes</h3>
-                    <p>Hearty, family-friendly dinners that come together in 30 minutes or less - perfect for busy weeknights.</p>
-                </div>
-                
-                <div class="detail-box">
-                    <div class="detail-icon">
-                        <i class="fas fa-cookie-bite"></i>
-                    </div>
-                    <h3>20+ Snacks & Desserts</h3>
-                    <p>Healthy snacks and guilt-free desserts that satisfy cravings without derailing your health goals.</p>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 40px;">
-                <p style="font-size: 1.1rem;"><strong>Total: 100+ delicious plant-based recipes</strong> designed for every meal and occasion!</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Who is it for -->
-    <section class="audience">
-        <div class="container">
-            <h2 class="section-title">Who Is This Cookbook Made For?</h2>
-           <p class="section-subtitle">Whether you're a seasoned vegan or just starting your plant-based journey, this cookbook has something for everyone</p>
-
-<div class="audience-grid">
-    <div class="audience-item">
-        <i class="fas fa-seedling" style="font-size: 2.5rem; color: #228b22; margin-bottom: 15px;"></i>
-        <h3>Beginners to Plant-Based Eating</h3>
-        <p>Easy-to-follow recipes with familiar ingredients and clear instructions to build confidence in the kitchen.</p>
-    </div>
-    
-    <div class="audience-item">
-        <i class="fas fa-clock" style="font-size: 2.5rem; color: #228b22; margin-bottom: 15px;"></i>
-        <h3>Busy People with No Time</h3>
-        <p>30-minute meals and simple prep steps that fit into even the most hectic schedules.</p>
-    </div>
-    
-    <div class="audience-item">
-        <i class="fas fa-heartbeat" style="font-size: 2.5rem; color: #228b22; margin-bottom: 15px;"></i>
-        <h3>Health-Focused Individuals</h3>
-        <p>Nutritionally balanced recipes designed to boost energy, improve digestion, and support overall wellness.</p>
-    </div>
-    
-    <div class="audience-item">
-        <i class="fas fa-home" style="font-size: 2.5rem; color: #228b22; margin-bottom: 15px;"></i>
-        <h3>Families with Picky Eaters</h3>
-        <p>Kid-friendly meals that even non-vegans will love, with tips for adapting recipes for different tastes.</p>
-    </div>
-    
-    <div class="audience-item">
-        <i class="fas fa-utensil-spoon" style="font-size: 2.5rem; color: #228b22; margin-bottom: 15px;"></i>
-        <h3>Non-Vegans Who Love Flavor</h3>
-        <p>Delicious recipes that prove plant-based food can be hearty, satisfying, and packed with flavor.</p>
-    </div>
-    
-    <div class="audience-item">
-        <i class="fas fa-piggy-bank" style="font-size: 2.5rem; color: #228b22; margin-bottom: 15px;"></i>
-        <h3>Budget-Conscious Cooks</h3>
-        <p>Cost-effective recipes using affordable ingredients that minimize waste and maximize nutrition.</p>
-    </div>
-</div>
-</div>
-</section>
-
-<!-- Benefits Section -->
-<section>
-<div class="container">
-    <h2 class="section-title">Here's What Happens When You Start Cooking From Our Cookbook</h2>
-    
-    <div class="details-grid">
-        <div class="detail-box">
-            <div class="detail-icon">
-                <i class="fas fa-brain"></i>
-            </div>
-            <h3>Eliminate Decision Fatigue</h3>
-            <p>No more wondering what to cook. With 100 recipes and weekly meal plans, dinner decisions become effortless.</p>
-        </div>
-        
-        <div class="detail-box">
-            <div class="detail-icon">
-                <i class="fas fa-weight"></i>
-            </div>
-            <h3>Natural Weight Management</h3>
-            <p>Whole-food, nutrient-dense recipes naturally support healthy weight without counting calories or restrictive dieting.</p>
-        </div>
-        
-        <div class="detail-box">
-            <div class="detail-icon">
-                <i class="fas fa-bolt"></i>
-            </div>
-            <h3>Sustained Energy All Day</h3>
-            <p>Balanced meals with complex carbs, plant protein, and healthy fats provide steady energy without crashes.</p>
-        </div>
-        
-        <div class="detail-box">
-            <div class="detail-icon">
-                <i class="fas fa-heart"></i>
-            </div>
-            <h3>Improved Heart Health</h3>
-            <p>Fiber-rich, cholesterol-free meals support cardiovascular health and help maintain healthy blood pressure.</p>
-        </div>
-        
-        <div class="detail-box">
-            <div class="detail-icon">
-                <i class="fas fa-smile"></i>
-            </div>
-            <h3>Better Digestion & Gut Health</h3>
-            <p>High-fiber plant foods promote healthy gut bacteria, improve digestion, and reduce bloating.</p>
-        </div>
-        
-        <div class="detail-box">
-            <div class="detail-icon">
-                <i class="fas fa-dollar-sign"></i>
-            </div>
-            <h3>Save Money on Groceries</h3>
-            <p>Plant-based ingredients are often cheaper than meat and dairy, reducing your weekly food bill significantly.</p>
-        </div>
-    </div>
-</div>
-</section>
-
-<!-- Testimonials -->
-<section class="testimonials">
-<div class="container">
-    <h2 class="section-title">Join 500+ Happy Cooks Who Transformed Their Meals</h2>
-    <p class="section-subtitle">See what others are saying about how this cookbook changed their cooking and health</p>
-    <div class="testimonial-grid">
-        <div class="testimonial-card">
-            <p class="testimonial-text">"I was completely lost in the kitchen before this cookbook. Now I actually enjoy cooking! The recipes are so easy to follow, and my family loves the meals. We've saved so much money on takeout!"</p>                                                   <div class="testimonial-author">
-                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah M." class="author-img">
-                <div class="author-info">
-                    <h4>Sarah M.</h4>
-                    <p>Busy mom of two</p>
-                    <div style="color: #ffcc00;">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="testimonial-card">
-            <p class="testimonial-text">"As someone new to plant-based eating, I was overwhelmed. This cookbook made the transition so easy! The recipes are delicious, and I've noticed my digestion has improved dramatically in just 2 weeks."</p>
-            <div class="testimonial-author">
-                <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="James R." class="author-img">
-                <div class="author-info">
-                    <h4>James R.</h4>
-                    <p>Former meat-lover</p>
-                    <div style="color: #ffcc00;">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="testimonial-card">
-            <p class="testimonial-text">"I've tried many cookbooks, but this is the first one where every single recipe has turned out perfectly. The step-by-step instructions are foolproof. My energy levels have never been better!"</p>
-            <div class="testimonial-author">
-                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Maria T." class="author-img">
-                <div class="author-info">
-                    <h4>Maria T.</h4>
-                    <p>Health coach</p>
-                    <div style="color: #ffcc00;">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-
-<!-- FAQ -->
-<section class="faq">
-<div class="container">
-    <h2 class="section-title">Frequently Asked Questions</h2>
-    
-    <div class="faq-item">
-        <div class="faq-question">
-            <span>Is this cookbook suitable for beginners?</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            <p>Absolutely! We've designed every recipe with beginners in mind. Each recipe includes clear, step-by-step instructions, common ingredient substitutions, and tips for success. Even if you've never cooked a plant-based meal before, you'll be able to follow along easily.</p>
-        </div>
-    </div>
-    
-    <div class="faq-item">
-        <div class="faq-question">
-            <span>What format will I receive the cookbook in?</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            <p>You'll receive a PDF version that you can download immediately after purchase. This format allows you to view it on any device - phone, tablet, or computer. You can also print specific pages if you prefer cooking from paper. The PDF is optimized for easy reading on screens of all sizes.</p>
-        </div>
-    </div>
-    
-    <div class="faq-item">
-        <div class="faq-question">
-            <span>Are the ingredients expensive or hard to find?</span>
-            <i class="fas fa-chevron-down"></i>               
-        </div>
-        <div class="faq-answer">
-            <p>Not at all! We've focused on affordable, accessible ingredients that you can find at any regular grocery store. Many recipes use pantry staples, and we always provide substitution options for less common items. In fact, most users save money on groceries after switching to these plant-based recipes.</p>
-        </div>
-    </div>
-    
-    <div class="faq-item">
-        <div class="faq-question">
-            <span>How is this different from free recipes online?</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            <p>While there are free recipes online, they're often inconsistent in quality, incomplete in instructions, and not organized into a cohesive system. Our cookbook provides 100 tested, perfected recipes with complete nutritional information, meal planning guidance, and a logical progression from simple to more advanced dishes. It's a complete system, not just random recipes.</p>
-        </div>
-    </div>
-    
-    <div class="faq-item">
-        <div class="faq-question">
-            <span>What if I don't like the cookbook?</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="faq-answer">
-            <p>We offer a 30-day money-back guarantee with no questions asked. If for any reason you're not completely satisfied with your purchase, simply email us within 30 days for a full refund. We're confident you'll love it, but we want you to feel completely secure in your purchase.</p>
-        </div>
-    </div>
-</div>
-</section>
-
-<!-- Final CTA -->
-<section class="final-cta">
-<div class="container">
-    <h2>Transform Your Meals & Health Today</h2>                    
-<p>Stop struggling with meal planning and start enjoying delicious, nutritious plant-based cooking. With 100 recipes, clear instructions, and a 30-day guarantee, you have nothing to lose and everything to gain.</p>
-
-<div style="margin: 40px 0;">
-    <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; display: inline-block; margin-bottom: 20px;">
-        <p>Instant digital access • PDF format • Use on any device</p>
-    </div>
-</div>
-
-<!-- UPDATED LINK BELOW -->
-<a href="https://www.digistore24.com/redir/550988/wizz8079/" class="cta-button" style="font-size: 1.4rem; padding: 20px 50px;">
-    <i class="fas fa-lock"></i> Get Instant Access Now
-</a>
-
-<div style="margin-top: 30px; font-size: 0.9rem; opacity: 0.8;">
-    <p><i class="fas fa-shield-alt"></i> Secure checkout • 30-day money-back guarantee</p>
-</div>
-</div>
-</section>
-
-<!-- Footer -->
-<footer>
-<div class="container">
-    <div class="footer-content">
-        <h3 style="margin-bottom: 20px;">Plant-Based Kitchen Mastery</h3>
-        
-        <div class="contact-info">
-            <p>Have questions? We're here to help!</p>
-            <p>
-                <a href="mailto:support@plantbasedcookbook.com"><i class="fas    fa-envelope"></i> support@plantbasedcookbook.com</a> | 
-                <a href="tel:+15551234567"><i class="fas fa-phone"></i> +1 (555) 123-4567</a>
+            <h2 class="section-title">Delicious Plant-Based Recipes</h2>
+            <p style="text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; font-size: 18px;">
+                Discover mouthwatering plant-based meals that are both healthy and satisfying. These are just a few examples of what's possible with plant-based cooking.
             </p>
+            
+            <div class="images-grid">
+                <div class="recipe-image">
+                    <img src="https://itdoesnttastelikechicken.com/wp-content/uploads/2017/01/vegan-chili-recipe-best-easy-vegetarian-with-tofu.jpg" alt="Vegan Chili with Tofu">
+                </div>
+                
+                <div class="recipe-image">
+                    <img src="https://www.feastingathome.com/wp-content/uploads/2022/04/Coconut-Rice-Bowl-12-683x1024.jpg" alt="Coconut Rice Bowl">
+                </div>
+                
+                <div class="recipe-image">
+                    <img src="https://www.eatingwell.com/thmb/2JzxqGhwn_ncMuMI6QGrAESBFNs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/6474212-b4177cc730e043d3a50a051e83679cfa.jpg" alt="Vegan Buddha Bowl">
+                </div>
+                
+                <div class="recipe-image">
+                    <img src="https://www.eatingwell.com/thmb/udKsCYvEqadbD1I46MzxEOhHm88=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/quinoa-chili-with-sweet-potatoes-3f2d49b5fe294f2ba4df6d12bfa75e1c.jpg" alt="Quinoa Chili with Sweet Potatoes">
+                </div>
+            </div>
         </div>
-        
-        <div class="copyright">
-            <p>© 2023 Plant-Based Kitchen Mastery. All rights reserved.</p>
-            <p></p>
-        </div>
-    </div>
-</div>
-</footer>
+    </section>
 
-<script>
-// FAQ toggle functionality
-document.querySelectorAll('.faq-question').forEach(question => {
-    question.addEventListener('click', () => {
-        const item = question.parentElement;
-        item.classList.toggle('active');
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Community Says</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I've tried many diets, but plant-based eating changed everything. I lost 25 pounds in 3 months, my cholesterol dropped 40 points, and I have more energy than I did in my 20s!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SJ</div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Lost 25 lbs with plant-based</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As someone with digestive issues, finding foods that didn't cause discomfort was a struggle until I went plant-based. My gut health has never been better and I've lost 18 pounds!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <h4>Michael Roberts</h4>
+                            <p>Improved digestion & weight loss</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I was worried plant-based food would be boring, but these recipes proved me wrong. I lost 30 pounds and my energy levels are through the roof!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AL</div>
+                        <div class="author-info">
+                            <h4>Amanda Lee</h4>
+                            <p>Lost 30 lbs, gained energy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-content">
+                <div class="guarantee-badge">
+                    <span>30</span>
+                    DAYS
+                </div>
+                
+                <h2 style="font-size: 36px; margin-bottom: 20px;">Risk-Free Exploration</h2>
+                <p style="font-size: 18px; max-width: 700px; margin: 0 auto 30px;">We're so confident you'll love plant-based living that we offer a satisfaction guarantee on our recommended resources. If you're not completely satisfied, simply reach out within 30 days for support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Transform Your Health?</h2>
+            <p>Discover how simple and delicious plant-based living can be with our curated collection of resources, meal plans, and expert guidance. Click below to explore our recommendations.</p>
+            
+            <a href="https://www.digistore24.com/redir/550988/wizz8079/" class="cta-button" target="_blank">Click Here to See More →</a>
+            
+            <p style="margin-top: 20px; font-size: 14px; opacity: 0.9;"><i class="fas fa-lock"></i> Secure access • Trusted resources</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Who is this plant-based cookbook made for?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>This cookbook is perfect for anyone interested in plant-based eating! Whether you're a committed vegan, vegetarian, flexitarian, or just looking to incorporate more plant-based meals into your diet. It's also great for families, busy professionals, and anyone wanting to improve their health through nutrition.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Will plant-based eating help me lose weight?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! Plant-based diets are naturally lower in calories and higher in fiber, which helps you feel full longer. Many people experience sustainable weight loss without counting calories or feeling deprived.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Are plant-based ingredients expensive?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Plant-based eating can be very affordable! Staples like beans, rice, lentils, seasonal vegetables, and fruits are often cheaper than meat and dairy products. We focus on simple recipes with accessible ingredients that won't break the bank.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How quickly will I see weight loss results?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Many people notice weight loss within the first week, with more significant results in 2-4 weeks. The high fiber content helps reduce cravings and naturally regulates appetite, making weight management easier long-term.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Plant-Based Living</h3>
+                    <p>Helping you achieve better health through sustainable plant-based eating since 2018.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Important Notes</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Medical Disclaimer</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Plant-Based Living. All rights reserved. This site provides educational information about plant-based nutrition. Always consult with a healthcare professional before making dietary changes. This site contains affiliate links.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
         
-        // Close other open FAQs
-        document.querySelectorAll('.faq-item').forEach(otherItem => {
-            if (otherItem !== item && otherItem.classList.contains('active')) {
-                otherItem.classList.remove('active');
-            }
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                // Close other open FAQs
+                document.querySelectorAll('.faq-answer.active').forEach(activeAnswer => {
+                    if (activeAnswer !== answer) {
+                        activeAnswer.classList.remove('active');
+                        activeAnswer.previousElementSibling.querySelector('i').classList.remove('fa-chevron-up');
+                        activeAnswer.previousElementSibling.querySelector('i').classList.add('fa-chevron-down');
+                    }
+                });
+                
+                // Toggle current FAQ
+                answer.classList.toggle('active');
+                if (answer.classList.contains('active')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
         });
-    });
-});
-
-// Simple count-up animation for stats
-function animateStats() {
-    const statNumbers = document.querySelectorAll('.stat-number');
-    
-    statNumbers.forEach(stat => {
-        const target = parseInt(stat.textContent);
-        let current = 0;
-        const increment = target / 50;
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                stat.textContent = target;
-                clearInterval(timer);
-            } else {
-                stat.textContent = Math.floor(current);
-            }
-        }, 30);
-    });
-}
-
-// Trigger animation when stats come into view
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateStats();
-            observer.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-// Observe the stats section
-const statsSection = document.querySelector('header');
-if (statsSection) {
-    observer.observe(statsSection);
-}
-
-// Open all external links in new tab
-document.querySelectorAll('a[href^="http"]').forEach(link => {
-    if (!link.href.includes(window.location.hostname)) {
-        link.setAttribute('target', '_blank');
-        link.setAttribute('rel', 'noopener noreferrer');
-    }
-});
-</script>
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Track outbound link clicks
+        document.querySelectorAll('a[href*="digistore24.com"]').forEach(link => {
+            link.addEventListener('click', function() {
+                // In a real implementation, you might want to track this click with analytics
+                console.log('Outbound link clicked:', this.href);
+            });
+        });
+    </script>
 </body>
 </html>
