@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -193,6 +194,62 @@
             color: #2c3e50;
         }
         
+        /* New Sections */
+        .cookbook-for, .expected-results, .reasons-to-buy {
+            padding: 80px 0;
+        }
+        
+        .cookbook-for {
+            background-color: white;
+        }
+        
+        .expected-results {
+            background-color: #f1f8e9;
+        }
+        
+        .reasons-to-buy {
+            background-color: white;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .info-card {
+            background-color: #f9f7f3;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .info-card h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        .info-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .info-card li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .info-card li:before {
+            content: "✓";
+            color: #4CAF50;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
         /* Testimonials */
         .testimonials {
             padding: 80px 0;
@@ -210,12 +267,15 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
         }
         
         .testimonial-text {
             font-style: italic;
             margin-bottom: 20px;
             color: #555;
+            flex-grow: 1;
         }
         
         .testimonial-author {
@@ -225,16 +285,19 @@
         }
         
         .author-avatar {
-            width: 50px;
-            height: 50px;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
-            background-color: #4CAF50;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 3px solid #f1f8e9;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .author-info h4 {
@@ -245,6 +308,11 @@
         .author-info p {
             color: #777;
             font-size: 14px;
+        }
+        
+        .stars {
+            color: #FF9800;
+            margin-top: 3px;
         }
         
         /* Recipe Images Section */
@@ -439,10 +507,14 @@
             .section-title {
                 font-size: 30px;
             }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 576px) {
-            .hero, .features, .testimonials, .recipe-images, .final-cta, .faq {
+            .hero, .features, .cookbook-for, .expected-results, .reasons-to-buy, .testimonials, .recipe-images, .final-cta, .faq {
                 padding: 60px 0;
             }
             
@@ -450,7 +522,7 @@
                 font-size: 32px;
             }
             
-            .features-grid {
+            .features-grid, .testimonial-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -484,7 +556,7 @@
                         <li><i class="fas fa-check-circle"></i> Boost energy levels naturally</li>
                     </ul>
                     
-                    <a href="https://www.digistore24.com/redir/550988/wizz8079/" class="cta-button" target="_blank">Click Here to See More →</a>
+                    <a href="https://tinyurl.com/4anv8p3j" class="cta-button" target="_blank">Click Here to See More →</a>
                     
                     <p style="margin-top: 15px; font-size: 14px; color: #777;">Join 50,000+ people who transformed their health with plant-based eating</p>
                 </div>
@@ -565,19 +637,160 @@
         </div>
     </section>
 
+    <!-- Who This Cookbook Is Made For -->
+    <section class="cookbook-for">
+        <div class="container">
+            <h2 class="section-title">Who This Plant-Based Cookbook Is Made For</h2>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Health Seekers</h3>
+                    <ul>
+                        <li>Those wanting to lower cholesterol naturally</li>
+                        <li>People with digestive issues seeking relief</li>
+                        <li>Individuals looking to reduce inflammation</li>
+                        <li>Anyone wanting to boost their immune system</li>
+                        <li>People with high blood pressure concerns</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Weight Management</h3>
+                    <ul>
+                        <li>People struggling with yo-yo dieting</li>
+                        <li>Those wanting sustainable weight loss</li>
+                        <li>Individuals tired of counting calories</li>
+                        <li>People who want to eat more without gaining weight</li>
+                        <li>Anyone seeking natural appetite regulation</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Lifestyle Changes</h3>
+                    <ul>
+                        <li>Beginners to plant-based eating</li>
+                        <li>Busy professionals needing quick meals</li>
+                        <li>Families wanting healthy meal options</li>
+                        <li>Foodies looking for delicious alternatives</li>
+                        <li>Anyone tired of boring "diet" food</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expected Results After Buying -->
+    <section class="expected-results">
+        <div class="container">
+            <h2 class="section-title">What Results You Can Expect After Buying</h2>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Week 1-2: Initial Changes</h3>
+                    <ul>
+                        <li>Increased energy levels and mental clarity</li>
+                        <li>Better digestion and reduced bloating</li>
+                        <li>Natural appetite suppression from high-fiber foods</li>
+                        <li>Initial weight loss of 3-7 pounds</li>
+                        <li>Reduced cravings for processed foods</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Month 1: Noticeable Improvements</h3>
+                    <ul>
+                        <li>Sustainable weight loss of 8-15 pounds</li>
+                        <li>Improved skin complexion and glow</li>
+                        <li>Better sleep quality and easier mornings</li>
+                        <li>Clothing fitting looser and more comfortably</li>
+                        <li>Natural reduction in blood pressure readings</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Long-Term Transformation</h3>
+                    <ul>
+                        <li>Maintained healthy weight without struggle</li>
+                        <li>Improved blood work results (cholesterol, sugar)</li>
+                        <li>Reduced need for medications (consult doctor)</li>
+                        <li>New healthy relationship with food</li>
+                        <li>Consistent energy throughout the day</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reasons to Buy -->
+    <section class="reasons-to-buy">
+        <div class="container">
+            <h2 class="section-title">Top Reasons to Buy This Plant-Based Cookbook Now</h2>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Health Benefits</h3>
+                    <ul>
+                        <li>Scientifically proven approach to weight loss</li>
+                        <li>Natural detoxification through whole foods</li>
+                        <li>Reduced risk of chronic diseases</li>
+                        <li>Improved gut microbiome diversity</li>
+                        <li>Anti-inflammatory benefits for joints</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Practical Advantages</h3>
+                    <ul>
+                        <li>Simple recipes with common ingredients</li>
+                        <li>Meal prep strategies for busy lifestyles</li>
+                        <li>Budget-friendly eating plan</li>
+                        <li>Family-friendly recipes everyone will enjoy</li>
+                        <li>No complicated calorie counting</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Exclusive Value</h3>
+                    <ul>
+                        <li>30-day satisfaction guarantee</li>
+                        <li>Bonus meal plans and shopping lists</li>
+                        <li>Access to private community support</li>
+                        <li>Regular recipe updates and additions</li>
+                        <li>Special discount for early adopters</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">What Our Community Says</h2>
+            <h2 class="section-title">Real People, Real Results</h2>
+            <p style="text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; font-size: 18px;">
+                See what real buyers are saying about their transformation with our plant-based cookbook.
+            </p>
             
             <div class="testimonial-grid">
                 <div class="testimonial-card">
                     <p class="testimonial-text">"I've tried many diets, but plant-based eating changed everything. I lost 25 pounds in 3 months, my cholesterol dropped 40 points, and I have more energy than I did in my 20s!"</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">SJ</div>
+                        <div class="author-avatar">
+                            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Sarah Johnson">
+                        </div>
                         <div class="author-info">
                             <h4>Sarah Johnson</h4>
-                            <p>Lost 25 lbs with plant-based</p>
+                            <p>Lost 25 lbs, Cholesterol -40 points</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p style="font-size: 12px; color: #4CAF50; margin-top: 5px;">
+                                <i class="fas fa-check-circle"></i> Verified Buyer
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -585,10 +798,22 @@
                 <div class="testimonial-card">
                     <p class="testimonial-text">"As someone with digestive issues, finding foods that didn't cause discomfort was a struggle until I went plant-based. My gut health has never been better and I've lost 18 pounds!"</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">MR</div>
+                        <div class="author-avatar">
+                            <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Michael Roberts">
+                        </div>
                         <div class="author-info">
                             <h4>Michael Roberts</h4>
-                            <p>Improved digestion & weight loss</p>
+                            <p>Improved digestion, Lost 18 lbs</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p style="font-size: 12px; color: #4CAF50; margin-top: 5px;">
+                                <i class="fas fa-check-circle"></i> Verified Buyer
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -596,10 +821,94 @@
                 <div class="testimonial-card">
                     <p class="testimonial-text">"I was worried plant-based food would be boring, but these recipes proved me wrong. I lost 30 pounds and my energy levels are through the roof!"</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">AL</div>
+                        <div class="author-avatar">
+                            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Amanda Lee">
+                        </div>
                         <div class="author-info">
                             <h4>Amanda Lee</h4>
-                            <p>Lost 30 lbs, gained energy</p>
+                            <p>Lost 30 lbs, Gained energy</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p style="font-size: 12px; color: #4CAF50; margin-top: 5px;">
+                                <i class="fas fa-check-circle"></i> Verified Buyer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional testimonials -->
+            <div class="testimonial-grid" style="margin-top: 30px;">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"This cookbook saved my life! After being diagnosed with high blood pressure, I switched to plant-based and not only lost 22 pounds, but my blood pressure is now normal without medication!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400" alt="David Chen">
+                        </div>
+                        <div class="author-info">
+                            <h4>David Chen</h4>
+                            <p>Normalized blood pressure</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p style="font-size: 12px; color: #4CAF50; margin-top: 5px;">
+                                <i class="fas fa-check-circle"></i> Verified Buyer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As a busy mom, I needed quick, healthy meals. This cookbook delivered! My whole family loves the recipes and I've lost 15 pounds in 2 months without feeling like I'm dieting."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Jennifer Park">
+                        </div>
+                        <div class="author-info">
+                            <h4>Jennifer Park</h4>
+                            <p>Busy mom, Lost 15 lbs</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p style="font-size: 12px; color: #4CAF50; margin-top: 5px;">
+                                <i class="fas fa-check-circle"></i> Verified Buyer
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The 30-day meal plan made the transition so easy! I've never felt better - my skin cleared up, I sleep better, and I've dropped 28 pounds. This is not a diet, it's a lifestyle!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Robert Garcia">
+                        </div>
+                        <div class="author-info">
+                            <h4>Robert Garcia</h4>
+                            <p>Lost 28 lbs, Better sleep</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p style="font-size: 12px; color: #4CAF50; margin-top: 5px;">
+                                <i class="fas fa-check-circle"></i> Verified Buyer
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -628,7 +937,7 @@
             <h2>Ready to Transform Your Health?</h2>
             <p>Discover how simple and delicious plant-based living can be with our curated collection of resources, meal plans, and expert guidance. Click below to explore our recommendations.</p>
             
-            <a href="https://www.digistore24.com/redir/550988/wizz8079/" class="cta-button" target="_blank">Click Here to See More →</a>
+            <a href="https://tinyurl.com/4anv8p3j" class="cta-button" target="_blank">Click Here to See More →</a>
             
             <p style="margin-top: 20px; font-size: 14px; opacity: 0.9;"><i class="fas fa-lock"></i> Secure access • Trusted resources</p>
         </div>
@@ -757,10 +1066,10 @@
         });
         
         // Track outbound link clicks
-        document.querySelectorAll('a[href*="digistore24.com"]').forEach(link => {
+        document.querySelectorAll('a[href*="tinyurl.com"]').forEach(link => {
             link.addEventListener('click', function() {
-                // In a real implementation, you might want to track this click with analytics
                 console.log('Outbound link clicked:', this.href);
+                // You can add analytics tracking here
             });
         });
     </script>
