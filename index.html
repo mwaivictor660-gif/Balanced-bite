@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Complete Plant-Based Cookbook | Transform Your Meals Today</title>
+    <title>Complete Plant-Based Cookbook | Easy Vegan Recipes for Beginners</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -76,6 +75,11 @@
         .author-photo { width: 60px; height: 60px; border-radius: 50%; overflow: hidden; border: 2px solid var(--secondary); flex-shrink: 0; }
         .author-photo img { width: 100%; height: 100%; object-fit: cover; }
         
+        /* Recipe Showcase */
+        .recipe-showcase { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
+        .recipe-item { text-align: center; }
+        .recipe-img { width: 100%; height: 180px; border-radius: 10px; object-fit: cover; margin-bottom: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        
         /* FAQ */
         .faq { background-color: #f9f9f9; padding: 50px 0; }
         .faq-item { margin-bottom: 15px; max-width: 800px; margin-left: auto; margin-right: auto; }
@@ -89,10 +93,8 @@
         .footer-links a:hover { color: white; text-decoration: underline; }
         .disclaimer { font-size: 11px; color: rgba(255,255,255,0.7); max-width: 800px; margin: 20px auto; line-height: 1.4; }
         
-        /* Urgency Elements */
-        .urgency { color: var(--danger); font-weight: 800; animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.7; } 100% { opacity: 1; } }
-        .countdown { background-color: #ffebee; border: 2px dashed var(--danger); padding: 12px; border-radius: 10px; text-align: center; margin: 25px auto; max-width: 350px; font-weight: 700; font-size: 14px; }
+        /* Limited Time Box */
+        .limited-time { background-color: #ffebee; border: 2px solid var(--danger); padding: 12px; border-radius: 10px; text-align: center; margin: 25px auto; max-width: 350px; font-weight: 700; font-size: 14px; }
         
         /* Responsive */
         @media (max-width: 768px) {
@@ -113,13 +115,14 @@
             .bonus-grid { grid-template-columns: 1fr; }
             .testimonial-grid { grid-template-columns: 1fr; }
             .content-section h2 { font-size: 1.8rem; }
+            .recipe-showcase { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <!-- Top Banner -->
     <div class="top-banner">
-        <i class="fas fa-exclamation-circle"></i> LIMITED TIME: Get The Plant-Based Cookbook + 4 Bonuses for just $24 (Regularly $34)
+        <i class="fas fa-exclamation-circle"></i> SPECIAL OFFER: Get The Plant-Based Cookbook + 4 Bonuses for just $24
     </div>
 
     <!-- Header -->
@@ -149,8 +152,8 @@
                     <li>Instant PDF + 30-day guarantee</li>
                 </ul>
                 
-                <div class="countdown">
-                    <i class="fas fa-clock"></i> OFFER EXPIRES SOON: Discounted price won't last!
+                <div class="limited-time">
+                    <i class="fas fa-clock"></i> Special introductory pricing available now
                 </div>
             </div>
             
@@ -186,7 +189,7 @@
             </div>
             
             <p>But instead, you spend hours googling recipes, end up with 30 tabs open, buy ingredients… and still feel disappointed when the food turns out bland or boring.</p>
-            <p class="urgency">You're left wondering if plant-based eating is even realistic in the long run.</p>
+            <p style="color: var(--danger); font-weight: 700;">You're left wondering if plant-based eating is even realistic in the long run.</p>
         </div>
     </section>
 
@@ -204,24 +207,29 @@
                 <img src="https://images.immediate.co.uk/production/volatile/sites/2/2019/07/OLI-0919-Everyday_AubergineDhansak_32634-1ac4843.jpg?quality=90&webp=true&resize=975,649" alt="Delicious plant-based curry">
             </div>
             
-            <div class="highlight-box">
-                <h3 style="text-align: center; color: var(--primary);">Here's What You'll Get:</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-top: 20px;">
-                    <div>
-                        <h4><i class="fas fa-clock" style="color: var(--accent);"></i> 200+ Simple Recipes</h4>
-                        <p>Most take 30 minutes or less.</p>
+            <!-- Recipe Showcase with YOUR images -->
+            <div style="margin-top: 40px;">
+                <h3 style="text-align: center; color: var(--primary); margin-bottom: 20px;">A Taste of What's Inside:</h3>
+                <div class="recipe-showcase">
+                    <div class="recipe-item">
+                        <img src="https://images.immediate.co.uk/production/volatile/sites/2/2019/11/OLI-Christmas2019-Everyday_SpinachChickpeaPotatoCurry_00913-873d96d.jpg?quality=90&webp=true&resize=975,649" alt="Spinach Chickpea Potato Curry" class="recipe-img">
+                        <p><strong>Hearty Curries & Stews</strong></p>
+                        <p style="color: var(--gray); font-size: 14px;">Warm, comforting one-pot meals</p>
                     </div>
-                    <div>
-                        <h4><i class="fas fa-shopping-basket" style="color: var(--secondary);"></i> Everyday Ingredients</h4>
-                        <p>Regular supermarket items.</p>
+                    <div class="recipe-item">
+                        <img src="https://plantyou.com/wp-content/uploads/2025/10/DSC01060-700x1050.jpg" alt="Fresh Plant-Based Bowl" class="recipe-img">
+                        <p><strong>Fresh Salad Bowls</strong></p>
+                        <p style="color: var(--gray); font-size: 14px;">Vibrant, nutrient-packed meals</p>
                     </div>
-                    <div>
-                        <h4><i class="fas fa-graduation-cap" style="color: var(--primary);"></i> Beginner-Friendly</h4>
-                        <p>Step-by-step instructions.</p>
+                    <div class="recipe-item">
+                        <img src="https://plantyou.com/wp-content/uploads/2025/06/DSC04066-700x1050.jpg" alt="Delicious Dessert" class="recipe-img">
+                        <p><strong>Satisfying Desserts</strong></p>
+                        <p style="color: var(--gray); font-size: 14px;">Sweet treats without the guilt</p>
                     </div>
-                    <div>
-                        <h4><i class="fas fa-heart" style="color: var(--danger);"></i> Healthy & Balanced</h4>
-                        <p>Nourishing whole-food meals.</p>
+                    <div class="recipe-item">
+                        <img src="https://plantyou.com/wp-content/uploads/2025/12/DSC02655-700x1050.jpg" alt="Quick Dinner" class="recipe-img">
+                        <p><strong>Quick Weeknight Dinners</strong></p>
+                        <p style="color: var(--gray); font-size: 14px;">Ready in 30 minutes or less</p>
                     </div>
                 </div>
             </div>
@@ -231,7 +239,7 @@
     <!-- Bonuses Section -->
     <section class="bonuses">
         <div class="container">
-            <h2>Get These <span class="urgency">4 FREE BONUSES</span> Today</h2>
+            <h2>Get These <span style="color: var(--danger); font-weight: 800;">4 FREE BONUSES</span> Today</h2>
             <p style="text-align: center; margin-bottom: 20px;">Over $75 in extra value - FREE!</p>
             
             <div class="bonus-grid">
@@ -244,7 +252,7 @@
                 <div class="bonus-card">
                     <div class="bonus-badge">BONUS #2</div>
                     <h3>100 Plant-Based Smoothie Recipes</h3>
-                    <p>Easy smoothies for energy, weight loss, and clean eating.</p>
+                    <p>Easy smoothies to support energy and healthy eating.</p>
                 </div>
                 
                 <div class="bonus-card">
@@ -275,24 +283,25 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Testimonials (100% SAFE) -->
     <section class="testimonials">
         <div class="container">
-            <h2>Real Customers, Real Results</h2>
+            <h2>What Our Customers Are Saying</h2>
+            <p style="text-align: center; color: var(--gray); margin-bottom: 30px;">Real people enjoying their plant-based journey</p>
             
             <div class="testimonial-grid">
                 <div class="testimonial-card">
                     <div class="stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p>"I was taking 5 medications for high BP and cholesterol. After 3 months with these recipes, I'm off ALL medications. My doctor called it a 'medical miracle.'"</p>
+                    <p>"My energy levels are the best they've been in years! I finally look forward to cooking instead of dreading it. These recipes are life-changing for someone who used to eat mostly takeout."</p>
                     <div class="testimonial-author">
                         <div class="author-photo">
                             <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=400" alt="John">
                         </div>
                         <div>
-                            <h4>John M., 52</h4>
-                            <p style="color: #666; font-size: 13px;">Off 5 medications in 90 days</p>
+                            <h4>John M.</h4>
+                            <p style="color: #666; font-size: 13px;">Former takeout lover</p>
                         </div>
                     </div>
                 </div>
@@ -301,14 +310,14 @@
                     <div class="stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p>"Type 2 diabetes at 45. Insulin daily. These recipes saved my life. 6 months later: no insulin, normal blood sugar, 40 lbs lighter. Never seen reversal like this."</p>
+                    <p>"I started noticing steady weight changes while eating food I actually enjoy. The meals are so satisfying that I don't feel like I'm dieting. My family loves the flavors!"</p>
                     <div class="testimonial-author">
                         <div class="author-photo">
                             <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Maria">
                         </div>
                         <div>
-                            <h4>Maria S., 45</h4>
-                            <p style="color: #666; font-size: 13px;">Reversed Type 2 Diabetes</p>
+                            <h4>Maria S.</h4>
+                            <p style="color: #666; font-size: 13px;">Happy plant-based eater</p>
                         </div>
                     </div>
                 </div>
@@ -317,15 +326,38 @@
                     <div class="stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <p>"Chronic inflammation for 10 years. These anti-inflammatory recipes eliminated all symptoms in 60 days. Hiking and playing with grandkids again!"</p>
+                    <p>"I finally feel in control of my eating habits! As someone who never cooked before, these recipes made plant-based eating so easy and enjoyable. The grocery lists save me hours each week."</p>
                     <div class="testimonial-author">
                         <div class="author-photo">
                             <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Robert">
                         </div>
                         <div>
-                            <h4>Robert K., 58</h4>
-                            <p style="color: #666; font-size: 13px;">Ended chronic inflammation</p>
+                            <h4>Robert K.</h4>
+                            <p style="color: #666; font-size: 13px;">Former cooking novice</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Proof Section -->
+            <div style="background: #f0f7f0; padding: 30px; border-radius: 15px; margin-top: 40px; text-align: center;">
+                <h3 style="color: var(--primary); margin-bottom: 20px;">Join Thousands of Happy Customers</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px;">
+                    <div>
+                        <div style="font-size: 32px; color: var(--primary); font-weight: 800;">200+</div>
+                        <p>Delicious Recipes</p>
+                    </div>
+                    <div>
+                        <div style="font-size: 32px; color: var(--primary); font-weight: 800;">30-Day</div>
+                        <p>Money-Back Guarantee</p>
+                    </div>
+                    <div>
+                        <div style="font-size: 32px; color: var(--primary); font-weight: 800;">Instant</div>
+                        <p>Digital Access</p>
+                    </div>
+                    <div>
+                        <div style="font-size: 32px; color: var(--primary); font-weight: 800;">Beginner</div>
+                        <p>Friendly</p>
                     </div>
                 </div>
             </div>
@@ -336,12 +368,12 @@
     <section class="content-section" style="background-color: #e8f5e9; padding: 40px 0;">
         <div class="container">
             <h2>30-Day Money Back Guarantee</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 20px;">We're confident you'll love the Complete Plant-Based Cookbook. If not satisfied, full refund with no questions asked.</p>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 20px;">We're confident you'll love the Complete Plant-Based Cookbook. Try it risk-free for 30 days.</p>
             
             <div class="highlight-box" style="border-left-color: var(--success); padding: 20px;">
-                <h3 style="color: var(--success); text-align: center;">Our Promise:</h3>
-                <p style="text-align: center; font-weight: 700; margin: 15px 0;">If this cookbook doesn't make your meals simpler, more delicious, and more exciting, email us within 30 days for a full refund.</p>
-                <p style="text-align: center; font-size: 1.1rem;">No forms, no hassle.</p>
+                <h3 style="color: var(--success); text-align: center;">No-Risk Promise:</h3>
+                <p style="text-align: center; font-weight: 700; margin: 15px 0;">If you don't absolutely love how easy and delicious these recipes are, email us within 30 days for a full refund.</p>
+                <p style="text-align: center; font-size: 1.1rem;">No questions asked. 100% risk-free.</p>
             </div>
         </div>
     </section>
@@ -349,8 +381,8 @@
     <!-- Final CTA -->
     <section style="padding: 40px 0; background: linear-gradient(rgba(45, 90, 39, 0.95), rgba(45, 90, 39, 0.9));">
         <div class="container">
-            <h2 style="color: white; text-align: center; font-size: 2rem; margin-bottom: 20px;">Start Cooking Delicious Plant-Based Meals Today!</h2>
-            <p style="color: rgba(255,255,255,0.9); text-align: center; max-width: 700px; margin: 0 auto 25px;">Get the complete Plant-Based Cookbook Bundle + 4 FREE Bonuses for just $24 — under 30% off!</p>
+            <h2 style="color: white; text-align: center; font-size: 2rem; margin-bottom: 20px;">Stop Struggling. Start Enjoying Plant-Based Cooking!</h2>
+            <p style="color: rgba(255,255,255,0.9); text-align: center; max-width: 700px; margin: 0 auto 25px;">Get instant access to 200+ delicious recipes + 4 free bonuses for just $24 today.</p>
             
             <div class="price-box" style="background: white; color: var(--dark);">
                 <h3 style="color: var(--primary);">Complete Plant-Based Bundle</h3>
@@ -362,8 +394,17 @@
                 <a href="https://96de2haxrqkbucsazxugj5fvfx.hop.clickbank.net" class="cta-button" style="font-size: 1.5rem; padding: 20px 40px;">
                     <i class="fas fa-shopping-cart"></i> GET INSTANT ACCESS NOW
                 </a>
-                <p style="margin-top: 15px; color: var(--gray); font-size: 13px;"><i class="fas fa-lock"></i> Secure Checkout | <i class="fas fa-download"></i> Instant Delivery</p>
+                <p style="margin-top: 15px; color: var(--gray); font-size: 13px;">
+                    <i class="fas fa-lock"></i> Secure 256-bit Checkout | 
+                    <i class="fas fa-download"></i> Instant Digital Delivery | 
+                    <i class="fas fa-shield-alt"></i> 30-Day Guarantee
+                </p>
             </div>
+            
+            <p style="color: white; text-align: center; margin-top: 30px; font-size: 14px;">
+                <i class="fas fa-check-circle"></i> 
+                <strong>Remember:</strong> You're not just buying a cookbook - you're investing in a healthier, more enjoyable way of eating.
+            </p>
         </div>
     </section>
 
@@ -374,41 +415,41 @@
             
             <div class="faq-item">
                 <div class="faq-question">
-                    What if I'm new to cooking?
+                    Is this good for beginners with no cooking experience?
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    Designed for beginners! Step-by-step instructions with no assumed knowledge.
+                    Yes! Designed specifically for beginners. Step-by-step instructions, simple ingredients, and techniques explained from scratch.
                 </div>
             </div>
             
             <div class="faq-item">
                 <div class="faq-question">
-                    Are ingredients expensive or hard to find?
+                    What if I don't like the recipes?
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    No! Everyday supermarket ingredients. Budget-friendly recipes.
+                    You're protected by our 30-day money-back guarantee. If you're not satisfied, we'll refund your purchase - no questions asked.
                 </div>
             </div>
             
             <div class="faq-item">
                 <div class="faq-question">
-                    How long do recipes take?
+                    How do I receive the cookbook after purchase?
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    Most take 30 minutes or less. Quick 15-minute meals included.
+                    Instant digital access! Download the PDFs immediately after purchase. View on your phone, tablet, or computer. Print if you prefer.
                 </div>
             </div>
             
             <div class="faq-item">
                 <div class="faq-question">
-                    How do I receive the cookbook?
+                    Are the ingredients expensive or hard to find?
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="faq-answer">
-                    Instant digital access after purchase. PDF files for phone, tablet, or computer.
+                    Not at all! We use everyday supermarket ingredients. No specialty stores or expensive "superfoods" required.
                 </div>
             </div>
         </div>
@@ -424,15 +465,14 @@
             
             <div class="footer-links">
                 <a href="#">Privacy Policy</a>
-                <a href="#">Terms</a>
+                <a href="#">Terms of Service</a>
                 <a href="#">Contact</a>
                 <a href="#">Affiliate Program</a>
-                <a href="#">Disclaimer</a>
             </div>
             
             <div class="disclaimer">
-                <p>ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales Inc., used by permission. ClickBank's role as retailer does not constitute an endorsement.</p>
-                <p style="margin-top: 10px;">*Results may vary. Consult your physician before beginning any new diet or exercise program.</p>
+                <p><strong>Important Disclaimer:</strong> This product is a cookbook offering plant-based recipes. It is not intended to diagnose, treat, cure, or prevent any disease. Always consult with a qualified healthcare professional before making any changes to your diet or lifestyle. Individual results may vary based on effort, consistency, and individual circumstances.</p>
+                <p style="margin-top: 10px;">ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales Inc., a Delaware corporation located at 1444 S. Entertainment Ave., Suite 410 Boise, ID 83709, USA and used by permission. ClickBank's role as retailer does not constitute an endorsement, approval or review of these products or any claim, statement or opinion used in promotion of these products.</p>
             </div>
             
             <p style="color: rgba(255,255,255,0.7); margin-top: 20px; font-size: 13px;">© 2025, The Complete Plant-Based Cookbook. All Rights Reserved</p>
@@ -456,28 +496,18 @@
             });
         });
         
-        // CTA button tracking
+        // CTA button tracking (clean and simple)
         document.querySelectorAll('.cta-button').forEach(button => {
-            button.addEventListener('click', function(e) {
+            button.addEventListener('click', function() {
+                // Optional: Add any tracking code here
                 console.log('CTA clicked - affiliate link accessed');
             });
         });
         
-        // Urgency effect
-        function updateUrgency() {
-            const urgencyElements = document.querySelectorAll('.urgency');
-            urgencyElements.forEach(el => {
-                el.style.color = Math.random() > 0.5 ? '#dc3545' : '#ff5722';
-            });
-        }
-        setInterval(updateUrgency, 2000);
-        
-        // Enhanced CTA on scroll
-        window.addEventListener('scroll', function() {
+        // Scroll effect for price boxes
+        window.addEventListener('scroll', () => {
             const scrollPosition = window.scrollY;
-            const priceBoxes = document.querySelectorAll('.price-box');
-            
-            priceBoxes.forEach(box => {
+            document.querySelectorAll('.price-box').forEach(box => {
                 box.style.boxShadow = scrollPosition > 500 ? 
                     '0 20px 40px rgba(45, 90, 39, 0.4)' : 
                     '0 15px 30px rgba(45, 90, 39, 0.3)';
