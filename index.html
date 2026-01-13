@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Analytics Tracking Code -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7BB299RDY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-E7BB299RDY');
+    </script>
+    <!-- End Google Analytics -->
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complete Plant-Based Cookbook | Easy Vegan Recipes for Beginners</title>
@@ -499,7 +509,14 @@
         // CTA button tracking (clean and simple)
         document.querySelectorAll('.cta-button').forEach(button => {
             button.addEventListener('click', function() {
-                // Optional: Add any tracking code here
+                // Optional: Add Google Analytics event tracking
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'click', {
+                        'event_category': 'CTA Button',
+                        'event_label': this.textContent.trim(),
+                        'value': 24 // optional: value of the purchase
+                    });
+                }
                 console.log('CTA clicked - affiliate link accessed');
             });
         });
