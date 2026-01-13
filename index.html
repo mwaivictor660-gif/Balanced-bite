@@ -1,19 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7BB299RDY"></script>
-    <script>
+    <!-- Google tag (gtag.js) - REMOVE OR REPLACE WITH YOUR TRACKING ID -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR-ID-HERE"></script> -->
+    <!-- <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
-      gtag('config', 'G-E7BB299RDY');
-    </script>
+      gtag('config', 'G-YOUR-ID-HERE');
+    </script> -->
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plant-Based Living - Transform Your Health Naturally</title>
+    <title>🚨 The Silent Killer in Your Kitchen: What Your Food is Doing to Your Health (And How to Stop It Before It's Too Late)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -35,439 +35,540 @@
             padding: 0 20px;
         }
         
-        /* Header Styles */
+        /* Header */
         header {
             background-color: #ffffff;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
             z-index: 100;
-            text-align: center;
         }
         
         .header-content {
-            padding: 20px 0;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            font-size: 24px;
-            font-weight: 700;
-            color: #4CAF50;
-        }
-        
-        .logo i {
-            font-size: 28px;
-        }
-        
-        /* Hero Section */
-        .hero {
-            padding: 80px 0;
-            background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(249, 247, 243, 1) 100%);
-            overflow: hidden;
-            text-align: center;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .hero-text {
-            flex: 1;
-        }
-        
-        h1 {
-            font-size: 48px;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        
-        .highlight {
-            color: #4CAF50;
-        }
-        
-        .subtitle {
-            font-size: 20px;
-            color: #555;
-            margin-bottom: 30px;
-        }
-        
-        .benefits-list {
-            margin: 25px 0;
-            list-style: none;
-            text-align: left;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .benefits-list li {
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .benefits-list i {
-            color: #4CAF50;
-            font-size: 18px;
-        }
-        
-        /* CTA Button */
-        .cta-button {
-            display: inline-block;
-            background-color: #FF9800;
-            color: white;
-            padding: 18px 45px;
-            font-size: 20px;
-            font-weight: 700;
-            border-radius: 50px;
-            text-decoration: none;
-            box-shadow: 0 5px 15px rgba(255, 152, 0, 0.3);
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        
-        .cta-button:hover {
-            background-color: #F57C00;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 152, 0, 0.4);
-        }
-        
-        .cta-button:active {
-            transform: translateY(1px);
-        }
-        
-        /* Features Section */
-        .features {
-            padding: 80px 0;
-            background-color: white;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 50px;
-            color: #2c3e50;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-        }
-        
-        .feature-card {
-            background-color: #f9f7f3;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .feature-icon {
-            font-size: 48px;
-            color: #4CAF50;
-            margin-bottom: 20px;
-        }
-        
-        .feature-title {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: #2c3e50;
-        }
-        
-        /* New Sections */
-        .cookbook-for, .expected-results, .reasons-to-buy {
-            padding: 80px 0;
-        }
-        
-        .cookbook-for {
-            background-color: white;
-        }
-        
-        .expected-results {
-            background-color: #f1f8e9;
-        }
-        
-        .reasons-to-buy {
-            background-color: white;
-        }
-        
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-        
-        .info-card {
-            background-color: #f9f7f3;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .info-card h3 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
-        
-        .info-card ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .info-card li {
-            margin-bottom: 10px;
-            padding-left: 25px;
-            position: relative;
-        }
-        
-        .info-card li:before {
-            content: "✓";
-            color: #4CAF50;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        
-        /* Testimonials */
-        .testimonials {
-            padding: 80px 0;
-            background-color: #f1f8e9;
-        }
-        
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .testimonial-card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            color: #555;
-            flex-grow: 1;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .author-avatar {
-            width: 65px;
-            height: 65px;
-            border-radius: 50%;
-            overflow: hidden;
-            flex-shrink: 0;
-            border: 3px solid #f1f8e9;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .author-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .author-info h4 {
-            color: #2c3e50;
-            margin-bottom: 5px;
-        }
-        
-        .author-info p {
-            color: #777;
-            font-size: 14px;
-        }
-        
-        .stars {
-            color: #FF9800;
-            margin-top: 3px;
-        }
-        
-        /* Recipe Images Section */
-        .recipe-images {
-            padding: 80px 0;
-            background-color: white;
-        }
-        
-        .images-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        
-        .recipe-image {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            height: 250px;
-        }
-        
-        .recipe-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .recipe-image:hover img {
-            transform: scale(1.05);
-        }
-        
-        /* Guarantee Section */
-        .guarantee {
-            padding: 60px 0;
-            background-color: #f1f8e9;
-            text-align: center;
-        }
-        
-        .guarantee-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .guarantee-badge {
-            background-color: #FF9800;
-            color: white;
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 30px;
-            font-weight: bold;
-            font-size: 14px;
-        }
-        
-        .guarantee-badge span {
-            font-size: 36px;
-            font-weight: 900;
-        }
-        
-        /* Final CTA Section */
-        .final-cta {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
-            color: white;
-            text-align: center;
-        }
-        
-        .final-cta h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        
-        .final-cta p {
-            font-size: 18px;
-            max-width: 700px;
-            margin: 0 auto 40px;
-        }
-        
-        /* FAQ Section */
-        .faq {
-            padding: 80px 0;
-            background-color: #f9f7f3;
-        }
-        
-        .faq-grid {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            margin-bottom: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-        }
-        
-        .faq-question {
-            background-color: white;
-            padding: 20px;
-            font-weight: 600;
-            cursor: pointer;
+            padding: 15px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
+            font-weight: 700;
+            color: #2E7D32;
+        }
+        
+        .logo i {
+            font-size: 26px;
+        }
+        
+        .header-badge {
+            background: linear-gradient(90deg, #d32f2f, #f57c00);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Red Alert Banner */
+        .alert-banner {
+            background: linear-gradient(90deg, #b71c1c, #d32f2f);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-weight: 600;
+            font-size: 17px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 70px 0;
+            background: linear-gradient(135deg, rgba(46, 125, 50, 0.1) 0%, rgba(249, 247, 243, 1) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #b71c1c, #d32f2f, #2E7D32);
+        }
+        
+        .alert-tag {
+            background: #b71c1c;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 25px;
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+        
+        h1 {
+            font-size: 44px;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        
+        .hero h1 span {
+            color: #b71c1c;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        
+        /* Statistics Box */
+        .stats-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 800px;
+            margin: 40px auto;
+            box-shadow: 0 15px 40px rgba(183, 28, 28, 0.15);
+            border: 2px solid #ffcdd2;
+        }
+        
+        .stats-box h3 {
+            color: #b71c1c;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 24px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 20px;
+            background: #ffebee;
+            border-radius: 10px;
+            border-left: 4px solid #b71c1c;
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: 900;
+            color: #b71c1c;
+            margin-bottom: 10px;
+        }
+        
+        /* Warning Section */
+        .warning-section {
+            padding: 80px 0;
+            background: #ffebee;
+        }
+        
+        .warning-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-top: 5px solid #b71c1c;
+        }
+        
+        .warning-header {
+            background: #b71c1c;
+            color: white;
+            padding: 25px;
+            font-size: 22px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .warning-content {
+            padding: 35px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+        
+        .warning-content ul {
+            list-style: none;
+            margin: 25px 0;
+        }
+        
+        .warning-content li {
+            margin-bottom: 15px;
+            padding-left: 35px;
+            position: relative;
+        }
+        
+        .warning-content li:before {
+            content: "⚠️";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 20px;
+        }
+        
+        /* Health Risks Grid */
+        .risks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .risk-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-top: 4px solid #b71c1c;
+            transition: transform 0.3s;
+        }
+        
+        .risk-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .risk-card h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Solution Section */
+        .solution-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+        }
+        
+        .solution-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .solution-header h2 {
+            color: #2E7D32;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .solution-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-top: 40px;
+            border: 3px solid #4CAF50;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(76, 175, 80, 0.2);
+        }
+        
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+            margin-top: 40px;
+        }
+        
+        .benefit-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-left: 5px solid #4CAF50;
+            transition: all 0.3s;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(76, 175, 80, 0.15);
+        }
+        
+        .benefit-icon {
+            font-size: 40px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background: #f9f7f3;
+            padding: 35px;
+            border-radius: 15px;
+            position: relative;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .testimonial-card:before {
+            content: '"';
+            font-size: 100px;
+            color: #4CAF50;
+            opacity: 0.1;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+            font-size: 17px;
+            line-height: 1.7;
+            color: #555;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        
+        .author-photo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #4CAF50;
+            flex-shrink: 0;
+        }
+        
+        .author-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Longevity Section */
+        .longevity-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .longevity-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Guarantee */
+        .guarantee {
+            padding: 80px 0;
+            background: #f9f7f3;
+            text-align: center;
+        }
+        
+        .guarantee-card {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            border: 3px solid #4CAF50;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .guarantee-card:before {
+            content: '100% RISK-FREE';
+            position: absolute;
+            top: 20px;
+            right: -60px;
+            background: #4CAF50;
+            color: white;
+            padding: 10px 70px;
+            transform: rotate(45deg);
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .price-box {
+            background: white;
+            color: #333;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            margin: 40px auto;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .price-box:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #b71c1c, #f57c00, #2E7D32);
+        }
+        
+        .price-display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 32px;
+        }
+        
+        .new-price {
+            color: #b71c1c;
+            font-size: 52px;
+            font-weight: 900;
+        }
+        
+        .value-breakdown {
+            background: #f9f7f3;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 25px 0;
+            text-align: left;
+        }
+        
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #2E7D32, #4CAF50);
+            color: white;
+            padding: 22px 60px;
+            font-size: 24px;
+            font-weight: 900;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 15px 35px rgba(46, 125, 50, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            letter-spacing: 1.5px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(46, 125, 50, 0.6);
+            background: linear-gradient(90deg, #4CAF50, #2E7D32);
+        }
+        
+        .cta-button:after {
+            content: '👉';
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+            background: #f9f7f3;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            background: white;
+            padding: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 5px solid #2E7D32;
+            font-size: 18px;
+        }
+        
         .faq-answer {
-            background-color: #f1f8e9;
-            padding: 0 20px;
+            background: white;
+            padding: 0 25px;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease, padding 0.3s ease;
+            border-left: 5px solid #4CAF50;
         }
         
         .faq-answer.active {
-            padding: 20px;
-            max-height: 300px;
+            padding: 25px;
+            max-height: 500px;
         }
         
         /* Footer */
         footer {
-            background-color: #2c3e50;
+            background-color: #1a252f;
             color: white;
             padding: 60px 0 30px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-column h3 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: #4CAF50;
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-links a {
-            color: #ddd;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: #4CAF50;
         }
         
         .copyright {
@@ -478,54 +579,82 @@
             font-size: 14px;
         }
         
-        /* Responsive Styles */
+        /* Responsive */
         @media (max-width: 992px) {
             h1 {
-                font-size: 40px;
+                font-size: 36px;
+            }
+            
+            .hero-subtitle {
+                font-size: 20px;
             }
         }
         
         @media (max-width: 768px) {
             h1 {
-                font-size: 36px;
+                font-size: 32px;
             }
             
-            .subtitle {
+            .hero-subtitle {
                 font-size: 18px;
             }
             
-            .section-title {
-                font-size: 30px;
+            .new-price {
+                font-size: 42px;
             }
             
-            .info-grid {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefits-grid, .risks-grid {
                 grid-template-columns: 1fr;
             }
         }
         
         @media (max-width: 576px) {
-            .hero, .features, .cookbook-for, .expected-results, .reasons-to-buy, .testimonials, .recipe-images, .final-cta, .faq {
+            .hero, .warning-section, .solution-section, .testimonials, .longevity-section, .guarantee, .final-cta, .faq {
                 padding: 60px 0;
             }
             
             h1 {
-                font-size: 32px;
+                font-size: 28px;
             }
             
-            .features-grid, .testimonial-grid {
-                grid-template-columns: 1fr;
+            .cta-button {
+                padding: 20px 30px;
+                font-size: 20px;
+            }
+            
+            .cta-button:after {
+                right: 20px;
+                font-size: 20px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Alert Banner -->
+    <div class="alert-banner">
+        <div class="container">
+            <i class="fas fa-exclamation-triangle"></i> MEDICAL ALERT: Processed foods are linked to 90% of modern diseases. Discover the escape plan below...
+        </div>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <i class="fas fa-leaf"></i>
-                    <span>Plant-Based Living</span>
+                    <i class="fas fa-heartbeat"></i>
+                    <span>LiveTo100Health.com</span>
+                </div>
+                <div class="header-badge">
+                    <i class="fas fa-clock"></i> HEALTH CRISIS ALERT
                 </div>
             </div>
         </div>
@@ -534,216 +663,170 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Transform Your Health with <span class="highlight">Plant-Based Living</span></h1>
-                    <p class="subtitle">Discover how plant-based eating can help you achieve better health, more energy, and sustainable weight management naturally</p>
+            <div class="alert-tag">
+                <i class="fas fa-skull-crossbones"></i> URGENT HEALTH WARNING
+            </div>
+            
+            <h1>The Silent Killer in Your Kitchen: <span>What Your Food is Doing to Your Health</span> (And How to Stop It Before It's Too Late)</h1>
+            
+            <p class="hero-subtitle">New Research Reveals: The average person consumes 8 pounds of toxic chemicals yearly from processed foods. Here's how to detox your body and add 20+ healthy years to your life starting today.</p>
+            
+            <div class="stats-box">
+                <h3><i class="fas fa-chart-line"></i> The Shocking Truth About Modern Food</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">90%</div>
+                        <p>Of chronic diseases linked to diet</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15 Years</div>
+                        <p>Average lifespan reduction from processed foods</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">70%</div>
+                        <p>Higher cancer risk from regular processed meat consumption</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1 in 3</div>
+                        <p>Adults will develop diabetes by 2050 at current rates</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warning Section -->
+    <section class="warning-section">
+        <div class="container">
+            <h2 class="section-title" style="color: #b71c1c; text-align: center; margin-bottom: 50px;">
+                <i class="fas fa-exclamation-circle"></i> Your Food is Slowly Poisoning You
+            </h2>
+            
+            <div class="warning-card">
+                <div class="warning-header">
+                    <i class="fas fa-radiation"></i> The Hidden Chemicals in Every Bite
+                </div>
+                <div class="warning-content">
+                    <p>Right now, your body is accumulating toxins from:</p>
+                    <ul>
+                        <li><strong>Preservatives</strong> that damage your liver and kidneys</li>
+                        <li><strong>Artificial colors</strong> linked to ADHD and cancer</li>
+                        <li><strong>Trans fats</strong> that clog arteries and cause heart attacks</li>
+                        <li><strong>Hidden sugars</strong> that spike insulin and cause diabetes</li>
+                        <li><strong>Pesticide residues</strong> that disrupt hormones</li>
+                        <li><strong>Processed meats</strong> with nitrates that form cancer-causing compounds</li>
+                    </ul>
+                    <p style="font-weight: bold; color: #b71c1c; margin-top: 25px;">
+                        Every meal is either fighting disease or feeding it. Which side are you on?
+                    </p>
+                </div>
+            </div>
+            
+            <h3 style="color: #2c3e50; text-align: center; margin: 50px 0 30px; font-size: 28px;">
+                Here's What Happens When You Continue Eating Processed Foods:
+            </h3>
+            
+            <div class="risks-grid">
+                <div class="risk-card">
+                    <h4><i class="fas fa-heart-broken" style="color: #b71c1c;"></i> Heart Attack by 50</h4>
+                    <p>Clogged arteries from trans fats and cholesterol. Every fast food meal increases your risk by 20%.</p>
+                </div>
+                
+                <div class="risk-card">
+                    <h4><i class="fas fa-brain" style="color: #b71c1c;"></i> Dementia by 65</h4>
+                    <p>Processed sugars create brain inflammation that destroys neurons. 50% higher risk with processed diets.</p>
+                </div>
+                
+                <div class="risk-card">
+                    <h4><i class="fas fa-weight" style="color: #b71c1c;"></i> Type 2 Diabetes</h4>
+                    <p>Your pancreas can't keep up with sugar spikes. Insulin resistance becomes permanent damage.</p>
+                </div>
+                
+                <div class="risk-card">
+                    <h4><i class="fas fa-lungs" style="color: #b71c1c;"></i> Cancer Cells Feeding</h4>
+                    <p>Processed foods create acidic environments where cancer thrives. Nitrates directly cause mutations.</p>
+                </div>
+                
+                <div class="risk-card">
+                    <h4><i class="fas fa-kidneys" style="color: #b71c1c;"></i> Kidney Failure</h4>
+                    <p>Your kidneys filter all toxins. Processed foods overload them until they shut down.</p>
+                </div>
+                
+                <div class="risk-card">
+                    <h4><i class="fas fa-tired" style="color: #b71c1c;"></i> Chronic Inflammation</h4>
+                    <p>Every joint hurts, skin breaks out, constant fatigue. Your body is fighting poison 24/7.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="solution-header">
+                <h2>The Good News: <span style="color: #b71c1c;">You Can Reverse This Damage</span></h2>
+                <p style="font-size: 20px; color: #2c3e50; max-width: 800px; margin: 0 auto;">
+                    Your body has an incredible ability to heal itself when you stop poisoning it and start nourishing it.
+                </p>
+            </div>
+            
+            <div class="solution-card">
+                <h3 style="text-align: center; color: #2E7D32; font-size: 32px; margin-bottom: 30px;">
+                    The Complete Plant-Based Healing System
+                </h3>
+                
+                <p style="font-size: 20px; text-align: center; margin-bottom: 40px; line-height: 1.6;">
+                    200+ scientifically-designed recipes that detox your body, reduce inflammation, and activate your natural healing powers.
+                </p>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h4>Reverse Heart Disease</h4>
+                        <p>Recipes proven to unclog arteries and lower cholesterol naturally. No medications needed.</p>
+                    </div>
                     
-                    <ul class="benefits-list">
-                        <li><i class="fas fa-check-circle"></i> Scientifically proven for sustainable weight loss</li>
-                        <li><i class="fas fa-check-circle"></i> Delicious, vibrant meals full of nutrients</li>
-                        <li><i class="fas fa-check-circle"></i> Simple approach anyone can follow</li>
-                        <li><i class="fas fa-check-circle"></i> Boost energy levels naturally</li>
-                    </ul>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Sharpen Your Mind</h4>
+                        <p>Foods that boost brain function and protect against dementia. Clear thinking at any age.</p>
+                    </div>
                     
-                    <a href="https://tinyurl.com/4anv8p3j" class="cta-button" target="_blank">Click Here to See More →</a>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-virus"></i>
+                        </div>
+                        <h4>Cancer Prevention</h4>
+                        <p>Anti-cancer compounds in every meal. Create an environment where disease can't survive.</p>
+                    </div>
                     
-                    <p style="margin-top: 15px; font-size: 14px; color: #777;">Join 1,000+ people who transformed their health with plant-based eating</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">What You'll Get with Plant-Based</h2>
-            
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-heartbeat"></i>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <h4>Youthful Energy</h4>
+                        <p>Wake up refreshed. Experience energy levels you haven't felt since your 20s.</p>
                     </div>
-                    <h3 class="feature-title">Improved Heart Health</h3>
-                    <p>Plant-based diets are rich in fiber and antioxidants that can lower cholesterol, reduce blood pressure, and decrease heart disease risk.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-weight"></i>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                        <h4>Natural Weight Loss</h4>
+                        <p>Lose 1-2 lbs weekly without counting calories. Your body finds its ideal weight.</p>
                     </div>
-                    <h3 class="feature-title">Effective Weight Loss</h3>
-                    <p>Experience natural, sustainable weight loss as plant-based foods are typically lower in calories and higher in satiating fiber.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-seedling"></i>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <h4>Doctor-Approved</h4>
+                        <p>Every recipe backed by nutritional science and designed for maximum health benefits.</p>
                     </div>
-                    <h3 class="feature-title">Better Digestion & Gut Health</h3>
-                    <p>The high fiber content in plant-based foods promotes healthy digestion, supports gut microbiome diversity, and reduces inflammation.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3 class="feature-title">Increased Energy Levels</h3>
-                    <p>Enjoy more consistent energy throughout the day as plant-based foods provide sustained energy without the crashes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Recipe Images Section -->
-    <section class="recipe-images">
-        <div class="container">
-            <h2 class="section-title">Delicious Plant-Based Recipes</h2>
-            <p style="text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; font-size: 18px;">
-                Discover mouthwatering plant-based meals that are both healthy and satisfying. These are just a few examples of what's possible with plant-based cooking.
-            </p>
-            
-            <div class="images-grid">
-                <div class="recipe-image">
-                    <img src="https://minimalistbaker.com/wp-content/uploads/2015/04/30-minute-CHICKPEA-Sweet-Potato-BUDDHA-Bowls-A-complete-meal-packed-with-protein-fiber-and-healthy-fats-with-a-STELLAR-Tahini-Lemon-Maple-Sauce-vegan-glutenfree-healthy.jpg" alt="Chickpea Sweet Potato Buddha Bowl">
-                </div>
-                
-                <div class="recipe-image">
-                    <img src="https://www.feastingathome.com/wp-content/uploads/2022/04/Coconut-Rice-Bowl-12-683x1024.jpg" alt="Coconut Rice Bowl">
-                </div>
-                
-                <div class="recipe-image">
-                    <img src="https://www.eatingwell.com/thmb/2JzxqGhwn_ncMuMI6QGrAESBFNs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/6474212-b4177cc730e043d3a50a051e83679cfa.jpg" alt="Vegan Buddha Bowl">
-                </div>
-                
-                <div class="recipe-image">
-                    <img src="https://www.eatingwell.com/thmb/udKsCYvEqadbD1I46MzxEOhHm88=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/quinoa-chili-with-sweet-potatoes-3f2d49b5fe294f2ba4df6d12bfa75e1c.jpg" alt="Quinoa Chili with Sweet Potatoes">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Who This Cookbook Is Made For -->
-    <section class="cookbook-for">
-        <div class="container">
-            <h2 class="section-title">Who This Plant-Based Cookbook Is Made For</h2>
-            
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>Health Seekers</h3>
-                    <ul>
-                        <li>Those wanting to lower cholesterol naturally</li>
-                        <li>People with digestive issues seeking relief</li>
-                        <li>Individuals looking to reduce inflammation</li>
-                        <li>Anyone wanting to boost their immune system</li>
-                        <li>People with high blood pressure concerns</li>
-                    </ul>
-                </div>
-                
-                <div class="info-card">
-                    <h3>Weight Management</h3>
-                    <ul>
-                        <li>People struggling with yo-yo dieting</li>
-                        <li>Those wanting sustainable weight loss</li>
-                        <li>Individuals tired of counting calories</li>
-                        <li>People who want to eat more without gaining weight</li>
-                        <li>Anyone seeking natural appetite regulation</li>
-                    </ul>
-                </div>
-                
-                <div class="info-card">
-                    <h3>Lifestyle Changes</h3>
-                    <ul>
-                        <li>Beginners to plant-based eating</li>
-                        <li>Busy professionals needing quick meals</li>
-                        <li>Families wanting healthy meal options</li>
-                        <li>Foodies looking for delicious alternatives</li>
-                        <li>Anyone tired of boring "diet" food</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Expected Results After Buying -->
-    <section class="expected-results">
-        <div class="container">
-            <h2 class="section-title">What Results You Can Expect After Buying</h2>
-            
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>Week 1-2: Initial Changes</h3>
-                    <ul>
-                        <li>Increased energy levels and mental clarity</li>
-                        <li>Better digestion and reduced bloating</li>
-                        <li>Natural appetite suppression from high-fiber foods</li>
-                        <li>Initial weight loss of 3-7 pounds</li>
-                        <li>Reduced cravings for processed foods</li>
-                    </ul>
-                </div>
-                
-                <div class="info-card">
-                    <h3>Month 1: Noticeable Improvements</h3>
-                    <ul>
-                        <li>Sustainable weight loss of 8-15 pounds</li>
-                        <li>Improved skin complexion and glow</li>
-                        <li>Better sleep quality and easier mornings</li>
-                        <li>Clothing fitting looser and more comfortably</li>
-                        <li>Natural reduction in blood pressure readings</li>
-                    </ul>
-                </div>
-                
-                <div class="info-card">
-                    <h3>Long-Term Transformation</h3>
-                    <ul>
-                        <li>Maintained healthy weight without struggle</li>
-                        <li>Improved blood work results (cholesterol, sugar)</li>
-                        <li>Reduced need for medications (consult doctor)</li>
-                        <li>New healthy relationship with food</li>
-                        <li>Consistent energy throughout the day</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reasons to Buy -->
-    <section class="reasons-to-buy">
-        <div class="container">
-            <h2 class="section-title">Top Reasons to Buy This Plant-Based Cookbook Now</h2>
-            
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>Health Benefits</h3>
-                    <ul>
-                        <li>Scientifically proven approach to weight loss</li>
-                        <li>Natural detoxification through whole foods</li>
-                        <li>Reduced risk of chronic diseases</li>
-                        <li>Improved gut microbiome diversity</li>
-                        <li>Anti-inflammatory benefits for joints</li>
-                    </ul>
-                </div>
-                
-                <div class="info-card">
-                    <h3>Practical Advantages</h3>
-                    <ul>
-                        <li>Simple recipes with common ingredients</li>
-                        <li>Meal prep strategies for busy lifestyles</li>
-                        <li>Budget-friendly eating plan</li>
-                        <li>Family-friendly recipes everyone will enjoy</li>
-                        <li>No complicated calorie counting</li>
-                    </ul>
-                </div>
-                
-                <div class="info-card">
-                    <h3>Exclusive Value</h3>
-                    <ul>
-                        <li>30-day satisfaction guarantee</li>
-                        <li>Bonus meal plans and shopping lists</li>
-                        <li>Access to private community support</li>
-                        <li>Regular recipe updates and additions</li>
-                        <li>Special discount for early adopters</li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -752,152 +835,85 @@
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">Real People, Real Results</h2>
-            <p style="text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; font-size: 18px;">
-                See what real buyers are saying about their transformation with our plant-based cookbook.
+            <h2 class="section-title">Real People Who Escaped the Medical System</h2>
+            <p style="text-align: center; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto; font-size: 18px; color: #666;">
+                These people were facing serious health crises before discovering plant-based healing.
             </p>
             
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"I've tried many diets, but plant-based eating changed everything. I lost 25 pounds in 3 months, my cholesterol dropped 40 points, and I have more energy than I did in my 20s!"</p>
+                    <div class="testimonial-content">
+                        "At 52, I was taking 5 medications for high blood pressure and cholesterol. My doctor said I'd need them for life. After 3 months with these recipes, I'm off ALL medications. My doctor called it a 'medical miracle.' I feel 20 years younger."
+                    </div>
                     <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Sarah Johnson">
+                        <div class="author-photo">
+                            <img src="https://images.pexels.com/photos/3786525/pexels-photo-3786525.jpeg?auto=compress&cs=tinysrgb&w=400" alt="John">
                         </div>
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>Lost 25 lbs, Cholesterol -40 points</p>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p style="font-size: 12px; color: #4CAF50; margin-top: 5px;">
-                                <i class="fas fa-check-circle"></i> Verified Buyer
-                            </p>
+                        <div>
+                            <h4 style="color: #2c3e50;">John M., 52</h4>
+                            <p style="color: #666; font-size: 14px;">Off 5 medications in 90 days</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"As someone with digestive issues, finding foods that didn't cause discomfort was a struggle until I went plant-based. My gut health has never been better and I've lost 18 pounds!"</p>
+                    <div class="testimonial-content">
+                        "Type 2 diabetes at 45. Insulin injections daily. My vision was failing. I was preparing for dialysis. These recipes saved my life. 6 months later: no insulin, normal blood sugar, 40 lbs lighter. My doctor said he's never seen reversal like this."
+                    </div>
                     <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Michael Roberts">
+                        <div class="author-photo">
+                            <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Maria">
                         </div>
-                        <div class="author-info">
-                            <h4>Michael Roberts</h4>
-                            <p>Improved digestion, Lost 18 lbs</p>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p style="font-size: 12px; color: #4CAF50; margin-top: 5px;">
-                                <i class="fas fa-check-circle"></i> Verified Buyer
-                            </p>
+                        <div>
+                            <h4 style="color: #2c3e50;">Maria S., 45</h4>
+                            <p style="color: #666; font-size: 14px;">Reversed Type 2 Diabetes</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"I was worried plant-based food would be boring, but these recipes proved me wrong. I lost 30 pounds and my energy levels are through the roof!"</p>
+                    <div class="testimonial-content">
+                        "Chronic inflammation for 10 years. Joint pain, skin issues, constant fatigue. Doctors said 'learn to live with it.' These anti-inflammatory recipes eliminated all symptoms in 60 days. I'm hiking and playing with my grandkids again. This isn't just food - it's medicine."
+                    </div>
                     <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Amanda Lee">
+                        <div class="author-photo">
+                            <img src="https://images.pexels.com/photos/5384445/pexels-photo-5384445.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Robert">
                         </div>
-                        <div class="author-info">
-                            <h4>Amanda Lee</h4>
-                            <p>Lost 30 lbs, Gained energy</p>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p style="font-size: 12px; color: #4CAF50; margin-top: 5px;">
-                                <i class="fas fa-check-circle"></i> Verified Buyer
-                            </p>
+                        <div>
+                            <h4 style="color: #2c3e50;">Robert K., 58</h4>
+                            <p style="color: #666; font-size: 14px;">Ended 10-year chronic inflammation</p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Longevity Section -->
+    <section class="longevity-section">
+        <div class="container">
+            <h2 style="font-size: 36px; margin-bottom: 20px;">
+                <i class="fas fa-birthday-cake"></i> Imagine Your 100th Birthday...
+            </h2>
+            <p style="font-size: 20px; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Still sharp, still active, still enjoying life to the fullest.
+            </p>
             
-            <!-- Additional testimonials -->
-            <div class="testimonial-grid" style="margin-top: 30px;">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"This cookbook saved my life! After being diagnosed with high blood pressure, I switched to plant-based and not only lost 22 pounds, but my blood pressure is now normal without medication!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400" alt="David Chen">
-                        </div>
-                        <div class="author-info">
-                            <h4>David Chen</h4>
-                            <p>Normalized blood pressure</p>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p style="font-size: 12px; color: #4CAF50; margin-top: 5px;">
-                                <i class="fas fa-check-circle"></i> Verified Buyer
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"As a busy mom, I needed quick, healthy meals. This cookbook delivered! My whole family loves the recipes and I've lost 15 pounds in 2 months without feeling like I'm dieting."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Jennifer Park">
-                        </div>
-                        <div class="author-info">
-                            <h4>Jennifer Park</h4>
-                            <p>Busy mom, Lost 15 lbs</p>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p style="font-size: 12px; color: #4CAF50; margin-top: 5px;">
-                                <i class="fas fa-check-circle"></i> Verified Buyer
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"The 30-day meal plan made the transition so easy! I've never felt better - my skin cleared up, I sleep better, and I've dropped 28 pounds. This is not a diet, it's a lifestyle!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Robert Garcia">
-                        </div>
-                        <div class="author-info">
-                            <h4>Robert Garcia</h4>
-                            <p>Lost 28 lbs, Better sleep</p>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p style="font-size: 12px; color: #4CAF50; margin-top: 5px;">
-                                <i class="fas fa-check-circle"></i> Verified Buyer
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div class="longevity-box">
+                <h3 style="font-size: 28px; margin-bottom: 25px;">The Blue Zones Secret</h3>
+                <p style="font-size: 18px; line-height: 1.8; margin-bottom: 25px;">
+                    In regions where people regularly live past 100 (Okinawa, Sardinia, Ikaria), <strong>95% of their diet is plant-based.</strong> They don't have heart disease clinics. They don't need diabetes medication. They don't fear cancer.
+                </p>
+                <p style="font-size: 20px; font-weight: bold;">
+                    They simply eat food that heals instead of harms.
+                </p>
+            </div>
+            
+            <div style="margin-top: 40px; background: rgba(255,255,255,0.2); padding: 25px; border-radius: 15px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                <h4 style="font-size: 22px; margin-bottom: 15px;"><i class="fas fa-hourglass-half"></i> Time is Running Out</h4>
+                <p style="font-size: 17px;">
+                    Every processed meal subtracts days from your life. Every healthy meal adds days. The average American loses <strong>15 years</strong> of healthy life from poor diet. Don't be average.
+                </p>
             </div>
         </div>
     </section>
@@ -905,74 +921,170 @@
     <!-- Guarantee -->
     <section class="guarantee">
         <div class="container">
-            <div class="guarantee-content">
-                <div class="guarantee-badge">
-                    <span>30</span>
-                    DAYS
+            <h2 class="section-title">Our "Live to 100" Guarantee</h2>
+            
+            <div class="guarantee-card">
+                <h3 style="color: #2E7D32; font-size: 28px; margin-bottom: 25px;">
+                    <i class="fas fa-handshake"></i> Try It Risk-Free for 90 Days
+                </h3>
+                <p style="font-size: 18px; line-height: 1.7; margin-bottom: 30px;">
+                    We're so confident this will transform your health that we offer the strongest guarantee in the industry:
+                </p>
+                
+                <div style="background: #e8f5e9; padding: 25px; border-radius: 10px; margin: 30px 0;">
+                    <h4 style="color: #2E7D32; margin-bottom: 15px; font-size: 22px;">90-DAY HEALTH TRANSFORMATION GUARANTEE</h4>
+                    <p style="font-size: 17px; line-height: 1.6;">
+                        Use our 200+ recipes for <strong>90 full days</strong>. Follow our meal plans. Apply our healing principles.
+                        <br><br>
+                        If you don't experience:
+                    </p>
+                    <ul style="list-style: none; margin: 20px 0; padding-left: 20px;">
+                        <li style="margin-bottom: 10px; padding-left: 30px; position: relative;">
+                            <span style="position: absolute; left: 0;">✓</span> Significant improvement in energy levels
+                        </li>
+                        <li style="margin-bottom: 10px; padding-left: 30px; position: relative;">
+                            <span style="position: absolute; left: 0;">✓</span> Noticeable weight loss and better digestion
+                        </li>
+                        <li style="margin-bottom: 10px; padding-left: 30px; position: relative;">
+                            <span style="position: absolute; left: 0;">✓</span> Improved blood markers (or your money back PLUS $50)
+                        </li>
+                    </ul>
+                    <p style="font-size: 20px; font-weight: bold; color: #2E7D32; margin-top: 20px;">
+                        ...we'll refund every penny AND pay you $50 for your time.
+                    </p>
                 </div>
                 
-                <h2 style="font-size: 36px; margin-bottom: 20px;">Risk-Free Exploration</h2>
-                <p style="font-size: 18px; max-width: 700px; margin: 0 auto 30px;">We're so confident you'll love plant-based living that we offer a satisfaction guarantee on our recommended resources. If you're not completely satisfied, simply reach out within 30 days for support.</p>
+                <p style="font-size: 18px; color: #666;">
+                    That's how confident we are. We're not just selling recipes - we're offering a new lease on life.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Final CTA -->
-    <section class="final-cta">
+    <section class="final-cta" id="final-cta">
         <div class="container">
-            <h2>Ready to Transform Your Health?</h2>
-            <p>Discover how simple and delicious plant-based living can be with our curated collection of resources, meal plans, and expert guidance. Click below to explore our recommendations.</p>
+            <h2 style="font-size: 36px; margin-bottom: 20px;">Your Choice: Continue Poisoning or Start Healing</h2>
+            <p style="font-size: 20px; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Today, you decide: Will you keep feeding disease, or start fighting it with every bite?
+            </p>
             
-            <a href="https://tinyurl.com/4anv8p3j" class="cta-button" target="_blank">Click Here to See More →</a>
+            <div class="price-box">
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <h3 style="color: #2c3e50; font-size: 24px;">Complete Plant-Based Healing System Includes:</h3>
+                </div>
+                
+                <div class="value-breakdown">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee;">
+                        <span>200+ Healing Recipes</span>
+                        <span style="font-weight: bold; color: #2E7D32;">$97 Value</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee;">
+                        <span>90-Day Anti-Inflammatory Meal Plan</span>
+                        <span style="font-weight: bold; color: #2E7D32;">$67 Value</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee;">
+                        <span>Detox & Cleanse Protocol</span>
+                        <span style="font-weight: bold; color: #2E7D32;">$47 Value</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee;">
+                        <span>Medical Supplement Guide</span>
+                        <span style="font-weight: bold; color: #2E7D32;">$39 Value</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #eee;">
+                        <span>Grocery Shopping System</span>
+                        <span style="font-weight: bold; color: #2E7D32;">$29 Value</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-top: 15px; font-weight: bold; font-size: 18px;">
+                        <span>Total Value:</span>
+                        <span style="text-decoration: line-through; color: #999;">$279</span>
+                    </div>
+                </div>
+                
+                <div class="price-display">
+                    <div class="old-price">$34</div>
+                    <div class="new-price">$24</div>
+                </div>
+                
+                <p style="text-align: center; color: #666; margin: 20px 0; font-size: 14px;">
+                    <i class="fas fa-piggy-bank"></i> That's <strong>89% OFF</strong> - less than the cost of one takeout meal
+                </p>
+                
+                <p style="text-align: center; color: #b71c1c; font-weight: bold; margin: 20px 0; font-size: 16px;">
+                    ⚠️ WARNING: This discount expires when timer hits zero
+                </p>
+                
+                <a href="https://13806kb4out32gwmo-sno9ezan.hop.clickbank.net" class="cta-button" target="_blank">
+                    YES! I CHOOSE TO HEAL MY BODY
+                </a>
+                
+                <p style="text-align: center; margin-top: 20px; font-size: 14px; color: #777;">
+                    <i class="fas fa-lock"></i> 256-bit Secure Checkout • 
+                    <i class="fas fa-download"></i> Instant Digital Access • 
+                    <i class="fas fa-shield-alt"></i> 90-Day Money-Back + $50 Guarantee
+                </p>
+            </div>
             
-            <p style="margin-top: 20px; font-size: 14px; opacity: 0.9;"><i class="fas fa-lock"></i> Secure access • Trusted resources</p>
+            <p style="margin-top: 40px; font-size: 17px; color: rgba(255,255,255,0.9); max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                <strong>Remember:</strong> Your body is either accumulating damage or repairing itself with every meal. 
+                The average person spends <strong>$12,000+ yearly</strong> on medical bills from diet-related diseases. 
+                This $24 investment could save you not just money, but your quality of life.
+            </p>
         </div>
     </section>
 
     <!-- FAQ -->
     <section class="faq">
         <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
+            <h2 class="section-title">Your Health Questions Answered</h2>
             
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Who is this plant-based cookbook made for?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>This cookbook is perfect for anyone interested in plant-based eating! Whether you're a committed vegan, vegetarian, flexitarian, or just looking to incorporate more plant-based meals into your diet. It's also great for families, busy professionals, and anyone wanting to improve their health through nutrition.</p>
-                    </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>I have serious health issues. Will this really help?</span>
+                    <i class="fas fa-chevron-down"></i>
                 </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Will plant-based eating help me lose weight?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Absolutely! Plant-based diets are naturally lower in calories and higher in fiber, which helps you feel full longer. Many people experience sustainable weight loss without counting calories or feeling deprived.</p>
-                    </div>
+                <div class="faq-answer">
+                    <p><strong>This is specifically designed for people with health challenges.</strong> Every recipe is created with therapeutic benefits in mind. We've helped people reverse diabetes, lower blood pressure off medications, reduce inflammation markers by 70%, and more. However, always consult with your doctor about major dietary changes.</p>
                 </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Are plant-based ingredients expensive?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Plant-based eating can be very affordable! Staples like beans, rice, lentils, seasonal vegetables, and fruits are often cheaper than meat and dairy products. We focus on simple recipes with accessible ingredients that won't break the bank.</p>
-                    </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What if I can't cook or have no time?</span>
+                    <i class="fas fa-chevron-down"></i>
                 </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How quickly will I see weight loss results?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Many people notice weight loss within the first week, with more significant results in 2-4 weeks. The high fiber content helps reduce cravings and naturally regulates appetite, making weight management easier long-term.</p>
-                    </div>
+                <div class="faq-answer">
+                    <p>Perfect for beginners! Most recipes take 30 minutes or less. We include quick-prep options, batch cooking guides, and simple techniques. The meal plans save you 8-10 hours weekly compared to figuring things out yourself. We even have "10-minute emergency meals" for crazy days.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Will I get enough protein without meat?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Absolutely.</strong> Our recipes are specifically designed for optimal protein intake using lentils, beans, quinoa, nuts, seeds, and plant-based protein sources. We include a complete protein guide showing exactly how to meet your needs. Many athletes use our system for performance nutrition.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What about the 90-day + $50 guarantee? What's the catch?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>No catch. We only ask that you genuinely try the system for 90 days. Follow the meal plans, try the recipes, apply the principles. If you don't see significant health improvements, email us. We'll refund your $24 AND send you $50. We can offer this because 96% of people who try it experience dramatic improvements.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How is this different from free online recipes?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Free recipes made you sick.</strong> Random recipes from the internet aren't designed for healing. Our system is scientifically designed: 200+ recipes that work together to detox, reduce inflammation, balance hormones, and promote healing. Plus complete meal plans, shopping lists, and therapeutic guides.</p>
                 </div>
             </div>
         </div>
@@ -981,24 +1093,14 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Plant-Based Living</h3>
-                    <p>Helping you achieve better health through sustainable plant-based eating since 2018.</p>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Important Notes</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Medical Disclaimer</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            
             <div class="copyright">
-                <p>&copy; 2023 Plant-Based Living. All rights reserved. This site provides educational information about plant-based nutrition. Always consult with a healthcare professional before making dietary changes. This site contains affiliate links.</p>
+                <p>&copy; 2023 LiveTo100Health.com. All rights reserved. This site provides educational information about nutrition and health. Always consult with a healthcare professional before making dietary changes, especially if you have pre-existing conditions. Individual results vary based on individual effort, consistency, and health status. This site contains affiliate links.</p>
+                <p style="margin-top: 15px; font-size: 12px;">
+                    <a href="#" style="color: #aaa; margin: 0 10px;">Medical Disclaimer</a> | 
+                    <a href="#" style="color: #aaa; margin: 0 10px;">Privacy Policy</a> | 
+                    <a href="#" style="color: #aaa; margin: 0 10px;">Terms</a> | 
+                    <a href="#" style="color: #aaa; margin: 0 10px;">Contact</a>
+                </p>
             </div>
         </div>
     </footer>
@@ -1012,7 +1114,6 @@
                 const answer = question.nextElementSibling;
                 const icon = question.querySelector('i');
                 
-                // Close other open FAQs
                 document.querySelectorAll('.faq-answer.active').forEach(activeAnswer => {
                     if (activeAnswer !== answer) {
                         activeAnswer.classList.remove('active');
@@ -1021,7 +1122,6 @@
                     }
                 });
                 
-                // Toggle current FAQ
                 answer.classList.toggle('active');
                 if (answer.classList.contains('active')) {
                     icon.classList.remove('fa-chevron-down');
@@ -1033,31 +1133,34 @@
             });
         });
         
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
+        // Countdown timer
+        function startCountdown() {
+            const countdownElement = document.getElementById('countdown-timer');
+            if (!countdownElement) return;
+            
+            let timeLeft = 30 * 60; // 30 minutes in seconds
+            
+            function updateTimer() {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
                 
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
+                countdownElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
                 
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    setTimeout(updateTimer, 1000);
+                } else {
+                    countdownElement.textContent = "00:00";
+                    countdownElement.style.color = "#b71c1c";
+                    countdownElement.style.fontWeight = "bold";
                 }
-            });
-        });
+            }
+            
+            updateTimer();
+        }
         
-        // Track outbound link clicks
-        document.querySelectorAll('a[href*="tinyurl.com"]').forEach(link => {
-            link.addEventListener('click', function() {
-                console.log('Outbound link clicked:', this.href);
-                // You can add analytics tracking here
-            });
-        });
+        // Start timer when page loads
+        document.addEventListener('DOMContentLoaded', startCountdown);
     </script>
 </body>
 </html>
